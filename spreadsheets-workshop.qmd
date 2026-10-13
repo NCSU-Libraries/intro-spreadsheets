@@ -234,7 +234,7 @@ The `working` sheet's columns, for reference:
 | G | Sex | Sex | Typos and inconsistent capitals (@sec-clean) |
 | H | TRCHILDNUM | Number of children under 18 in household | Header not renamed (@sec-understand) |
 | I | Labor force status | Employed, unemployed, or not in the labor force | Ready |
-| J | Enrolled in school | Enrolled in high school, college or university (asked only of ages 15–49) | Ready |
+| J | Enrolled in school | Enrolled in high school, college or university. Asked only of ages 15–49; "Blank" means not asked | Ready (not used today) |
 | K | TEHRUSLT | Hours usually worked per week | Header not renamed; uses missing codes (@sec-clean) |
 | L | Sleep (mins) | Minutes sleeping on the diary day | Ready |
 | M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores | Ready, except O (@sec-clean) |
