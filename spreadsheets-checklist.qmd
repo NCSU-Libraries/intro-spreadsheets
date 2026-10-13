@@ -1,0 +1,145 @@
+---
+title: "Working with Spreadsheets: session checklist"
+subtitle: "Data Science Training Intensive · Google Sheets track"
+author: "NC State University Libraries — Data Science Services"
+format:
+  html:
+    toc: false
+    number-sections: false
+    theme: cosmo
+    embed-resources: true
+    code-overflow: wrap
+    include-in-header:
+      text: |
+        <style>
+        .tbd { background: #fef3c7; padding: 0 0.2em; }
+        li code { overflow-wrap: anywhere; }
+        pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
+        ul.task-list li { margin-bottom: 0.25rem; }
+        h1 { font-size: 1.35rem; margin-top: 1.5rem; }
+        @media print {
+          h1 { break-before: page; }
+          h1:first-of-type { break-before: auto; }
+          a { color: inherit; text-decoration: none; }
+        }
+        </style>
+---
+
+<!--
+The steps from spreadsheets-workshop.qmd, without the explanations, to print and tick off.
+Section numbers match the guide. When a step changes in the guide, change it here too.
+[text]{.tbd} marks the same provisional values as in the guide.
+Print from the browser (File > Print); each section starts on a new page.
+-->
+
+Full steps and explanations: the guide at [link TBD]{.tbd}. Mac users: **Cmd** where this says
+**Ctrl**.
+
+# 2. Set up your workbook
+
+- [ ] Open the workbook link and **File > Make a copy**. Name it "[Your name] DSTI spreadsheets".
+- [ ] Find the three sheets: **README**, **raw** (never edit), **working**.
+- [ ] On **working**: **View > Freeze > 1 row**.
+- [ ] **Ctrl + ↓** in column A to find the last row. Respondents: ______
+
+# 3. Entering data well
+
+- [ ] Read the allowed values for Sex and the range for Age on **README**.
+- [ ] Select **G2:G**. **Data > Data validation > Add rule**: Dropdown with `Female` and `Male`.
+      **Advanced options > Show a warning.**
+- [ ] Rule for **F2:F** (Age): is between 15 and 85.
+- [ ] Hover over a red triangle to see why the cell is flagged. Leave the flags for section 5.
+
+# 4. Making data understandable
+
+- [ ] Rename **H1** to `Number of children` and **K1** to `Work hours per week`.
+- [ ] Log both renames on **README**.
+- [ ] Select column **D**. **Edit > Find and replace**, **Specific range**, **Match entire cell
+      contents** checked:
+  - [ ] `-1` → (empty) *first*
+  - [ ] `1` → `Metropolitan`
+  - [ ] `2` → `Non-metropolitan`
+  - [ ] `3` → `Not identified`
+- [ ] Log the recode on **README**.
+- [ ] Select column **A**. **Format > Number > Custom number format**: `0`.
+
+**Break.** Catch-up copy: [link TBD]{.tbd}
+
+# 5. Making data usable: cleaning
+
+- [ ] **Data > Create a filter.** Open the Sex filter and read the value list.
+- [ ] **Data > Data cleanup > Trim whitespace** on the data.
+- [ ] Fix typos in column **G** with Find and replace (**Match entire cell contents**):
+      `Femal` → `Female`, `Mole` → `Male`.
+- [ ] Fix capitalization: **W2** `=PROPER(G2)`, fill down, select **W2:W** (click W2, then
+      **Ctrl/Cmd + Shift + ↓**), copy, paste values only into **G2**, clear W.
+- [ ] Fix spellings in column **E** with Find and replace (**Match entire cell contents**):
+      `Bachelors` → `Bachelor's`, `Masters` → `Master's`.
+- [ ] Column **O**: Find `"` and replace with nothing, then **Format > Number > Number**.
+- [ ] On a new sheet, compare `=AVERAGE(working!K2:K)` and `=AVERAGEIF(working!K2:K, ">=0")`.
+      Difference: ______
+- [ ] **W1** `Work hours missing`, **W2** `=OR(K2=-1, K2=-4)`, fill down.
+- [ ] Log the missing-value decision on **README**.
+- [ ] Check Age with **Data > Column stats**. Age 150: error, so empty it and log it. Ages 80 and 85:
+      real (top-coded), so leave them.
+- [ ] **X2** `=COUNTIF(A:A, A2)`, fill down, filter for values over 1.
+- [ ] **Data > Data cleanup > Remove duplicates** (header row checked, all columns). Rows removed:
+      ______
+- [ ] Clear column X. Log the duplicates.
+
+Catch-up copy: [link TBD]{.tbd}
+
+# 6. Making new variables with formulas
+
+- [ ] **X1** `Chores (mins)`, **X2** `=SUM(M2:P2)`.
+- [ ] **Y1** `Leisure (mins)`, **Y2** `=SUM(S2:V2)`. Fill X2:Y2 down. Check one row by hand.
+- [ ] **Z1** `Age group`, **Z2** (then fill down):
+
+      ```
+      =IFS(F2<25, "15-24", F2<35, "25-34", F2<45, "35-44", F2<55, "45-54", F2<65, "55-64", TRUE, "65+")
+      ```
+- [ ] **AA1** `Children group`: your own formula giving "0", "1", "2" or "3+". Fill down.
+- [ ] New sheet **settings**: **A1** `Full time from (hours)`, **B1** `35`.
+- [ ] **AB1** `Work status`, **AB2** (then fill down):
+
+      ```
+      =IFS(K2=-1, "Not working", K2=-4, "Hours vary", K2>=settings!$B$1, "Full time", K2>=0, "Part time")
+      ```
+
+Catch-up copy: [link TBD]{.tbd}
+
+# 7. Exploring: summaries and pivot tables
+
+- [ ] New sheet **summary**: `COUNTA`, `AVERAGE`, `MEDIAN`, `MIN`, `MAX`, `STDEV`, `COUNTIF` on
+      chores and leisure. Chores average ______ median ______
+- [ ] Pivot table 1: **Rows** Age group; **Values** Case (COUNTA) and Leisure (AVERAGE).
+- [ ] Pivot table 2: **Rows** Children group; **Values** Chores (AVERAGE) and Leisure (AVERAGE).
+- [ ] Pivot table 3: **Rows** Education level; **Values** Leisure (AVERAGE).
+- [ ] Add **Columns** Work status. Compare the Full time column across education levels.
+
+Catch-up copy: [link TBD]{.tbd}
+
+# 8. Visualizing distributions
+
+Scatter with trendline:
+
+- [ ] Select column **F**, Ctrl-click column **Y**. **Insert > Chart > Scatter chart.**
+- [ ] **Customize > Series**: small points, about 30% opacity.
+- [ ] **Trendline**: Polynomial, degree 2, Use equation, Show R².
+- [ ] Titles: "Leisure time by age"; "Age (years)"; "Leisure on diary day (minutes)".
+- [ ] Vertical axis max 1440. Alt text.
+
+Grouped histogram:
+
+- [ ] **Insert > Pivot table.** **Rows** Leisure (mins).
+- [ ] Right-click a row value > **Create pivot group rule**, interval 120.
+- [ ] **Columns** Children group; **Filters** Children group, keep 0 and 3+.
+- [ ] **Values** Case (COUNTA), **Show as: % of column.**
+- [ ] **Insert > Chart > Column chart.** Titles and alt text.
+- [ ] Download a chart: **⋮ > Download > PNG** or **SVG**.
+
+# 9. Wrapping up
+
+- [ ] **File > Download > Comma-separated values (.csv)** for **working**, and for **README**.
+- [ ] Evaluation: [link TBD]{.tbd}
+- [ ] Get Data Help: go.ncsu.edu/getdatahelp · getdatahelp@ncsu.edu

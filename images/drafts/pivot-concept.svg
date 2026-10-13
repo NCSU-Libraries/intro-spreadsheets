@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" role="img" aria-labelledby="t d">
+<title id="t">A pivot table groups rows and summarizes each group</title>
+<desc id="d">Left, eight rows of data with an age group and leisure minutes for each person, colored by age group. Right, the pivot table: one row per age group, with the number of people and their average leisure. 25-34: 3 people, average 160 minutes. 35-44: 2 people, average 120. 65+: 3 people, average 360.</desc>
+<rect width="960" height="470" fill="#ffffff"/>
+<text x="40" y="62" font-size="22" font-weight="700" fill="#1f2937" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">The data</text>
+<text x="40" y="88" font-size="15" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">one row per person</text>
+<rect x="40" y="120" width="130" height="34" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="143" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Age group</text>
+<rect x="170" y="120" width="150" height="34" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="143" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Leisure (min)</text>
+<rect x="40" y="154" width="130" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="177" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">25-34</text>
+<rect x="170" y="154" width="150" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="177" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">120</text>
+<rect x="40" y="188" width="130" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="211" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">65+</text>
+<rect x="170" y="188" width="150" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="211" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">400</text>
+<rect x="40" y="222" width="130" height="34" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="245" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">35-44</text>
+<rect x="170" y="222" width="150" height="34" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="245" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">150</text>
+<rect x="40" y="256" width="130" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="279" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">25-34</text>
+<rect x="170" y="256" width="150" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="279" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">200</text>
+<rect x="40" y="290" width="130" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="313" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">65+</text>
+<rect x="170" y="290" width="150" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="313" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">320</text>
+<rect x="40" y="324" width="130" height="34" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="347" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">35-44</text>
+<rect x="170" y="324" width="150" height="34" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="347" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">90</text>
+<rect x="40" y="358" width="130" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="381" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">25-34</text>
+<rect x="170" y="358" width="150" height="34" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="381" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">160</text>
+<rect x="40" y="392" width="130" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="105.0" y="415" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">65+</text>
+<rect x="170" y="392" width="150" height="34" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="245.0" y="415" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">360</text>
+<line x1="360" y1="250" x2="488" y2="250" stroke="#475569" stroke-width="3"/>
+<path d="M500 250 L484 241 L484 259 Z" fill="#475569"/>
+<text x="430.0" y="216" font-size="14" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">group by age,</text>
+<text x="430.0" y="234" font-size="14" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">then summarize</text>
+<text x="430.0" y="280" font-size="13" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Rows: Age group</text>
+<text x="430.0" y="298" font-size="13" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Values: COUNTA,</text>
+<text x="430.0" y="314" font-size="13" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">AVERAGE</text>
+<text x="540" y="62" font-size="22" font-weight="700" fill="#1f2937" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">The pivot table</text>
+<text x="540" y="88" font-size="15" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">one row per group</text>
+<rect x="540" y="120" width="130" height="40" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="605.0" y="146" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Age group</text>
+<rect x="670" y="120" width="110" height="40" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="725.0" y="146" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">People</text>
+<rect x="780" y="120" width="140" height="40" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="850.0" y="146" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Avg leisure</text>
+<rect x="540" y="160" width="130" height="40" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="605.0" y="186" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">25-34</text>
+<rect x="670" y="160" width="110" height="40" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="725.0" y="186" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">3</text>
+<rect x="780" y="160" width="140" height="40" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="850.0" y="186" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">160</text>
+<rect x="540" y="200" width="130" height="40" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="605.0" y="226" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">35-44</text>
+<rect x="670" y="200" width="110" height="40" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="725.0" y="226" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">2</text>
+<rect x="780" y="200" width="140" height="40" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="850.0" y="226" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">120</text>
+<rect x="540" y="240" width="130" height="40" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="605.0" y="266" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">65+</text>
+<rect x="670" y="240" width="110" height="40" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="725.0" y="266" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">3</text>
+<rect x="780" y="240" width="140" height="40" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="850.0" y="266" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">360</text>
+<text x="540" y="310" font-size="13" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Made-up example values</text>
+</svg>

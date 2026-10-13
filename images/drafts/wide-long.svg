@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" role="img" aria-labelledby="t d">
+<title id="t">Wide and long layouts of the same plant measurements</title>
+<desc id="d">Left, a wide table: one row per plant, with heights on day 1, day 8 and day 15 in separate columns. Right, the same data as a long table: one row per plant per day, with a Day column and a Height column. Colors link each day column in the wide table to its rows in the long table.</desc>
+<rect width="960" height="460" fill="#ffffff"/>
+<text x="40" y="62" font-size="22" font-weight="700" fill="#1f2937" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Wide</text>
+<text x="40" y="88" font-size="15" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">one row per plant</text>
+<rect x="40" y="120" width="80" height="38" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="80.0" y="145" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Plant</text>
+<rect x="120" y="120" width="90" height="38" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="165.0" y="145" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Day 1</text>
+<rect x="210" y="120" width="90" height="38" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="255.0" y="145" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Day 8</text>
+<rect x="300" y="120" width="90" height="38" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="345.0" y="145" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Day 15</text>
+<rect x="40" y="158" width="80" height="38" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="80.0" y="183" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">A</text>
+<rect x="120" y="158" width="90" height="38" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="165.0" y="183" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">2.1</text>
+<rect x="210" y="158" width="90" height="38" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="255.0" y="183" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">4.0</text>
+<rect x="300" y="158" width="90" height="38" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="345.0" y="183" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">6.3</text>
+<rect x="40" y="196" width="80" height="38" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="80.0" y="221" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">B</text>
+<rect x="120" y="196" width="90" height="38" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="165.0" y="221" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">1.8</text>
+<rect x="210" y="196" width="90" height="38" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="255.0" y="221" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">3.5</text>
+<rect x="300" y="196" width="90" height="38" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="345.0" y="221" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">5.9</text>
+<rect x="40" y="234" width="80" height="38" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="80.0" y="259" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">C</text>
+<rect x="120" y="234" width="90" height="38" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="165.0" y="259" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">2.4</text>
+<rect x="210" y="234" width="90" height="38" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="255.0" y="259" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">4.4</text>
+<rect x="300" y="234" width="90" height="38" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="345.0" y="259" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">7.0</text>
+<text x="40" y="302" font-size="13" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Heights in cm</text>
+<line x1="420" y1="200" x2="528" y2="200" stroke="#475569" stroke-width="3"/>
+<path d="M540 200 L524 191 L524 209 Z" fill="#475569"/>
+<text x="480.0" y="184" font-size="14" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">same data,</text>
+<text x="480.0" y="230" font-size="14" font-weight="400" fill="#475569" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">new shape</text>
+<text x="580" y="62" font-size="22" font-weight="700" fill="#1f2937" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Long</text>
+<text x="580" y="88" font-size="15" font-weight="400" fill="#475569" text-anchor="start" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">one row per plant per day</text>
+<rect x="580" y="120" width="80" height="30" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="141" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Plant</text>
+<rect x="660" y="120" width="80" height="30" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="141" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Day</text>
+<rect x="740" y="120" width="140" height="30" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="141" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">Height (cm)</text>
+<rect x="580" y="150" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="171" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">A</text>
+<rect x="660" y="150" width="80" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="171" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">1</text>
+<rect x="740" y="150" width="140" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="171" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">2.1</text>
+<rect x="580" y="180" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="201" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">A</text>
+<rect x="660" y="180" width="80" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="201" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">8</text>
+<rect x="740" y="180" width="140" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="201" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">4.0</text>
+<rect x="580" y="210" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="231" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">A</text>
+<rect x="660" y="210" width="80" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="231" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">15</text>
+<rect x="740" y="210" width="140" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="231" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">6.3</text>
+<rect x="580" y="240" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="261" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">B</text>
+<rect x="660" y="240" width="80" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="261" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">1</text>
+<rect x="740" y="240" width="140" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="261" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">1.8</text>
+<rect x="580" y="270" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="291" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">B</text>
+<rect x="660" y="270" width="80" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="291" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">8</text>
+<rect x="740" y="270" width="140" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="291" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">3.5</text>
+<rect x="580" y="300" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="321" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">B</text>
+<rect x="660" y="300" width="80" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="321" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">15</text>
+<rect x="740" y="300" width="140" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="321" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">5.9</text>
+<rect x="580" y="330" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="351" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">C</text>
+<rect x="660" y="330" width="80" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="351" font-size="15" font-weight="700" fill="#0f766e" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">1</text>
+<rect x="740" y="330" width="140" height="30" fill="#ccfbf1" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="351" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">2.4</text>
+<rect x="580" y="360" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="381" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">C</text>
+<rect x="660" y="360" width="80" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="381" font-size="15" font-weight="700" fill="#b45309" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">8</text>
+<rect x="740" y="360" width="140" height="30" fill="#fef3c7" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="381" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">4.4</text>
+<rect x="580" y="390" width="80" height="30" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="620.0" y="411" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">C</text>
+<rect x="660" y="390" width="80" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="700.0" y="411" font-size="15" font-weight="700" fill="#6d28d9" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">15</text>
+<rect x="740" y="390" width="140" height="30" fill="#ede9fe" stroke="#cbd5e1" stroke-width="1"/>
+<text x="810.0" y="411" font-size="15" font-weight="400" fill="#1f2937" text-anchor="middle" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">7.0</text>
+</svg>

@@ -1,0 +1,26 @@
+# Quarto working files
+/.quarto/
+/*_files/
+**/*.quarto_ipynb
+
+# The rendered guide, checklist and slides (*.html) ARE committed on purpose:
+# GitHub Pages serves them.
+
+# Team planning sources (meeting notes, literature review, peer review). Not published.
+/sources/
+
+# Scratch, and the local working notes for AI-assisted editing
+/notes
+CLAUDE.md
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Internal planning notes (kept locally, not published)
+/planning/
+
+# Data: only the attendee workbook is published (as a backup to the Google Sheet).
+# The teacher copy holds the cleaned answers; the original extract and codebook stay local.
+/data/*
+!/data/DSTI ATUS Data Working.xlsx
