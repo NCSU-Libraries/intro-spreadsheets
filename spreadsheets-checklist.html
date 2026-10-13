@@ -2218,11 +2218,11 @@ Section numbers match the guide. When a step changes in the guide, change it her
 [text]{.tbd} marks the same provisional values as in the guide.
 Print from the browser (File > Print); each section starts on a new page.
 -->
-<p>Full steps and explanations: the guide at <span class="tbd">link TBD</span>. Mac users: <strong>Cmd</strong> where this says <strong>Ctrl</strong>.</p>
+<p>Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro-spreadsheets/. Mac users: <strong>Cmd</strong> where this says <strong>Ctrl</strong>.</p>
 <section id="set-up-your-workbook" class="level1">
 <h1>2. Set up your workbook</h1>
 <ul class="task-list">
-<li><label><input type="checkbox">Open the workbook link and <strong>File &gt; Make a copy</strong>. Name it “[Your name] DSTI spreadsheets”.</label></li>
+<li><label><input type="checkbox">Open the workbook (link in the guide, section 2) and <strong>File &gt; Make a copy</strong>. Name it “[Your name] DSTI spreadsheets”.</label></li>
 <li><label><input type="checkbox">Find the three sheets: <strong>README</strong>, <strong>raw</strong> (never edit), <strong>working</strong>.</label></li>
 <li><label><input type="checkbox">On <strong>working</strong>: <strong>View &gt; Freeze &gt; 1 row</strong>.</label></li>
 <li><label><input type="checkbox"><strong>Ctrl + ↓</strong> in column A to find the last row. Respondents: ______</label></li>
@@ -2266,10 +2266,11 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">On a new sheet, compare <code>=AVERAGE(working!K2:K)</code> and <code>=AVERAGEIF(working!K2:K, &quot;&gt;=0&quot;)</code>. Difference: ______</label></li>
 <li><label><input type="checkbox"><strong>W1</strong> <code>Work hours missing</code>, <strong>W2</strong> <code>=OR(K2=-1, K2=-4)</code>, fill down.</label></li>
 <li><label><input type="checkbox">Log the missing-value decision on <strong>README</strong>.</label></li>
-<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Age 150: error, so empty it and log it. Ages 80 and 85: real (top-coded), so leave them.</label></li>
+<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Age 150: error; look up the Case in <strong>raw</strong> (age 33), correct it and log it. Ages 80 and 85: real (top-coded), so leave them.</label></li>
 <li><label><input type="checkbox"><strong>X2</strong> <code>=COUNTIF(A:A, A2)</code>, fill down, filter for values over 1.</label></li>
 <li><label><input type="checkbox"><strong>Data &gt; Data cleanup &gt; Remove duplicates</strong> (header row checked, all columns). Rows removed: ______</label></li>
-<li><label><input type="checkbox">Clear column X. Log the duplicates.</label></li>
+<li><label><input type="checkbox">One Case is still listed twice (Age 37 vs. 73): check <strong>raw</strong> (37), delete the 73 row.</label></li>
+<li><label><input type="checkbox">Clear column X. Log the duplicates. Rows left: 2,000.</label></li>
 </ul>
 <p>Catch-up copy: <span class="tbd">link TBD</span></p>
 </section>

@@ -49,7 +49,7 @@ catch up if you fall behind, and come back to it later.
 - **Fell behind?** Each section ends with a link to a catch-up copy of the workbook as it should
   look at that point.
 - **Printed checklist:** the steps without the explanations, to tick off as you go.
-  [Checklist link TBD]{.tbd}
+  [Open the checklist](https://ncsu-libraries.github.io/intro-spreadsheets/spreadsheets-checklist.html), and print it from your browser.
 :::
 
 # Welcome {.unnumbered}
@@ -89,7 +89,7 @@ By the end of this session you will be able to:
 The [American Time Use Survey](https://www.bls.gov/tus/) (ATUS) is collected every year by the
 U.S. Bureau of Labor Statistics. Each respondent describes one day, activity by activity, and the
 survey records how many minutes they spent on each kind of activity. Our workbook has a random
-sample of [2,000]{.tbd} respondents from [2003–2023]{.tbd}, with a few demographic columns and a
+sample of 2,000 respondents from 2003–2023, with a few demographic columns and a
 few activities.
 
 Two things to keep in mind about any result we get today:
@@ -196,7 +196,7 @@ back to the original and see what you changed.
 
 ## Make your copy
 
-1. Open the workbook: [link TBD]{.tbd}. It opens view-only.
+1. Open the workbook: [DSTI ATUS Data Working](https://docs.google.com/spreadsheets/d/1A9IbG6Fm5DXdETl9tv0qm8pjV1LvKKRouo-V2oKVwF0/edit?usp=sharing). It opens view-only.
 2. **File > Make a copy.** Name it "[Your name] DSTI spreadsheets" and click **Make a copy**. Your
    copy opens in a new tab.
 
@@ -209,8 +209,8 @@ Make a copy dialog.
 ## Gotcha: "Make a copy" is greyed out or asks you to request access
 
 You're probably signed in to a personal Google account, or not signed in. Switch to your NC State
-account (top right of the window) and try again. If it still fails, download the CSV from [link
-TBD]{.tbd} and use **File > Import** in a blank sheet.
+account (top right of the window) and try again. If it still fails, download [the workbook file](https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx), open a blank
+sheet, and use **File > Import > Upload**.
 :::
 
 ## What's in the workbook
@@ -261,7 +261,8 @@ and working tabs.
 back.
 :::
 
-That answers question 1: [2,000]{.tbd} respondents, one row each.
+The last row is 2007, so there are 2,006 rows of data. That answers question 1, almost: are they
+2,006 different people? @sec-clean finds out.
 
 **Selecting down to the last row.** This guide writes a range that runs from a cell to the bottom of
 its column like this: **W2:W** means "W2 and everything below it". To select one:
@@ -426,7 +427,7 @@ columns already have labels. Metropolitan (column D) is still coded, so we'll re
 ## Recode with Find and replace
 
 The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3 = Not identified,
--1 = blank (missing). [Confirm codes]{.tbd}
+-1 = blank (missing).
 
 1. Click the column letter **D** to select the whole column.
 2. **Edit > Find and replace** (Windows: **Ctrl + H**; Mac: **Cmd + Shift + H**).
@@ -525,8 +526,8 @@ values. Education level has a few of these: they show up as near-duplicates in i
 
 ## Fix inconsistent text
 
-Sex should have two values, but its filter list shows more: [Female, Femal, female, Male, MALE,
-Mole]{.tbd}. In a pivot table, R or Python, each version can count as a group of its own.
+Sex should have two values, but its filter list shows more: Female, Femal, female, Male, MALE and
+Mole. In a pivot table, R or Python, each version can count as a group of its own.
 
 **Typos** ("Femal", "Mole"): use Find and replace, as in @sec-understand.
 
@@ -584,8 +585,8 @@ together; check whether pivot tables do, and reword this section.]{.tbd}
 
 ## Fix numbers stored as text
 
-Look at column **O** (food and drink prep). Some values sit on the left: they're text, and sums will
-skip them. [Planted problem TBD: quotation marks or apostrophes]{.tbd}
+Look at column **O** (food and drink prep). Some values sit on the left, with quotation marks around
+them (`"30"`): they're text, and sums will skip them.
 
 1. Select column O. **Edit > Find and replace.** Find `"` and replace with nothing, in this range
    only. **Replace all.**
@@ -606,7 +607,8 @@ To see why it matters, put these in two empty cells on a new sheet:
 - `=AVERAGE(working!K2:K)`
 - `=AVERAGEIF(working!K2:K, ">=0")`
 
-The first treats -1 and -4 as numbers of hours and drags the average down: [values TBD]{.tbd}.
+The first treats -1 and -4 as numbers of hours and drags the average down: about 23 hours, against about 40 for
+the people who reported their hours.
 
 What to do with codes like these:
 
@@ -644,7 +646,8 @@ and a distribution.
 One example shows the whole process. For a flagged value, decide whether it's an error, a code, or
 real:
 
-- **Age 150:** impossible. An entry error.
+- **Age 150:** impossible. An entry error. The **raw** sheet is the source here: find this Case
+  there (**Ctrl/Cmd + F**) and you'll see the real age, 33. Correct it, and log it.
 - **Age 80 and 85:** real, but not exact. ATUS *top-codes* age: everyone 80–84 is recorded as 80,
   and 85 or older as 85. Check the documentation before you "fix" a value that looks odd.
 
@@ -671,8 +674,10 @@ Flag first, then decide:
 2. Filter column X for values greater than 1 to see every repeated Case ID.
 3. For exact duplicates: select the data, **Data > Data cleanup > Remove duplicates**, tick **Data
    has header row**, and choose which columns must match (all of them, for exact duplicates).
-   Sheets reports how many rows it removed: [TBD]{.tbd}.
-4. Clear column X. Log what you removed.
+   Sheets reports how many rows it removed: 5.
+4. Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and
+   73). Find that Case in **raw**: the real age is 37. Right-click the row with 73 > **Delete row**.
+5. Clear column X. Log what you removed. The sheet now has 2,000 rows: 2,000 different people.
 
 ::: {.placeholder}
 **Screenshot** `images/clean-remove-duplicates.png`: the Remove duplicates dialog with Data has
@@ -813,7 +818,7 @@ On **summary**, try:
 | `=COUNTIF(working!X2:X, 0)` | People with no chores on their diary day |
 | `=AVERAGE(working!Y2:Y)/60` | Average leisure in hours |
 
-Compare the average and the median for chores: [about 75 vs. about 30 minutes]{.tbd}. When many
+Compare the average and the median for chores: about 74 vs. 30 minutes. When many
 people report 0 and a few report a lot, the average gets pulled up. The median is the middle
 person, so it's often the better summary for minutes. That answers question 3.
 
@@ -826,7 +831,8 @@ formula for each group.
 2. **Rows: Add > Age group.** **Values: Add > Case**, summarized by **COUNTA**. That's how many
    people are in each age group.
 3. **Values: Add > Leisure (mins)**, summarized by **AVERAGE**. Question 4: does leisure change with
-   age? [Result TBD]{.tbd}
+   age? Yes: average leisure is lowest at 25–34 (about 190 minutes) and highest at 65+ (about
+   360).
 
 ::: {.placeholder}
 **Screenshot** `images/explore-pivot-age.png`: the pivot table editor with Age group in Rows,
@@ -837,18 +843,20 @@ Keep the count next to the average. An average of 5 people is much less certain 
 500.
 
 **Question 5:** make a second pivot table with **Rows: Children group** and **Values:** average
-**Chores (mins)** and average **Leisure (mins)**, side by side. [Result TBD]{.tbd}
+**Chores (mins)** and average **Leisure (mins)**, side by side. From no children to 3+, chores rise
+from about 66 to 117 minutes and leisure falls from about 298 to 174.
 
 **Question 6:** people with more education report less leisure. Is that education, or work?
 
 1. Make a third pivot table. **Rows: Education level.** **Values:** average **Leisure (mins)**. The
-   gap: [TBD]{.tbd}.
+   gap: about 305 minutes for no diploma, against 177 to 193 for master's and professional degrees.
+   (Doctoral, at 260, is only 32 people.)
 2. Add **Columns: Work status.** Now each education level is split by whether people work.
-3. Compare the **Full time** column across education levels. [Result TBD: the gap almost
-   disappears.]{.tbd}
+3. Compare the **Full time** column across education levels. The steady drop is gone: full-time
+   workers at every level report roughly 170 to 235 minutes, with no pattern by degree.
 
-Much of the education difference comes from who is working: [a higher share of people with less
-education are not working (-1)]{.tbd}. The answer depends on a cleaning decision from @sec-clean:
+Much of the education difference comes from who is working: 64% of people with no diploma have
+work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer depends on a cleaning decision from @sec-clean:
 reading -1 as "not working", rather than dropping it or treating it as 0. **Cleaning decisions
 change conclusions,** which is why they go in the log.
 
@@ -906,7 +914,7 @@ trendline, equation and R² in the legend.
 What to notice:
 
 - The curve (the average) is flat until about 40, then rises.
-- People vary enormously around it: R² is [about 0.10]{.tbd}, so age accounts for only about a tenth
+- People vary enormously around it: R² is about 0.1, so age accounts for only about a tenth
   of the variation in leisure.
 - The dense columns at 80 and 85 are the top-coded ages from @sec-clean.
 
@@ -950,9 +958,9 @@ colors, percent on the vertical axis.
 ::: {.callout-warning}
 ## Gotcha: compare percentages, not counts
 
-There are [1,137]{.tbd} people with no children and [180]{.tbd} with 3+. In counts, the
+There are 1,137 people with no children and 180 with 3+. In counts, the
 no-children bars are taller in almost every bin, just because the group is bigger. In percentages,
-[47%]{.tbd} of people with 3+ children report under 2 hours of leisure, against [19%]{.tbd} with no
+47% of people with 3+ children report under 2 hours of leisure, against 19% with no
 children. Counts compare group sizes; percentages compare shapes.
 
 Sheets' own **Histogram** chart type can draw two groups, but it only counts, so it misleads in
@@ -1038,10 +1046,11 @@ For fast finishers, and for practice afterwards.
 The **raw** sheet stores education level as codes 31–46. Recoding 16 codes with Find and replace
 takes 16 passes, and a lookup table takes one formula.
 
-1. Add a sheet named **lookup**. In A1 and B1 type `Code` and `Label`. Copy the codes and labels
-   from the README into A2:B17. [Codes TBD from the fixed README]{.tbd}
-2. On **raw**… [Decide: work on a copy of raw's education column, or add a codes column to
-   working.]{.tbd}
+1. Add a sheet named **lookup**. In A1 and B1 type `Code` and `Label`. In A2:B17, enter codes
+   31 to 46 and their labels: 31–38 No diploma, 39 High School, 40 Some college-no degree, 41–42
+   Associate's, 43 Bachelor's, 44 Master's, 45 Professional, 46 Doctoral.
+2. Make a copy of the **raw** sheet to practice on (right-click its tab > **Duplicate**).
+   Education level codes are in column E.
 3. In a helper column, enter this and fill it down:
 
    ```

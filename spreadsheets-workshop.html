@@ -2323,7 +2323,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ul>
 <li><strong>Work in your own copy of the workbook.</strong> <a href="#sec-setup" class="quarto-xref">Section 2</a> shows you how to make one.</li>
 <li><strong>Fell behind?</strong> Each section ends with a link to a catch-up copy of the workbook as it should look at that point.</li>
-<li><strong>Printed checklist:</strong> the steps without the explanations, to tick off as you go. <span class="tbd">Checklist link TBD</span></li>
+<li><strong>Printed checklist:</strong> the steps without the explanations, to tick off as you go. <a href="https://ncsu-libraries.github.io/intro-spreadsheets/spreadsheets-checklist.html">Open the checklist</a>, and print it from your browser.</li>
 </ul>
 </div>
 </div>
@@ -2397,7 +2397,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="about-the-data" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="about-the-data">About the data</h2>
-<p>The <a href="https://www.bls.gov/tus/">American Time Use Survey</a> (ATUS) is collected every year by the U.S. Bureau of Labor Statistics. Each respondent describes one day, activity by activity, and the survey records how many minutes they spent on each kind of activity. Our workbook has a random sample of <span class="tbd">2,000</span> respondents from <span class="tbd">2003–2023</span>, with a few demographic columns and a few activities.</p>
+<p>The <a href="https://www.bls.gov/tus/">American Time Use Survey</a> (ATUS) is collected every year by the U.S. Bureau of Labor Statistics. Each respondent describes one day, activity by activity, and the survey records how many minutes they spent on each kind of activity. Our workbook has a random sample of 2,000 respondents from 2003–2023, with a few demographic columns and a few activities.</p>
 <p>Two things to keep in mind about any result we get today:</p>
 <ul>
 <li><strong>It describes this sample, not the US population.</strong> ATUS supplies survey weights to make national estimates; we don’t use them.</li>
@@ -2517,7 +2517,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <section id="make-your-copy" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="make-your-copy"><span class="header-section-number">2.1</span> Make your copy</h2>
 <ol type="1">
-<li>Open the workbook: <span class="tbd">link TBD</span>. It opens view-only.</li>
+<li>Open the workbook: <a href="https://docs.google.com/spreadsheets/d/1A9IbG6Fm5DXdETl9tv0qm8pjV1LvKKRouo-V2oKVwF0/edit?usp=sharing">DSTI ATUS Data Working</a>. It opens view-only.</li>
 <li><strong>File &gt; Make a copy.</strong> Name it “[Your name] DSTI spreadsheets” and click <strong>Make a copy</strong>. Your copy opens in a new tab.</li>
 </ol>
 <div class="placeholder">
@@ -2533,7 +2533,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You’re probably signed in to a personal Google account, or not signed in. Switch to your NC State account (top right of the window) and try again. If it still fails, download the CSV from <span class="tbd">link TBD</span> and use <strong>File &gt; Import</strong> in a blank sheet.</p>
+<p>You’re probably signed in to a personal Google account, or not signed in. Switch to your NC State account (top right of the window) and try again. If it still fails, download <a href="https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx">the workbook file</a>, open a blank sheet, and use <strong>File &gt; Import &gt; Upload</strong>.</p>
 </div>
 </div>
 </section>
@@ -2668,7 +2668,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <div class="placeholder">
 <p><strong>GIF</strong> <code>images/setup-freeze-jump.gif</code>: freezing the header row, then jumping to the last row and back.</p>
 </div>
-<p>That answers question 1: <span class="tbd">2,000</span> respondents, one row each.</p>
+<p>The last row is 2007, so there are 2,006 rows of data. That answers question 1, almost: are they 2,006 different people? <a href="#sec-clean" class="quarto-xref">Section 5</a> finds out.</p>
 <p><strong>Selecting down to the last row.</strong> This guide writes a range that runs from a cell to the bottom of its column like this: <strong>W2:W</strong> means “W2 and everything below it”. To select one:</p>
 <ul>
 <li>Click the first cell (W2), then press <strong>Ctrl + Shift + ↓</strong> (Mac: <strong>Cmd + Shift + ↓</strong>). The selection runs down to the last filled cell. This works when the column has no empty cells.</li>
@@ -2849,7 +2849,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="recode-with-find-and-replace" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="recode-with-find-and-replace"><span class="header-section-number">4.4</span> Recode with Find and replace</h2>
-<p>The README gives Metropolitan’s codes: 1 = Metropolitan, 2 = Non-metropolitan, 3 = Not identified, -1 = blank (missing). <span class="tbd">Confirm codes</span></p>
+<p>The README gives Metropolitan’s codes: 1 = Metropolitan, 2 = Non-metropolitan, 3 = Not identified, -1 = blank (missing).</p>
 <ol type="1">
 <li>Click the column letter <strong>D</strong> to select the whole column.</li>
 <li><strong>Edit &gt; Find and replace</strong> (Windows: <strong>Ctrl + H</strong>; Mac: <strong>Cmd + Shift + H</strong>).</li>
@@ -2961,7 +2961,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="fix-inconsistent-text" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="fix-inconsistent-text"><span class="header-section-number">5.3</span> Fix inconsistent text</h2>
-<p>Sex should have two values, but its filter list shows more: <span class="tbd">Female, Femal, female, Male, MALE, Mole</span>. In a pivot table, R or Python, each version can count as a group of its own.</p>
+<p>Sex should have two values, but its filter list shows more: Female, Femal, female, Male, MALE and Mole. In a pivot table, R or Python, each version can count as a group of its own.</p>
 <p><strong>Typos</strong> (“Femal”, “Mole”): use Find and replace, as in <a href="#sec-understand" class="quarto-xref">Section 4</a>.</p>
 <ol type="1">
 <li>Select column <strong>G</strong>. <strong>Edit &gt; Find and replace.</strong></li>
@@ -3023,7 +3023,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="fix-numbers-stored-as-text" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="fix-numbers-stored-as-text"><span class="header-section-number">5.4</span> Fix numbers stored as text</h2>
-<p>Look at column <strong>O</strong> (food and drink prep). Some values sit on the left: they’re text, and sums will skip them. <span class="tbd">Planted problem TBD: quotation marks or apostrophes</span></p>
+<p>Look at column <strong>O</strong> (food and drink prep). Some values sit on the left, with quotation marks around them (<code>&quot;30&quot;</code>): they’re text, and sums will skip them.</p>
 <ol type="1">
 <li>Select column O. <strong>Edit &gt; Find and replace.</strong> Find <code>&quot;</code> and replace with nothing, in this range only. <strong>Replace all.</strong></li>
 <li><strong>Format &gt; Number &gt; Number.</strong> The values move to the right.</li>
@@ -3043,7 +3043,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><code>=AVERAGE(working!K2:K)</code></li>
 <li><code>=AVERAGEIF(working!K2:K, &quot;&gt;=0&quot;)</code></li>
 </ul>
-<p>The first treats -1 and -4 as numbers of hours and drags the average down: <span class="tbd">values TBD</span>.</p>
+<p>The first treats -1 and -4 as numbers of hours and drags the average down: about 23 hours, against about 40 for the people who reported their hours.</p>
 <p>What to do with codes like these:</p>
 <ul>
 <li><strong>Keep the code, and flag it</strong> in a column, so every analysis can include or exclude it on purpose. That’s what we’ll do.</li>
@@ -3095,7 +3095,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>The red triangles on Age (from <a href="#sec-entry" class="quarto-xref">Section 3</a>) mark values outside the allowed range. For a quick overview of any column, select it and use <strong>Data &gt; Column stats</strong>, which shows the minimum, maximum and a distribution.</p>
 <p>One example shows the whole process. For a flagged value, decide whether it’s an error, a code, or real:</p>
 <ul>
-<li><strong>Age 150:</strong> impossible. An entry error.</li>
+<li><strong>Age 150:</strong> impossible. An entry error. The <strong>raw</strong> sheet is the source here: find this Case there (<strong>Ctrl/Cmd + F</strong>) and you’ll see the real age, 33. Correct it, and log it.</li>
 <li><strong>Age 80 and 85:</strong> real, but not exact. ATUS <em>top-codes</em> age: everyone 80–84 is recorded as 80, and 85 or older as 85. Check the documentation before you “fix” a value that looks odd.</li>
 </ul>
 <p>What to do with a confirmed error: correct it from the source if you can; otherwise make the cell empty and log it. Don’t delete the whole row without recording why.</p>
@@ -3115,8 +3115,9 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>In <strong>X1</strong> type <code>ID count</code>. In <strong>X2</strong> type <code>=COUNTIF(A:A, A2)</code>. Fill down.</li>
 <li>Filter column X for values greater than 1 to see every repeated Case ID.</li>
-<li>For exact duplicates: select the data, <strong>Data &gt; Data cleanup &gt; Remove duplicates</strong>, tick <strong>Data has header row</strong>, and choose which columns must match (all of them, for exact duplicates). Sheets reports how many rows it removed: <span class="tbd">TBD</span>.</li>
-<li>Clear column X. Log what you removed.</li>
+<li>For exact duplicates: select the data, <strong>Data &gt; Data cleanup &gt; Remove duplicates</strong>, tick <strong>Data has header row</strong>, and choose which columns must match (all of them, for exact duplicates). Sheets reports how many rows it removed: 5.</li>
+<li>Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and 73). Find that Case in <strong>raw</strong>: the real age is 37. Right-click the row with 73 &gt; <strong>Delete row</strong>.</li>
+<li>Clear column X. Log what you removed. The sheet now has 2,000 rows: 2,000 different people.</li>
 </ol>
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/clean-remove-duplicates.png</code>: the Remove duplicates dialog with Data has header row checked.</p>
@@ -3283,7 +3284,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </tr>
 </tbody>
 </table>
-<p>Compare the average and the median for chores: <span class="tbd">about 75 vs. about 30 minutes</span>. When many people report 0 and a few report a lot, the average gets pulled up. The median is the middle person, so it’s often the better summary for minutes. That answers question 3.</p>
+<p>Compare the average and the median for chores: about 74 vs. 30 minutes. When many people report 0 and a few report a lot, the average gets pulled up. The median is the middle person, so it’s often the better summary for minutes. That answers question 3.</p>
 </section>
 <section id="pivot-tables" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="pivot-tables"><span class="header-section-number">7.4</span> Pivot tables</h2>
@@ -3291,20 +3292,20 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>Click any cell in <strong>working</strong>. <strong>Insert &gt; Pivot table</strong>, <strong>New sheet</strong>, <strong>Create</strong>.</li>
 <li><strong>Rows: Add &gt; Age group.</strong> <strong>Values: Add &gt; Case</strong>, summarized by <strong>COUNTA</strong>. That’s how many people are in each age group.</li>
-<li><strong>Values: Add &gt; Leisure (mins)</strong>, summarized by <strong>AVERAGE</strong>. Question 4: does leisure change with age? <span class="tbd">Result TBD</span></li>
+<li><strong>Values: Add &gt; Leisure (mins)</strong>, summarized by <strong>AVERAGE</strong>. Question 4: does leisure change with age? Yes: average leisure is lowest at 25–34 (about 190 minutes) and highest at 65+ (about 360).</li>
 </ol>
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/explore-pivot-age.png</code>: the pivot table editor with Age group in Rows, Case ID (COUNTA) and Leisure (AVERAGE) in Values, and the resulting table.</p>
 </div>
 <p>Keep the count next to the average. An average of 5 people is much less certain than an average of 500.</p>
-<p><strong>Question 5:</strong> make a second pivot table with <strong>Rows: Children group</strong> and <strong>Values:</strong> average <strong>Chores (mins)</strong> and average <strong>Leisure (mins)</strong>, side by side. <span class="tbd">Result TBD</span></p>
+<p><strong>Question 5:</strong> make a second pivot table with <strong>Rows: Children group</strong> and <strong>Values:</strong> average <strong>Chores (mins)</strong> and average <strong>Leisure (mins)</strong>, side by side. From no children to 3+, chores rise from about 66 to 117 minutes and leisure falls from about 298 to 174.</p>
 <p><strong>Question 6:</strong> people with more education report less leisure. Is that education, or work?</p>
 <ol type="1">
-<li>Make a third pivot table. <strong>Rows: Education level.</strong> <strong>Values:</strong> average <strong>Leisure (mins)</strong>. The gap: <span class="tbd">TBD</span>.</li>
+<li>Make a third pivot table. <strong>Rows: Education level.</strong> <strong>Values:</strong> average <strong>Leisure (mins)</strong>. The gap: about 305 minutes for no diploma, against 177 to 193 for master’s and professional degrees. (Doctoral, at 260, is only 32 people.)</li>
 <li>Add <strong>Columns: Work status.</strong> Now each education level is split by whether people work.</li>
-<li>Compare the <strong>Full time</strong> column across education levels. <span class="tbd">Result TBD: the gap almost disappears.</span></li>
+<li>Compare the <strong>Full time</strong> column across education levels. The steady drop is gone: full-time workers at every level report roughly 170 to 235 minutes, with no pattern by degree.</li>
 </ol>
-<p>Much of the education difference comes from who is working: <span class="tbd">a higher share of people with less education are not working (-1)</span>. The answer depends on a cleaning decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>Cleaning decisions change conclusions,</strong> which is why they go in the log.</p>
+<p>Much of the education difference comes from who is working: 64% of people with no diploma have work hours of -1 (not working), against about 26–29% with a bachelor’s or master’s. The answer depends on a cleaning decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>Cleaning decisions change conclusions,</strong> which is why they go in the log.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3372,7 +3373,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>What to notice:</p>
 <ul>
 <li>The curve (the average) is flat until about 40, then rises.</li>
-<li>People vary enormously around it: R² is <span class="tbd">about 0.10</span>, so age accounts for only about a tenth of the variation in leisure.</li>
+<li>People vary enormously around it: R² is about 0.1, so age accounts for only about a tenth of the variation in leisure.</li>
 <li>The dense columns at 80 and 85 are the top-coded ages from <a href="#sec-clean" class="quarto-xref">Section 5</a>.</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -3432,7 +3433,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There are <span class="tbd">1,137</span> people with no children and <span class="tbd">180</span> with 3+. In counts, the no-children bars are taller in almost every bin, just because the group is bigger. In percentages, <span class="tbd">47%</span> of people with 3+ children report under 2 hours of leisure, against <span class="tbd">19%</span> with no children. Counts compare group sizes; percentages compare shapes.</p>
+<p>There are 1,137 people with no children and 180 with 3+. In counts, the no-children bars are taller in almost every bin, just because the group is bigger. In percentages, 47% of people with 3+ children report under 2 hours of leisure, against 19% with no children. Counts compare group sizes; percentages compare shapes.</p>
 <p>Sheets’ own <strong>Histogram</strong> chart type can draw two groups, but it only counts, so it misleads in exactly this way.</p>
 </div>
 </div>
@@ -3546,8 +3547,8 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <h2 class="unnumbered anchored" data-anchor-id="recode-education-levels-with-a-lookup-table">Recode education levels with a lookup table</h2>
 <p>The <strong>raw</strong> sheet stores education level as codes 31–46. Recoding 16 codes with Find and replace takes 16 passes, and a lookup table takes one formula.</p>
 <ol type="1">
-<li><p>Add a sheet named <strong>lookup</strong>. In A1 and B1 type <code>Code</code> and <code>Label</code>. Copy the codes and labels from the README into A2:B17. <span class="tbd">Codes TBD from the fixed README</span></p></li>
-<li><p>On <strong>raw</strong>… <span class="tbd">Decide: work on a copy of raw’s education column, or add a codes column to working.</span></p></li>
+<li><p>Add a sheet named <strong>lookup</strong>. In A1 and B1 type <code>Code</code> and <code>Label</code>. In A2:B17, enter codes 31 to 46 and their labels: 31–38 No diploma, 39 High School, 40 Some college-no degree, 41–42 Associate’s, 43 Bachelor’s, 44 Master’s, 45 Professional, 46 Doctoral.</p></li>
+<li><p>Make a copy of the <strong>raw</strong> sheet to practice on (right-click its tab &gt; <strong>Duplicate</strong>). Education level codes are in column E.</p></li>
 <li><p>In a helper column, enter this and fill it down:</p>
 <pre><code>=XLOOKUP(E2, lookup!$A$2:$A$17, lookup!$B$2:$B$17)</code></pre></li>
 </ol>

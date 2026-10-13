@@ -32,12 +32,12 @@ Section numbers match the guide. When a step changes in the guide, change it her
 Print from the browser (File > Print); each section starts on a new page.
 -->
 
-Full steps and explanations: the guide at [link TBD]{.tbd}. Mac users: **Cmd** where this says
+Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro-spreadsheets/. Mac users: **Cmd** where this says
 **Ctrl**.
 
 # 2. Set up your workbook
 
-- [ ] Open the workbook link and **File > Make a copy**. Name it "[Your name] DSTI spreadsheets".
+- [ ] Open the workbook (link in the guide, section 2) and **File > Make a copy**. Name it "[Your name] DSTI spreadsheets".
 - [ ] Find the three sheets: **README**, **raw** (never edit), **working**.
 - [ ] On **working**: **View > Freeze > 1 row**.
 - [ ] **Ctrl + ↓** in column A to find the last row. Respondents: ______
@@ -80,12 +80,13 @@ Full steps and explanations: the guide at [link TBD]{.tbd}. Mac users: **Cmd** w
       Difference: ______
 - [ ] **W1** `Work hours missing`, **W2** `=OR(K2=-1, K2=-4)`, fill down.
 - [ ] Log the missing-value decision on **README**.
-- [ ] Check Age with **Data > Column stats**. Age 150: error, so empty it and log it. Ages 80 and 85:
+- [ ] Check Age with **Data > Column stats**. Age 150: error; look up the Case in **raw** (age 33), correct it and log it. Ages 80 and 85:
       real (top-coded), so leave them.
 - [ ] **X2** `=COUNTIF(A:A, A2)`, fill down, filter for values over 1.
 - [ ] **Data > Data cleanup > Remove duplicates** (header row checked, all columns). Rows removed:
       ______
-- [ ] Clear column X. Log the duplicates.
+- [ ] One Case is still listed twice (Age 37 vs. 73): check **raw** (37), delete the 73 row.
+- [ ] Clear column X. Log the duplicates. Rows left: 2,000.
 
 Catch-up copy: [link TBD]{.tbd}
 
