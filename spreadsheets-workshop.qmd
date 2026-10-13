@@ -236,7 +236,7 @@ The `working` sheet's columns, for reference:
 | I | Labor force status | Employed, unemployed, or not in the labor force | Ready |
 | J | Enrolled in school | Enrolled in high school, college or university (asked only of ages 15–49) | Ready |
 | K | TEHRUSLT | Hours usually worked per week | Header not renamed; uses missing codes (@sec-clean) |
-| L | Sleep (mins) | Minutes sleeping on the diary day | A few missing values (@sec-clean) |
+| L | Sleep (mins) | Minutes sleeping on the diary day | Ready |
 | M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores | Ready, except O (@sec-clean) |
 | Q–R | Eating and Drinking, Grocery Shopping (mins) | Neither chores nor leisure | Ready |
 | S–V | Reading, Playing games, TV and Movies, Socializing (mins) | Leisure | Ready |
