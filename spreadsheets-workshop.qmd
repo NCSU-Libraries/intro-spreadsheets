@@ -598,7 +598,8 @@ There's more than one kind of "missing", and they mean different things. Look at
 week** (column K) and the README:
 
 - **Empty cell:** no value recorded.
-- **-1:** blank in the survey. For this question it mostly means the person isn't working.
+- **-1:** not asked. ATUS asks about work hours only of people who are employed, so -1 means the
+  person isn't employed.
 - **-4:** hours vary.
 - **0:** a real zero.
 
