@@ -2540,9 +2540,10 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <section id="whats-in-the-workbook" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="whats-in-the-workbook"><span class="header-section-number">2.2</span> What’s in the workbook</h2>
 <ul>
-<li><strong>README</strong>: the data dictionary (what each column means and what its codes are) and a <strong>cleaning log</strong> where you’ll record what you change.</li>
+<li><strong>README</strong>: the data dictionary: what each column means, its allowed values, and what its codes are.</li>
 <li><strong>raw</strong>: the data as it came from ATUS. <strong>Never edit this sheet.</strong></li>
 <li><strong>working</strong>: a copy we’ll clean and analyze. Some of it has already been tidied, the way you might receive data from a collaborator. The rest is up to you.</li>
+<li><strong>log</strong>: the cleaning log, where you record each change you make: the date, the column, what changed and why.</li>
 </ul>
 <p>The <code>working</code> sheet’s columns, for reference:</p>
 <table class="caption-top table">
@@ -2638,13 +2639,13 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <td>M–P</td>
 <td>Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins)</td>
 <td>Household chores</td>
-<td>Ready, except O (<a href="#sec-clean" class="quarto-xref">Section 5</a>)</td>
+<td>A few numbers stored as text in O (<a href="#sec-clean" class="quarto-xref">Section 5</a>)</td>
 </tr>
 <tr class="even">
 <td>Q–R</td>
 <td>Eating and Drinking, Grocery Shopping (mins)</td>
 <td>Neither chores nor leisure</td>
-<td>Ready</td>
+<td>A few numbers stored as text in Q (<a href="#sec-clean" class="quarto-xref">Section 5</a>)</td>
 </tr>
 <tr class="odd">
 <td>S–V</td>
@@ -2655,7 +2656,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </tbody>
 </table>
 <div class="placeholder">
-<p><strong>Screenshot</strong> <code>images/setup-three-sheets.png</code>: the bottom of the window showing the README, raw and working tabs.</p>
+<p><strong>Screenshot</strong> <code>images/setup-three-sheets.png</code>: the bottom of the window showing the raw, README, working and log tabs.</p>
 </div>
 </section>
 <section id="find-your-way-around-the-data" class="level2" data-number="2.3">
@@ -2835,7 +2836,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>Click cell <strong>H1</strong> and type <code>Number of children</code>.</li>
 <li>Click cell <strong>K1</strong> and type <code>Work hours per week</code>.</li>
-<li>Add both changes to the cleaning log on <strong>README</strong>.</li>
+<li>Add both changes to the <strong>log</strong> sheet.</li>
 </ol>
 </section>
 <section id="codes-or-labels" class="level2" data-number="4.3">
@@ -2858,7 +2859,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>Check <strong>Match entire cell contents</strong>.</li>
 <li><strong>Replace all.</strong> The dialog says how many cells changed.</li>
 <li>Repeat for <code>1</code> → <code>Metropolitan</code>, <code>2</code> → <code>Non-metropolitan</code> and <code>3</code> → <code>Not identified</code>.</li>
-<li>Log the recode on <strong>README</strong>.</li>
+<li>Log the recode on the <strong>log</strong> sheet.</li>
 </ol>
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/understand-find-replace.png</code>: the Find and replace dialog with Specific range, the E column range and Match entire cell contents checked.</p>
@@ -2986,7 +2987,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>In <strong>W1</strong> type <code>helper</code>. In <strong>W2</strong> type <code>=PROPER(G2)</code>.</li>
 <li>Fill down: double-click the <strong>fill handle</strong>, the small blue square at the bottom right of the selected cell. <span class="tbd">Confirm: square or circle?</span> Sheets copies the formula down to the last row of the data.</li>
 <li>Select <strong>W2:W</strong> (click W2, then <strong>Ctrl/Cmd + Shift + ↓</strong>), copy, click <strong>G2</strong>, then <strong>Edit &gt; Paste special &gt; Values only</strong> (<strong>Ctrl/Cmd + Shift + V</strong>). Start at row 2 so the header isn’t overwritten.</li>
-<li>Clear column W. Log the fix on <strong>README</strong>.</li>
+<li>Clear column W. Log the fix on the <strong>log</strong> sheet.</li>
 </ol>
 <p><code>UPPER()</code> and <code>LOWER()</code> work the same way. Pick one convention per column and stick to it.</p>
 <p><strong>Spelling variants</strong> in Education level (“Bachelors”, “Masters”): open its filter list to find them, then use Find and replace on column E (<strong>Match entire cell contents</strong> checked): <code>Bachelors</code> → <code>Bachelor&#39;s</code> and <code>Masters</code> → <code>Master&#39;s</code>.</p>
@@ -3023,11 +3024,26 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="fix-numbers-stored-as-text" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="fix-numbers-stored-as-text"><span class="header-section-number">5.4</span> Fix numbers stored as text</h2>
-<p>Look at column <strong>O</strong> (food and drink prep). Some values sit on the left, with quotation marks around them (<code>&quot;30&quot;</code>): they’re text, and sums will skip them.</p>
+<p>Look at columns <strong>O</strong> (food and drink prep) and <strong>Q</strong> (eating and drinking). A few values sit on the left: they’re text, so sums and averages skip them. Two have quotation marks around them (<code>&quot;300&quot;</code>), and two have a unit typed in (<code>0min</code>, <code>120 min</code>), one of the common problems from <a href="#sec-intro" class="quarto-xref">Section 1</a>.</p>
 <ol type="1">
-<li>Select column O. <strong>Edit &gt; Find and replace.</strong> Find <code>&quot;</code> and replace with nothing, in this range only. <strong>Replace all.</strong></li>
-<li><strong>Format &gt; Number &gt; Number.</strong> The values move to the right.</li>
+<li>Select <strong>O2:Q</strong> (start at row 2). <strong>Edit &gt; Find and replace</strong>, <strong>Search: Specific range</strong>.</li>
+<li>Find <code>&quot;</code> and replace with nothing. <strong>Replace all.</strong></li>
+<li>Find <code>min</code> (with a space before it) and replace with nothing. <strong>Replace all.</strong> Then do the same for <code>min</code> without the space.</li>
+<li><strong>Format &gt; Number &gt; Number.</strong> The values move to the right. <span class="tbd">Confirm in the dry run that they become numbers.</span></li>
 </ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Gotcha: leave the header out of the range
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The headers in these columns end in “(mins)”. Replacing <code>min</code> in the whole column would turn “Food and drink prep (mins)” into “Food and drink prep (s)”. Starting the range at row 2 keeps the header safe.</p>
+</div>
+</div>
 </section>
 <section id="missing-values-why-and-how" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="missing-values-why-and-how"><span class="header-section-number">5.5</span> Missing values: why and how</h2>
@@ -3053,7 +3069,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>In <strong>W1</strong> type <code>Work hours missing</code>. In <strong>W2</strong> type <code>=OR(K2=-1, K2=-4)</code>.</li>
 <li>Fill down. Each row now says TRUE or FALSE, a flag you can filter and count.</li>
-<li>Log your decision on <strong>README</strong>.</li>
+<li>Log your decision on the <strong>log</strong> sheet.</li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -3206,7 +3222,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>IFS</code> stops at the first true condition. If “Part time” (<code>K2&gt;=0</code>) came before the missing codes, -1 would never be checked. And decide where boundaries go: is 35 hours full time (<code>&gt;=</code>) or part time (<code>&gt;</code>)? Write the decision on the README.</p>
+<p><code>IFS</code> stops at the first true condition. If “Part time” (<code>K2&gt;=0</code>) came before the missing codes, -1 would never be checked. And decide where boundaries go: is 35 hours full time (<code>&gt;=</code>) or part time (<code>&gt;</code>)? Write the decision in the <strong>log</strong> sheet.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -3508,7 +3524,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <h1 data-number="9"><span class="header-section-number">9</span> Wrapping up</h1>
 <section id="take-your-data-with-you" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="take-your-data-with-you"><span class="header-section-number">9.1</span> Take your data with you</h2>
-<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> too: the data dictionary and your cleaning log belong with the data.</p>
+<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> and <strong>log</strong> too: the data dictionary and your cleaning log belong with the data.</p>
 </section>
 <section id="what-we-did" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="what-we-did"><span class="header-section-number">9.2</span> What we did</h2>

@@ -215,11 +215,13 @@ sheet, and use **File > Import > Upload**.
 
 ## What's in the workbook
 
-- **README**: the data dictionary (what each column means and what its codes are) and a
-  **cleaning log** where you'll record what you change.
+- **README**: the data dictionary: what each column means, its allowed values, and what its codes
+  are.
 - **raw**: the data as it came from ATUS. **Never edit this sheet.**
 - **working**: a copy we'll clean and analyze. Some of it has already been tidied, the way you
   might receive data from a collaborator. The rest is up to you.
+- **log**: the cleaning log, where you record each change you make: the date, the column, what
+  changed and why.
 
 The `working` sheet's columns, for reference:
 
@@ -237,15 +239,15 @@ The `working` sheet's columns, for reference:
 | J | Enrolled in school | Enrolled in high school, college or university. Asked only of ages 15–49; "Blank" means not asked | Ready (not used today) |
 | K | TEHRUSLT | Hours usually worked per week | Header not renamed; uses missing codes (@sec-clean) |
 | L | Sleep (mins) | Minutes sleeping on the diary day | Ready |
-| M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores | Ready, except O (@sec-clean) |
-| Q–R | Eating and Drinking, Grocery Shopping (mins) | Neither chores nor leisure | Ready |
+| M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores | A few numbers stored as text in O (@sec-clean) |
+| Q–R | Eating and Drinking, Grocery Shopping (mins) | Neither chores nor leisure | A few numbers stored as text in Q (@sec-clean) |
 | S–V | Reading, Playing games, TV and Movies, Socializing (mins) | Leisure | Ready |
 
 : The `working` sheet's columns. New columns you make go to the right, starting at W.
 
 ::: {.placeholder}
-**Screenshot** `images/setup-three-sheets.png`: the bottom of the window showing the README, raw
-and working tabs.
+**Screenshot** `images/setup-three-sheets.png`: the bottom of the window showing the raw, README,
+working and log tabs.
 :::
 
 ## Find your way around the data
@@ -410,7 +412,7 @@ there. Pick one style and use it for every column.
 
 1. Click cell **H1** and type `Number of children`.
 2. Click cell **K1** and type `Work hours per week`.
-3. Add both changes to the cleaning log on **README**.
+3. Add both changes to the **log** sheet.
 
 ## Codes or labels?
 
@@ -437,7 +439,7 @@ The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3
 5. Check **Match entire cell contents**.
 6. **Replace all.** The dialog says how many cells changed.
 7. Repeat for `1` → `Metropolitan`, `2` → `Non-metropolitan` and `3` → `Not identified`.
-8. Log the recode on **README**.
+8. Log the recode on the **log** sheet.
 
 ::: {.placeholder}
 **Screenshot** `images/understand-find-replace.png`: the Find and replace dialog with Specific
@@ -552,7 +554,7 @@ Without **Match entire cell contents**, replacing "Femal" with "Female" also cha
 3. Select **W2:W** (click W2, then **Ctrl/Cmd + Shift + ↓**), copy, click **G2**, then
    **Edit > Paste special > Values only**
    (**Ctrl/Cmd + Shift + V**). Start at row 2 so the header isn't overwritten.
-4. Clear column W. Log the fix on **README**.
+4. Clear column W. Log the fix on the **log** sheet.
 
 `UPPER()` and `LOWER()` work the same way. Pick one convention per column and stick to it.
 
@@ -585,12 +587,24 @@ together; check whether pivot tables do, and reword this section.]{.tbd}
 
 ## Fix numbers stored as text
 
-Look at column **O** (food and drink prep). Some values sit on the left, with quotation marks around
-them (`"30"`): they're text, and sums will skip them.
+Look at columns **O** (food and drink prep) and **Q** (eating and drinking). A few values sit on the
+left: they're text, so sums and averages skip them. Two have quotation marks around them (`"300"`),
+and two have a unit typed in (`0min`, `120 min`), one of the common problems from @sec-intro.
 
-1. Select column O. **Edit > Find and replace.** Find `"` and replace with nothing, in this range
-   only. **Replace all.**
-2. **Format > Number > Number.** The values move to the right.
+1. Select **O2:Q** (start at row 2). **Edit > Find and replace**, **Search: Specific range**.
+2. Find `"` and replace with nothing. **Replace all.**
+3. Find ` min` (with a space before it) and replace with nothing. **Replace all.** Then do the same
+   for `min` without the space.
+4. **Format > Number > Number.** The values move to the right. [Confirm in the dry run that they
+   become numbers.]{.tbd}
+
+::: {.callout-warning}
+## Gotcha: leave the header out of the range
+
+The headers in these columns end in "(mins)". Replacing `min` in the whole column would turn
+"Food and drink prep (mins)" into "Food and drink prep (s)". Starting the range at row 2 keeps the
+header safe.
+:::
 
 ## Missing values: why and how
 
@@ -621,7 +635,7 @@ What to do with codes like these:
 
 1. In **W1** type `Work hours missing`. In **W2** type `=OR(K2=-1, K2=-4)`.
 2. Fill down. Each row now says TRUE or FALSE, a flag you can filter and count.
-3. Log your decision on **README**.
+3. Log your decision on the **log** sheet.
 
 ::: {.callout-warning}
 ## Gotcha: a flag goes in a column, not in a color
@@ -776,7 +790,7 @@ with the settings sheet's B1 visible or highlighted.
 
 `IFS` stops at the first true condition. If "Part time" (`K2>=0`) came before the missing codes,
 -1 would never be checked. And decide where boundaries go: is 35 hours full time (`>=`) or part
-time (`>`)? Write the decision on the README.
+time (`>`)? Write the decision in the **log** sheet.
 :::
 
 ::: {.callout-tip}
@@ -1009,7 +1023,7 @@ standard deviation for the whole series, not a separate value for each bar.
 ## Take your data with you
 
 **File > Download > Comma-separated values (.csv)** saves the current sheet as a CSV, which opens
-in R, Python, SPSS, Stata and almost everything else. Download **README** too: the data dictionary
+in R, Python, SPSS, Stata and almost everything else. Download **README** and **log** too: the data dictionary
 and your cleaning log belong with the data.
 
 ## What we did
