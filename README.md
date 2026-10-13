@@ -8,7 +8,6 @@ This is a draft. The guide, checklist and slides are still being written.
 
 - `spreadsheets-workshop.qmd`: the guide we work from in the session.
 - `spreadsheets-checklist.qmd`: the steps only, to print.
-- `slides.qmd`: the short opening and closing slides.
 
 Render any of them with `quarto render <file>.qmd`.
 
