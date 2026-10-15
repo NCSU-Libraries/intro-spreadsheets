@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Working with Spreadsheets"
-subtitle: "Cleaning, exploring and charting research data in Google Sheets"
+subtitle: "Preparing, exploring and charting research data in Google Sheets"
 author: "NC State University Libraries — Data Science Services"
 date: today
 format:
@@ -53,8 +53,8 @@ catch up if you fall behind, and come back to it later.
 # Welcome {.unnumbered}
 
 Spreadsheets are where a lot of research data starts: survey exports, lab measurements, field
-sheets, downloads from a database. Before you can analyze that data you have to understand it,
-clean it and reshape it. Today we do all of that in Google Sheets with a real dataset, the American
+sheets, downloads from a database. Before you can analyze that data you have to prepare it:
+understand it, fix its problems and reshape it. Today we do all of that in Google Sheets with a real dataset, the American
 Time Use Survey, and use it to answer one question that gets sharper as we go:
 
 **How do people split their day between household chores and leisure?**
@@ -216,9 +216,9 @@ sheet, and use **File > Import > Upload**.
 - **README**: the data dictionary: what each column means, its allowed values, and what its codes
   are.
 - **raw**: the data as it came from ATUS. **Never edit this sheet.**
-- **working**: a copy we'll clean and analyze. Some of it has already been tidied, the way you
+- **working**: a copy we'll prepare and analyze. Some of it has already been tidied, the way you
   might receive data from a collaborator. The rest is up to you.
-- **log**: the cleaning log, where you record each change you make: the date, the column, what
+- **log**: where you record each change you make: the date, the column, what
   changed and why.
 
 The `working` sheet's columns, for reference:
@@ -275,7 +275,7 @@ its column like this: **W2:W** means "W2 and everything below it". To select one
 ## Extra: protect the raw sheet
 
 Right-click the **raw** tab > **Protect sheet**. You can then choose who may edit it, or have
-Sheets warn anyone (including you) who tries. It's a guard against the classic accident of cleaning
+Sheets warn anyone (including you) who tries. It's a guard against the classic accident of editing
 the wrong sheet.
 :::
 
@@ -283,7 +283,7 @@ the wrong sheet.
 ## Extra: version history
 
 **File > Version history > See version history** shows every saved version of the workbook and
-who changed what. You can name a version ("before cleaning") and restore it. Day 1 of the
+who changed what. You can name a version ("before preparing") and restore it. Day 1 of the
 intensive covered version control in more depth.
 :::
 
@@ -292,6 +292,12 @@ intensive covered version control in more depth.
 # Entering data well {#sec-entry}
 
 > **Question 2:** Can we trust these values? (Sections 3 to 5.)
+
+**Data preparation** is everything you do to get data from the form it arrives in to a form you can
+analyze: setting rules for what's allowed, making it understandable, and finding and fixing its
+problems. Sections 3 to 5 are all preparation. You'll also hear it called data cleaning, wrangling,
+tidying or munging, and some people use "cleaning" for just the fixing part. This guide says
+*preparing* for all of it.
 
 Most data problems start at data entry. Knowing what kind of data each column holds, and telling
 Sheets what's allowed, catches mistakes before they spread. The same rules also find mistakes
@@ -388,7 +394,7 @@ sheet.
 
 # Making data understandable {#sec-understand}
 
-Before you can clean data, you have to know what it means. That starts with the data dictionary,
+Before you can fix data, you have to know what it means. That starts with the data dictionary,
 and with column names and values that a person can read.
 
 ## Read the data dictionary
@@ -465,7 +471,7 @@ Metropolitan recoded, and red validation triangles still showing.
 
 ------------------------------------------------------------------------
 
-# Making data usable: cleaning {#sec-clean}
+# Making data usable {#sec-clean}
 
 > **Question 2, continued:** Can we trust these values?
 
@@ -686,7 +692,7 @@ Flag first, then decide:
 header row checked.
 :::
 
-**Checkpoint.** The `working` sheet is now clean.
+**Checkpoint.** The `working` sheet is now ready to analyze.
 
 ------------------------------------------------------------------------
 
@@ -860,9 +866,9 @@ from about 66 to 117 minutes and leisure falls from about 298 to 174.
    workers at every level report roughly 170 to 235 minutes, with no pattern by degree.
 
 Much of the education difference comes from who is working: 64% of people with no diploma have
-work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer depends on a cleaning decision from @sec-clean:
-reading -1 as "not working", rather than dropping it or treating it as 0. **Cleaning decisions
-change conclusions,** which is why they go in the log.
+work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer depends on a decision from @sec-clean:
+reading -1 as "not working", rather than dropping it or treating it as 0. **How you prepare data
+changes your conclusions,** which is why every decision goes in the log.
 
 ::: {.callout-warning}
 ## Gotcha: a pivot table only sees its range
@@ -1015,7 +1021,7 @@ standard deviation for the whole series, not a separate value for each bar.
 
 **File > Download > Comma-separated values (.csv)** saves the current sheet as a CSV, which opens
 in R, Python, SPSS, Stata and almost everything else. Download **README** and **log** too: the data dictionary
-and your cleaning log belong with the data.
+and your log belong with the data.
 
 ## What we did
 
@@ -1023,13 +1029,14 @@ and your cleaning log belong with the data.
 
 - Kept the raw data untouched and worked on a copy.
 - Used the data dictionary to rename, recode and write validation rules.
-- Cleaned text, spaces, numbers stored as text, missing-value codes, out-of-range values
+- Fixed text, spaces, numbers stored as text, missing-value codes, out-of-range values
   and duplicates.
 - Made new variables with formulas.
 - Summarized with pivot tables.
 - Charted distributions.
 
-And the main lesson: **cleaning decisions change conclusions.** Write them down.
+And the main lesson: **how you prepare data changes your conclusions.** Write down every
+decision.
 
 ## Where to go next
 

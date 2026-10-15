@@ -64,7 +64,7 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 
 **Break.**
 
-# 5. Making data usable: cleaning
+# 5. Making data usable
 
 - [ ] **Data > Create a filter.** Open the Sex filter and read the value list.
 - [ ] Fix typos in column **G** with Find and replace (**Match entire cell contents**):

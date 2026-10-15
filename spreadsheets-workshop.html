@@ -2214,7 +2214,7 @@ pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
   <li><a href="#codes-or-labels" id="toc-codes-or-labels" class="nav-link" data-scroll-target="#codes-or-labels"><span class="header-section-number">4.3</span> Codes or labels?</a></li>
   <li><a href="#recode-with-find-and-replace" id="toc-recode-with-find-and-replace" class="nav-link" data-scroll-target="#recode-with-find-and-replace"><span class="header-section-number">4.4</span> Recode with Find and replace</a></li>
   </ul></li>
-  <li><a href="#sec-clean" id="toc-sec-clean" class="nav-link" data-scroll-target="#sec-clean"><span class="header-section-number">5</span> Making data usable: cleaning</a>
+  <li><a href="#sec-clean" id="toc-sec-clean" class="nav-link" data-scroll-target="#sec-clean"><span class="header-section-number">5</span> Making data usable</a>
   <ul class="collapse">
   <li><a href="#filter-and-filter-views" id="toc-filter-and-filter-views" class="nav-link" data-scroll-target="#filter-and-filter-views"><span class="header-section-number">5.1</span> Filter, and filter views</a></li>
   <li><a href="#fix-inconsistent-text" id="toc-fix-inconsistent-text" class="nav-link" data-scroll-target="#fix-inconsistent-text"><span class="header-section-number">5.2</span> Fix inconsistent text</a></li>
@@ -2265,7 +2265,7 @@ pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Introduction to Working with Spreadsheets</h1>
-<p class="subtitle lead">Cleaning, exploring and charting research data in Google Sheets</p>
+<p class="subtitle lead">Preparing, exploring and charting research data in Google Sheets</p>
 </div>
 
 
@@ -2327,7 +2327,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome</h1>
-<p>Spreadsheets are where a lot of research data starts: survey exports, lab measurements, field sheets, downloads from a database. Before you can analyze that data you have to understand it, clean it and reshape it. Today we do all of that in Google Sheets with a real dataset, the American Time Use Survey, and use it to answer one question that gets sharper as we go:</p>
+<p>Spreadsheets are where a lot of research data starts: survey exports, lab measurements, field sheets, downloads from a database. Before you can analyze that data you have to prepare it: understand it, fix its problems and reshape it. Today we do all of that in Google Sheets with a real dataset, the American Time Use Survey, and use it to answer one question that gets sharper as we go:</p>
 <p><strong>How do people split their day between household chores and leisure?</strong></p>
 <p>By the end of this session you will be able to:</p>
 <ol type="1">
@@ -2540,8 +2540,8 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ul>
 <li><strong>README</strong>: the data dictionary: what each column means, its allowed values, and what its codes are.</li>
 <li><strong>raw</strong>: the data as it came from ATUS. <strong>Never edit this sheet.</strong></li>
-<li><strong>working</strong>: a copy we’ll clean and analyze. Some of it has already been tidied, the way you might receive data from a collaborator. The rest is up to you.</li>
-<li><strong>log</strong>: the cleaning log, where you record each change you make: the date, the column, what changed and why.</li>
+<li><strong>working</strong>: a copy we’ll prepare and analyze. Some of it has already been tidied, the way you might receive data from a collaborator. The rest is up to you.</li>
+<li><strong>log</strong>: where you record each change you make: the date, the column, what changed and why.</li>
 </ul>
 <p>The <code>working</code> sheet’s columns, for reference:</p>
 <table class="caption-top table">
@@ -2666,7 +2666,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Right-click the <strong>raw</strong> tab &gt; <strong>Protect sheet</strong>. You can then choose who may edit it, or have Sheets warn anyone (including you) who tries. It’s a guard against the classic accident of cleaning the wrong sheet.</p>
+<p>Right-click the <strong>raw</strong> tab &gt; <strong>Protect sheet</strong>. You can then choose who may edit it, or have Sheets warn anyone (including you) who tries. It’s a guard against the classic accident of editing the wrong sheet.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -2679,7 +2679,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>File &gt; Version history &gt; See version history</strong> shows every saved version of the workbook and who changed what. You can name a version (“before cleaning”) and restore it. Day 1 of the intensive covered version control in more depth.</p>
+<p><strong>File &gt; Version history &gt; See version history</strong> shows every saved version of the workbook and who changed what. You can name a version (“before preparing”) and restore it. Day 1 of the intensive covered version control in more depth.</p>
 </div>
 </div>
 <hr>
@@ -2690,6 +2690,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <blockquote class="blockquote">
 <p><strong>Question 2:</strong> Can we trust these values? (Sections 3 to 5.)</p>
 </blockquote>
+<p><strong>Data preparation</strong> is everything you do to get data from the form it arrives in to a form you can analyze: setting rules for what’s allowed, making it understandable, and finding and fixing its problems. Sections 3 to 5 are all preparation. You’ll also hear it called data cleaning, wrangling, tidying or munging, and some people use “cleaning” for just the fixing part. This guide says <em>preparing</em> for all of it.</p>
 <p>Most data problems start at data entry. Knowing what kind of data each column holds, and telling Sheets what’s allowed, catches mistakes before they spread. The same rules also find mistakes already in the data.</p>
 <section id="kinds-of-data" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="kinds-of-data"><span class="header-section-number">3.1</span> Kinds of data</h2>
@@ -2794,7 +2795,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="sec-understand" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Making data understandable</h1>
-<p>Before you can clean data, you have to know what it means. That starts with the data dictionary, and with column names and values that a person can read.</p>
+<p>Before you can fix data, you have to know what it means. That starts with the data dictionary, and with column names and values that a person can read.</p>
 <section id="read-the-data-dictionary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="read-the-data-dictionary"><span class="header-section-number">4.1</span> Read the data dictionary</h2>
 <p>Open <strong>README</strong> and read the row for each column: what it measures, its type, and what each code means. Then compare it with the data. A dictionary that doesn’t match its data is common, and it’s worth catching early.</p>
@@ -2871,7 +2872,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 </section>
 <section id="sec-clean" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Making data usable: cleaning</h1>
+<h1 data-number="5"><span class="header-section-number">5</span> Making data usable</h1>
 <blockquote class="blockquote">
 <p><strong>Question 2, continued:</strong> Can we trust these values?</p>
 </blockquote>
@@ -3114,7 +3115,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/clean-remove-duplicates.png</code>: the Remove duplicates dialog with Data has header row checked.</p>
 </div>
-<p><strong>Checkpoint.</strong> The <code>working</code> sheet is now clean.</p>
+<p><strong>Checkpoint.</strong> The <code>working</code> sheet is now ready to analyze.</p>
 <hr>
 </section>
 </section>
@@ -3302,7 +3303,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>Add <strong>Columns: Work status.</strong> Now each education level is split by whether people work.</li>
 <li>Compare the <strong>Full time</strong> column across education levels. The steady drop is gone: full-time workers at every level report roughly 170 to 235 minutes, with no pattern by degree.</li>
 </ol>
-<p>Much of the education difference comes from who is working: 64% of people with no diploma have work hours of -1 (not working), against about 26–29% with a bachelor’s or master’s. The answer depends on a cleaning decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>Cleaning decisions change conclusions,</strong> which is why they go in the log.</p>
+<p>Much of the education difference comes from who is working: 64% of people with no diploma have work hours of -1 (not working), against about 26–29% with a bachelor’s or master’s. The answer depends on a decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>How you prepare data changes your conclusions,</strong> which is why every decision goes in the log.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3514,7 +3515,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <h1 data-number="9"><span class="header-section-number">9</span> Wrapping up</h1>
 <section id="take-your-data-with-you" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="take-your-data-with-you"><span class="header-section-number">9.1</span> Take your data with you</h2>
-<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> and <strong>log</strong> too: the data dictionary and your cleaning log belong with the data.</p>
+<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> and <strong>log</strong> too: the data dictionary and your log belong with the data.</p>
 </section>
 <section id="what-we-did" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="what-we-did"><span class="header-section-number">9.2</span> What we did</h2>
@@ -3527,12 +3528,12 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ul>
 <li>Kept the raw data untouched and worked on a copy.</li>
 <li>Used the data dictionary to rename, recode and write validation rules.</li>
-<li>Cleaned text, spaces, numbers stored as text, missing-value codes, out-of-range values and duplicates.</li>
+<li>Fixed text, spaces, numbers stored as text, missing-value codes, out-of-range values and duplicates.</li>
 <li>Made new variables with formulas.</li>
 <li>Summarized with pivot tables.</li>
 <li>Charted distributions.</li>
 </ul>
-<p>And the main lesson: <strong>cleaning decisions change conclusions.</strong> Write them down.</p>
+<p>And the main lesson: <strong>how you prepare data changes your conclusions.</strong> Write down every decision.</p>
 </section>
 <section id="where-to-go-next" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="where-to-go-next"><span class="header-section-number">9.3</span> Where to go next</h2>
