@@ -2250,19 +2250,19 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox"><code>3</code> → <code>Not identified</code></label></li>
 </ul></li>
 <li><label><input type="checkbox">Log the recode on the <strong>log</strong> sheet.</label></li>
-<li><label><input type="checkbox">Select column <strong>A</strong>. <strong>Format &gt; Number &gt; Custom number format</strong>: <code>0</code>.</label></li>
 </ul>
-<p><strong>Break.</strong> Catch-up copy: <span class="tbd">link TBD</span></p>
+<p><strong>Break.</strong></p>
 </section>
 <section id="making-data-usable-cleaning" class="level1">
 <h1>5. Making data usable: cleaning</h1>
 <ul class="task-list">
 <li><label><input type="checkbox"><strong>Data &gt; Create a filter.</strong> Open the Sex filter and read the value list.</label></li>
-<li><label><input type="checkbox"><strong>Data &gt; Data cleanup &gt; Trim whitespace</strong> on the data.</label></li>
 <li><label><input type="checkbox">Fix typos in column <strong>G</strong> with Find and replace (<strong>Match entire cell contents</strong>): <code>Femal</code> → <code>Female</code>, <code>Mole</code> → <code>Male</code>.</label></li>
-<li><label><input type="checkbox">Fix capitalization: <strong>W2</strong> <code>=PROPER(G2)</code>, fill down, select <strong>W2:W</strong> (click W2, then <strong>Ctrl/Cmd + Shift + ↓</strong>), copy, paste values only into <strong>G2</strong>, clear W.</label></li>
+<li><label><input type="checkbox">Fix capitalization: <strong>W2</strong> <code>=PROPER(G2)</code>, fill down (double-click the blue circle), select <strong>W2:W</strong> (click W2, then <strong>Ctrl/Cmd + Shift + ↓</strong>), copy, paste values only into <strong>G2</strong>, clear W.</label></li>
+<li><label><input type="checkbox">Open the Education level filter and read the value list.</label></li>
+<li><label><input type="checkbox">Select all the data (<strong>Ctrl/Cmd + A</strong>). <strong>Data &gt; Data cleanup &gt; Trim whitespace.</strong> Cells trimmed: ______</label></li>
 <li><label><input type="checkbox">Fix spellings in column <strong>E</strong> with Find and replace (<strong>Match entire cell contents</strong>): <code>Bachelors</code> → <code>Bachelor&#39;s</code>, <code>Masters</code> → <code>Master&#39;s</code>.</label></li>
-<li><label><input type="checkbox">Select <strong>O2:Q</strong> (not the header). Find and replace: <code>&quot;</code> → nothing, <code>min</code> → nothing, <code>min</code> → nothing. Then <strong>Format &gt; Number &gt; Number</strong>.</label></li>
+<li><label><input type="checkbox">Select <strong>O2:Q</strong> (not the header). Find and replace: <code>&quot;</code> → nothing, <code>min</code> → nothing, <code>min</code> → nothing. Then <strong>Format &gt; Number &gt; Number</strong>, and <strong>Decrease decimal places</strong> twice.</label></li>
 <li><label><input type="checkbox">On a new sheet, compare <code>=AVERAGE(working!K2:K)</code> and <code>=AVERAGEIF(working!K2:K, &quot;&gt;=0&quot;)</code>. Difference: ______</label></li>
 <li><label><input type="checkbox"><strong>W1</strong> <code>Work hours missing</code>, <strong>W2</strong> <code>=OR(K2=-1, K2=-4)</code>, fill down.</label></li>
 <li><label><input type="checkbox">Log the missing-value decision on the <strong>log</strong> sheet.</label></li>
@@ -2272,7 +2272,6 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">One Case is still listed twice (Age 37 vs. 73): check <strong>raw</strong> (37), delete the 73 row.</label></li>
 <li><label><input type="checkbox">Clear column X. Log the duplicates. Rows left: 2,000.</label></li>
 </ul>
-<p>Catch-up copy: <span class="tbd">link TBD</span></p>
 </section>
 <section id="making-new-variables-with-formulas" class="level1">
 <h1>6. Making new variables with formulas</h1>
@@ -2290,7 +2289,6 @@ Print from the browser (File > Print); each section starts on a new page.
 =IFS(K2=-1, &quot;Not working&quot;, K2=-4, &quot;Hours vary&quot;, K2&gt;=settings!$B$1, &quot;Full time&quot;, K2&gt;=0, &quot;Part time&quot;)
 ```</code></pre></li>
 </ul>
-<p>Catch-up copy: <span class="tbd">link TBD</span></p>
 </section>
 <section id="exploring-summaries-and-pivot-tables" class="level1">
 <h1>7. Exploring: summaries and pivot tables</h1>
@@ -2301,14 +2299,13 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">Pivot table 3: <strong>Rows</strong> Education level; <strong>Values</strong> Leisure (AVERAGE).</label></li>
 <li><label><input type="checkbox">Add <strong>Columns</strong> Work status. Compare the Full time column across education levels.</label></li>
 </ul>
-<p>Catch-up copy: <span class="tbd">link TBD</span></p>
 </section>
 <section id="visualizing-distributions" class="level1">
 <h1>8. Visualizing distributions</h1>
 <p>Scatter with trendline:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Select column <strong>F</strong>, Ctrl-click column <strong>Y</strong>. <strong>Insert &gt; Chart &gt; Scatter chart.</strong></label></li>
-<li><label><input type="checkbox"><strong>Customize &gt; Series</strong>: small points, about 30% opacity.</label></li>
+<li><label><input type="checkbox"><strong>Customize &gt; Series</strong>: small points, about 30% opacity, one color. Trendline black or dark gray.</label></li>
 <li><label><input type="checkbox"><strong>Trendline</strong>: Polynomial, degree 2, Use equation, Show R².</label></li>
 <li><label><input type="checkbox">Titles: “Leisure time by age”; “Age (years)”; “Leisure on diary day (minutes)”.</label></li>
 <li><label><input type="checkbox">Vertical axis max 1440. Alt text.</label></li>
@@ -2319,7 +2316,9 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">Right-click a row value &gt; <strong>Create pivot group rule</strong>, interval 120.</label></li>
 <li><label><input type="checkbox"><strong>Columns</strong> Children group; <strong>Filters</strong> Children group, keep 0 and 3+.</label></li>
 <li><label><input type="checkbox"><strong>Values</strong> Case (COUNTA), <strong>Show as: % of column.</strong></label></li>
-<li><label><input type="checkbox"><strong>Insert &gt; Chart &gt; Column chart.</strong> Titles and alt text.</label></li>
+<li><label><input type="checkbox"><strong>Insert &gt; Chart &gt; Column chart.</strong></label></li>
+<li><label><input type="checkbox"><strong>Customize &gt; Series</strong>: a dark and a light shade of one color for the two groups.</label></li>
+<li><label><input type="checkbox">Title (the question); axes “Leisure on diary day (minutes, 2-hour groups)” and “Percent of group”. Alt text.</label></li>
 <li><label><input type="checkbox">Download a chart: <strong>⋮ &gt; Download &gt; PNG</strong> or <strong>SVG</strong>.</label></li>
 </ul>
 </section>

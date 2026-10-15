@@ -46,8 +46,6 @@ This is the page we work from in the session. Every step is written out, so you 
 catch up if you fall behind, and come back to it later.
 
 - **Work in your own copy of the workbook.** @sec-setup shows you how to make one.
-- **Fell behind?** Each section ends with a link to a catch-up copy of the workbook as it should
-  look at that point.
 - **Printed checklist:** the steps without the explanations, to tick off as you go.
   [Open the checklist](https://ncsu-libraries.github.io/intro-spreadsheets/spreadsheets-checklist.html), and print it from your browser.
 :::
@@ -75,7 +73,7 @@ By the end of this session you will be able to:
 ## The questions we'll answer {.unnumbered}
 
 | | Question | Where |
-|---|---|---|
+|--|--------------------------------------|----------|
 | 1 | Who is in this data, and how many? | @sec-intro, @sec-setup |
 | 2 | Can we trust these values? | @sec-entry to @sec-clean |
 | 3 | How much of a day goes to chores, and how much to leisure? | @sec-variables, @sec-explore |
@@ -121,7 +119,7 @@ change.**
 - **Cell:** one box, named by column and row (B7). A **range** is a block of cells (A2:A2001).
 - **Row** and **column.** The **header** is the first row, which holds the column names.
 - **Formula bar:** the bar above the sheet that shows what's really in a cell. A cell can *show*
-  "2.01E+13" while *storing* 20070112060976.
+  a result, 147, while *storing* the formula that makes it, `=SUM(S2:V2)`.
 
 ::: {.placeholder}
 **Screenshot** `images/intro-sheets-anatomy.png`: a Google Sheets window with workbook name,
@@ -225,23 +223,23 @@ sheet, and use **File > Import > Upload**.
 
 The `working` sheet's columns, for reference:
 
-| Column | Header | What it is | Its state when you start |
-|---|---|---|---|
-| A | Case | Respondent ID | Shows in scientific notation (@sec-understand) |
-| B | Diary Year | Year of the diary day | Ready |
-| C | Diary Day | Day of the week of the diary day | Ready |
-| D | Metropolitan | Lives in a metropolitan area? | Still coded as numbers (@sec-understand) |
-| E | Education level | Highest degree | Extra spaces and spelling variants (@sec-clean) |
-| F | Age | Age in years | One impossible value (@sec-clean) |
-| G | Sex | Sex | Typos and inconsistent capitals (@sec-clean) |
-| H | TRCHILDNUM | Number of children under 18 in household | Header not renamed (@sec-understand) |
-| I | Labor force status | Employed, unemployed, or not in the labor force | Ready |
-| J | Enrolled in school | Enrolled in high school, college or university. Asked only of ages 15–49; "Blank" means not asked | Ready (not used today) |
-| K | TEHRUSLT | Hours usually worked per week | Header not renamed; uses missing codes (@sec-clean) |
-| L | Sleep (mins) | Minutes sleeping on the diary day | Ready |
-| M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores | A few numbers stored as text in O (@sec-clean) |
-| Q–R | Eating and Drinking, Grocery Shopping (mins) | Neither chores nor leisure | A few numbers stored as text in Q (@sec-clean) |
-| S–V | Reading, Playing games, TV and Movies, Socializing (mins) | Leisure | Ready |
+| Column | Header | What it is |
+|-----|--------------------|----------------------------------------|
+| A | Case | Respondent ID |
+| B | Diary Year | Year of the diary day |
+| C | Diary Day | Day of the week of the diary day |
+| D | Metropolitan | Lives in a metropolitan area? |
+| E | Education level | Highest degree |
+| F | Age | Age in years |
+| G | Sex | Sex |
+| H | TRCHILDNUM | Number of children under 18 in household |
+| I | Labor force status | Employed, unemployed, or not in the labor force |
+| J | Enrolled in school | Enrolled in high school, college or university. Asked only of ages 15–49; "Blank" means not asked. Not used today. |
+| K | TEHRUSLT | Hours usually worked per week |
+| L | Sleep (mins) | Minutes sleeping on the diary day |
+| M–P | Interior cleaning, Laundry, Food and drink prep, Kitchen clean-up (mins) | Household chores |
+| Q–R | Eating and Drinking, Grocery Shopping (mins) | Neither chores nor leisure |
+| S–V | Reading, Playing games, TV and Movies, Socializing (mins) | Leisure |
 
 : The `working` sheet's columns. New columns you make go to the right, starting at W.
 
@@ -256,11 +254,10 @@ working and log tabs.
 2. **View > Freeze > 1 row.** The header now stays in view as you scroll.
 3. Click any cell in column A, then press **Ctrl + ↓** (Mac: **Cmd + ↓**) to jump to the last row.
    The row number tells you how many respondents there are (one less than the row number, because
-   of the header). Press **Ctrl + ↑** (Mac: **Cmd + ↑**) to jump back.
+   of the header). Then scroll back up to the top.
 
 ::: {.placeholder}
-**GIF** `images/setup-freeze-jump.gif`: freezing the header row, then jumping to the last row and
-back.
+**GIF** `images/setup-freeze-jump.gif`: freezing the header row, then jumping to the last row.
 :::
 
 The last row is 2007, so there are 2,006 rows of data. That answers question 1, almost: are they
@@ -272,7 +269,7 @@ its column like this: **W2:W** means "W2 and everything below it". To select one
 - Click the first cell (W2), then press **Ctrl + Shift + ↓** (Mac: **Cmd + Shift + ↓**). The
   selection runs down to the last filled cell. This works when the column has no empty cells.
 - Or type the range (`W2:W`) in the **Name box** at the top left, just left of the formula bar, and
-  press **Enter**. [Confirm Name box behavior.]{.tbd}
+  press **Enter**.
 
 ::: {.callout-tip}
 ## Extra: protect the raw sheet
@@ -302,11 +299,11 @@ already in the data.
 
 ## Kinds of data
 
-- **Numeric:** continuous (sleep minutes) or discrete (number of children).
-- **Categorical:** nominal (labor force status), ordinal (education level, which has an order),
-  or binary (enrolled: yes or no).
-- **Dates.**
-- **IDs:** numbers you never do arithmetic on, like Case ID.
+The kind of data in a column decides what rule fits it, which summaries make sense (an average
+education level means nothing) and which charts work. In our data, Sleep is continuous, Number of
+children is discrete, Labor force status is nominal and Education level is ordinal. Two kinds the
+pictures don't show: **dates**, and **IDs** like Case, which are numbers you never do arithmetic
+on.
 
 ::: {layout-ncol="2"}
 ![Continuous and discrete numbers.](images/entry-kinds-numeric.jpg){fig-alt="Two painted animals. Continuous: measured data that can have infinite values within a possible range, shown by a chick saying 'I am 3.1 inches tall, I weigh 34.16 grams'. Discrete: observations that can only exist at limited values, often counts, shown by an octopus saying 'I have 8 legs and 4 spots'."}
@@ -423,8 +420,9 @@ easier to read, and charts and pivot tables need them. Codes have their uses too
   The codes 1–7 sort in the right order.
 - **Some analysis software expects codes.**
 
-A common approach is to keep both: a coded column and a labeled column. In `working`, most
-columns already have labels. Metropolitan (column D) is still coded, so we'll recode it.
+One way to get both is to keep a coded column next to each labeled one. We don't do that today: it
+would double the number of columns, and the **raw** sheet already keeps the codes. In `working`,
+most columns already have labels. Metropolitan (column D) is still coded, so we'll recode it.
 
 ## Recode with Find and replace
 
@@ -443,7 +441,7 @@ The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3
 
 ::: {.placeholder}
 **Screenshot** `images/understand-find-replace.png`: the Find and replace dialog with Specific
-range, the E column range and Match entire cell contents checked.
+range, the D column range and Match entire cell contents checked.
 :::
 
 ::: {.callout-warning}
@@ -455,14 +453,6 @@ checked, avoids both problems. The same mistake turns "Female" into "FeMale" if 
 "male", or "Non-metropolitan" into "Non-Metro" if you shorten "Metropolitan".
 :::
 
-## Show IDs as whole numbers
-
-Case IDs are 14-digit numbers, so Sheets shows them in scientific notation (2.00701E+13). The value
-is fine; only the display is wrong.
-
-1. Select column **A**.
-2. **Format > Number > Custom number format.** Type `0` and click **Apply**.
-
 ::: {.callout-tip}
 ## Extra: recode with a lookup table
 
@@ -471,8 +461,7 @@ one formula. See [Extra activities](#sec-extras).
 :::
 
 **Checkpoint (break).** You should have: your own copy, the header frozen, H and K renamed,
-Metropolitan recoded, Case IDs as whole numbers, and red validation triangles still showing.
-Catch-up copy: [link TBD]{.tbd}
+Metropolitan recoded, and red validation triangles still showing.
 
 ------------------------------------------------------------------------
 
@@ -487,25 +476,21 @@ validation rule from @sec-entry or easy to find with a filter. For each one, ask
 ## Filter, and filter views
 
 A filter hides rows that don't match what you choose, so you can look at one group or one problem
-at a time.
+at a time. Its list of values is also the quickest way to spot typos and inconsistent spellings.
 
 1. Click any cell in the data. **Data > Create a filter.** Each header gets a filter button.
-2. Click the filter button on **Sex**. The list shows every distinct value in the column, which is
-   the quickest way to spot typos and inconsistent spellings.
+2. Click the filter button on **Sex**. The list shows every distinct value in the column.
 3. Choose **Filter by values** to tick the values you want, or **Filter by condition** for rules
-   like "greater than 85".
+   like "greater than 85". **Cancel** closes the list without filtering.
 
-::: {.placeholder}
-**Screenshot** `images/clean-filter-values.png`: the Sex filter open, showing Femal, Mole, female and
-MALE in the value list alongside Female and Male.
-:::
+![The Sex filter's list of values: two typos sit alongside Female and Male.](images/clean-filter-values.png){fig-alt="The filter menu open on the Sex column, below the options to sort and to filter by color, condition or values. Under Filter by values, it says Displaying 4, and four ticked values are listed: Femal, Female, Male and Mole." width="40%"}
 
 ::: {.callout-warning}
 ## Gotcha: a filter changes the view for everyone
 
 In a shared workbook, a filter hides rows for every collaborator. A **filter view** (**Data >
-Filter views > Create new filter view**) is yours alone, and you can save it and come back to it.
-Use filter views when you share. [Confirm menu path]{.tbd}
+Create filter view**) is yours alone, and you can save it and come back to it. Use filter views
+when you share.
 :::
 
 ::: {.callout-warning}
@@ -515,21 +500,10 @@ Selecting one column and sorting it reorders that column only, so every value mo
 person. Sort with the filter button (**Sort A → Z**), or select the whole data range first.
 :::
 
-## Remove extra spaces
-
-A space before or after a value is invisible, but " Bachelor's" and "Bachelor's" are different
-values. Education level has a few of these: they show up as near-duplicates in its filter list.
-
-![The idea behind Trim whitespace and `TRIM()`. The title is an R function that does the same job. Artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/clean-extra-spaces.jpg){fig-alt="Illustration titled stringr::str_squish(): remove leading, trailing and repeated interior whitespace from strings. Four furry creatures push the words 'a cat' together, flinging away empty boxes that stand for the extra spaces before, between and after the words." width="75%"}
-
-1. Select the data. **Data > Data cleanup > Trim whitespace.**
-
-`=TRIM()` does the same in a helper column if you want to keep the original.
-
 ## Fix inconsistent text
 
-Sex should have two values, but its filter list shows more: Female, Femal, female, Male, MALE and
-Mole. In a pivot table, R or Python, each version can count as a group of its own.
+Sex should have two values, but its filter list shows four: Female, Femal, Male and Mole. In a
+pivot table, R or Python, each version counts as a group of its own.
 
 **Typos** ("Femal", "Mole"): use Find and replace, as in @sec-understand.
 
@@ -537,6 +511,7 @@ Mole. In a pivot table, R or Python, each version can count as a group of its ow
 2. **Find:** `Femal`. **Replace with:** `Female`. **Search:** **Specific range** (column G).
    Check **Match entire cell contents.** **Replace all.**
 3. Repeat for `Mole` → `Male`.
+4. Open the Sex filter again: it lists only Female and Male.
 
 ::: {.callout-warning}
 ## Gotcha: "Femal" is inside "Female"
@@ -545,22 +520,21 @@ Without **Match entire cell contents**, replacing "Femal" with "Female" also cha
 "Female" into "Femalee". Check the box every time you recode.
 :::
 
-**Capitalization** ("female", "MALE"): use a formula in a helper column, then put the results back.
+**Capitalization** ("female", "MALE"): a few cells have these, but the filter list doesn't show
+them. It ignores case, so "female" is listed under "Female". Pivot tables and `COUNTIF` ignore case
+too, so inside Sheets the problem stays hidden. R and Python don't ignore case: there, "female" and
+"Female" become two groups as soon as the data leaves Sheets. Fix it with a formula in a helper
+column, then put the results back.
 
 1. In **W1** type `helper`. In **W2** type `=PROPER(G2)`.
-2. Fill down: double-click the **fill handle**, the small blue square at the bottom right of the
-   selected cell. [Confirm: square or circle?]{.tbd} Sheets copies the formula down to the last row
-   of the data.
+2. Fill down: double-click the **fill handle**, the small blue circle at the bottom right of the
+   selected cell. Sheets copies the formula down to the last row of the data.
 3. Select **W2:W** (click W2, then **Ctrl/Cmd + Shift + ↓**), copy, click **G2**, then
    **Edit > Paste special > Values only**
    (**Ctrl/Cmd + Shift + V**). Start at row 2 so the header isn't overwritten.
 4. Clear column W. Log the fix on the **log** sheet.
 
 `UPPER()` and `LOWER()` work the same way. Pick one convention per column and stick to it.
-
-**Spelling variants** in Education level ("Bachelors", "Masters"): open its filter list to find
-them, then use Find and replace on column E (**Match entire cell contents** checked):
-`Bachelors` → `Bachelor's` and `Masters` → `Master's`.
 
 ::: {.placeholder}
 **GIF** `images/clean-proper-paste-values.gif`: the helper column, fill down, paste values only
@@ -582,8 +556,23 @@ becomes "Master'S". That's why we use it on Sex and not on Education level. [Con
 Sheets.]{.tbd}
 :::
 
-[Case-sensitivity note: Sheets' `COUNTIF` ignores case, so it counts "female" and "Female"
-together; check whether pivot tables do, and reword this section.]{.tbd}
+## Remove extra spaces and spelling variants
+
+Open the filter on **Education level**. Some levels are listed more than once, in near-identical
+versions: " Bachelor's" with a space in front, "Master's " with one after, and "Bachelors" and
+"Masters" without the apostrophe. A space before or after a value is invisible, but " Bachelor's"
+and "Bachelor's" are different values.
+
+![The idea behind Trim whitespace and `TRIM()`. The title is an R function that does the same job. Artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/clean-extra-spaces.jpg){fig-alt="Illustration titled stringr::str_squish(): remove leading, trailing and repeated interior whitespace from strings. Four furry creatures push the words 'a cat' together, flinging away empty boxes that stand for the extra spaces before, between and after the words." width="75%"}
+
+Trim whitespace removes the spaces in place. `=TRIM()` does the same in a helper column, if you
+want to keep the original.
+
+1. Click any cell in the data, then **Ctrl/Cmd + A** to select it all. **Data > Data cleanup >
+   Trim whitespace.** Sheets reports how many cells it trimmed: 9.
+2. Select column **E**. Find and replace, with **Match entire cell contents** checked:
+   `Bachelors` → `Bachelor's` and `Masters` → `Master's`.
+3. Open the Education level filter again: each level is listed once. Log both fixes.
 
 ## Fix numbers stored as text
 
@@ -595,8 +584,9 @@ and two have a unit typed in (`0min`, `120 min`), one of the common problems fro
 2. Find `"` and replace with nothing. **Replace all.**
 3. Find ` min` (with a space before it) and replace with nothing. **Replace all.** Then do the same
    for `min` without the space.
-4. **Format > Number > Number.** The values move to the right. [Confirm in the dry run that they
-   become numbers.]{.tbd}
+4. **Format > Number > Number.** The values move to the right: they're numbers now.
+5. The Number format shows two decimal places (300.00). With O2:Q still selected, click
+   **Decrease decimal places** (**.0←** in the toolbar) twice to show whole minutes again.
 
 ::: {.callout-warning}
 ## Gotcha: leave the header out of the range
@@ -655,8 +645,8 @@ From [Data Organization in Spreadsheets for Ecologists](https://datacarpentry.gi
 ## Values out of range: QA/QC
 
 The red triangles on Age (from @sec-entry) mark values outside the allowed range. For a quick
-overview of any column, select it and use **Data > Column stats**, which shows the minimum, maximum
-and a distribution.
+overview of any column, select it and use **Data > Column stats**, which shows how the values are
+spread and which are most common.
 
 One example shows the whole process. For a flagged value, decide whether it's an error, a code, or
 real:
@@ -669,10 +659,7 @@ real:
 What to do with a confirmed error: correct it from the source if you can; otherwise make the cell
 empty and log it. Don't delete the whole row without recording why.
 
-::: {.placeholder}
-**Screenshot** `images/clean-column-stats.png`: the Column stats panel for Age, showing the
-minimum, maximum and distribution.
-:::
+![Column stats for Age. The axis runs out to 155 because of one impossible value, and the most common age is 80, the top-coded 80–84 group.](images/clean-column-stats.png){fig-alt="The Column stats panel for Age, with Distribution selected. A bar chart has four tall bars between ages 10 and 87, and the axis continues, empty, to 155. Below, a table of the most frequent values: 80 appears 57 times, then 36 (48), 39 (47), 41 (47) and 40 (45)." width="35%"}
 
 ## Duplicates
 
@@ -699,7 +686,7 @@ Flag first, then decide:
 header row checked.
 :::
 
-**Checkpoint.** The `working` sheet is now clean. Catch-up copy: [link TBD]{.tbd}
+**Checkpoint.** The `working` sheet is now clean.
 
 ------------------------------------------------------------------------
 
@@ -800,13 +787,18 @@ Eight education levels make small groups at the top. Try grouping them into five
 high school, some college or associate's, bachelor's, graduate or professional) with `IFS`.
 :::
 
-**Checkpoint.** Catch-up copy: [link TBD]{.tbd}
-
 ------------------------------------------------------------------------
 
 # Exploring: summaries and pivot tables {#sec-explore}
 
-> **Questions 3 to 6.**
+> **Question 3:** How much of a day goes to chores, and how much to leisure?
+>
+> **Question 4:** Does leisure time change with age?
+>
+> **Question 5:** Do people with more children trade leisure for chores?
+>
+> **Question 6:** People with more education report less leisure. Is that about education, or
+> about work?
 
 ## Where summaries go
 
@@ -849,10 +841,7 @@ formula for each group.
    age? Yes: average leisure is lowest at 25–34 (about 190 minutes) and highest at 65+ (about
    360).
 
-::: {.placeholder}
-**Screenshot** `images/explore-pivot-age.png`: the pivot table editor with Age group in Rows,
-Case ID (COUNTA) and Leisure (AVERAGE) in Values, and the resulting table.
-:::
+![The first pivot table and its editor.](images/explore-pivot-age.png){fig-alt="A new sheet with a pivot table: age groups 15-24 to 65+ in rows, then COUNTA of Case (196, 303, 416, 360, 303, 422, total 2000) and AVERAGE of leisure (from 218.9 for 15-24, down to 189.4 for 25-34, up to 362.7 for 65+, overall 252.2). On the right, the pivot table editor shows the range working!A1:AB2001, Age group under Rows, and Case summarized by COUNTA and leisure summarized by AVERAGE under Values."}
 
 Keep the count next to the average. An average of 5 people is much less certain than an average of
 500.
@@ -892,8 +881,6 @@ Building it from whole columns (`working!A1:AB`) avoids this.
   else.
 :::
 
-**Checkpoint.** Catch-up copy: [link TBD]{.tbd}
-
 ------------------------------------------------------------------------
 
 # Visualizing distributions {#sec-visualize}
@@ -915,16 +902,14 @@ out people are, and who sits far from the rest. Both charts here show the distri
    - Point size: small. Opacity: about 30%, so crowded areas look darker.
    - Tick **Trendline**. Type: **Polynomial**, degree **2**. Label: **Use equation**. Tick
      **Show R²**.
-   - Trendline color: a dark color that stands out from the points.
+   - Point color: one color for all the points.
+   - Trendline color: black or dark gray, so it stands out from the points.
 4. **Customize > Chart & axis titles:** title "Leisure time by age", horizontal axis "Age (years)",
    vertical axis "Leisure on diary day (minutes)".
 5. **Customize > Vertical axis:** max **1440**.
 6. Right-click the chart > **Alt text**, and describe what it shows.
 
-::: {.placeholder}
-**Screenshot** `images/visualize-scatter-trendline.png`: the finished scatter with the curved
-trendline, equation and R² in the legend.
-:::
+![The finished scatter, with the trendline's equation and R² in the legend.](images/visualize-scatter-trendline.png){fig-alt="Scatter chart titled Leisure time by age. Age runs from about 15 to 85 along the bottom and leisure minutes from 0 to 1500 up the side. Semi-transparent red dots form vertical columns at each age, densest below 500 minutes, with full columns at 80 and 85. A black curved trendline sits near 200 minutes until about 40, then rises to about 450 at 85. The legend reads 260 + -4.46x + 0.0788x^2, R² = 0.095." width="80%"}
 
 What to notice:
 
@@ -953,22 +938,28 @@ paper, turn the label off and put the equation in the caption.
 Question 5 again: do people with 3+ children have less leisure than people with none? Averages say
 yes. A histogram shows *how* their days differ.
 
+Sheets builds this one as a column chart from a pivot table. Because each bar is a range of
+minutes (a bin) and not a category, it works as a histogram: one bar per group in each bin.
+
 ![Artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/visualize-two-distributions.jpg){fig-alt="Two overlapping distribution curves with faces on a pair of axes. A smooth orange bell curve looks unimpressed and says 'you're not normal' to a happy blue curve with two humps, which waves its arms." width="55%"}
 
 1. **Insert > Pivot table** from **working**, on a new sheet.
 2. **Rows: Add > Leisure (mins).** Right-click any value in the pivot's first column > **Create
    pivot group rule.** Interval size: **120** (two-hour bins).
 3. **Columns: Add > Children group.** Then **Filters: Add > Children group**, and under **Status**
-   keep only **0** and **3+**. [Confirm in testing.]{.tbd}
+   keep only **0** and **3+**.
 4. **Values: Add > Case**, summarized by **COUNTA**. Then **Show as: % of column.**
-5. Click in the pivot table. **Insert > Chart > Column chart.** Each bin has two bars, one per
-   group.
-6. Titles, axis titles and alt text as before.
+5. Click in the pivot table. **Insert > Chart.** If Sheets picks another type, choose **Setup >
+   Chart type: Column chart.** Each bin has two bars, one per group.
+6. **Customize > Series.** Choose each group in turn and give it a color: a dark and a light shade
+   of one color. The groups have an order (no children, then 3+), and shades still tell them apart
+   in grayscale and for people with color vision deficiency.
+7. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
+   3+ children have less leisure time than those with none?". Horizontal axis "Leisure on diary
+   day (minutes, 2-hour groups)", vertical axis "Percent of group".
+8. Right-click the chart > **Alt text**, and describe what it shows.
 
-::: {.placeholder}
-**Screenshot** `images/visualize-grouped-histogram.png`: the finished grouped histogram, two
-colors, percent on the vertical axis.
-:::
+![The finished grouped histogram, as percentages of each group.](images/visualize-grouped-histogram.png){fig-alt="Column chart titled Do people with 3+ children have less leisure time than those with none? Two-hour leisure bins from 0-119 to 1200-1319 minutes run along the bottom, with two bars in each: dark red for 0 children and light red for 3+. The vertical axis runs from 0% to 50%. In the 0-119 bin, 3+ is about 47% and 0 about 19%. The two are about equal at 120-239 (about 26%), and from 240 minutes up the dark red bars are taller, trailing off by 840-959." width="80%"}
 
 ::: {.callout-warning}
 ## Gotcha: compare percentages, not counts
@@ -1095,8 +1086,57 @@ so on.
 
 A strip plot shows one dot per person in each group, nudged sideways at random so dots don't sit on
 top of each other, with a marker at each group's median. You see the spread, the outliers and the
-center in one chart. [Steps to adapt from `planning/chart-tests.md`, Option 1, including the axis
-label fix.]{.tbd}
+center in one chart.
+
+Sheets has no strip plot, so we build one from a scatter chart. The chart data goes on its own
+sheet, because the median rows sit under the data, which `working` must never have.
+
+**Build the chart data:**
+
+1. Add a sheet named **strip**. In row 1 type the headers: **A1** `Group`, **B1** `x`, **C1**
+   `Leisure (mins)`, **D1** `Group median`, **E1** `Label`.
+2. Type these formulas in row 2:
+   - **A2:** `=MIN(working!H2, 3)`. The number of children, with 3 standing for "3 or more".
+   - **B2:** `=A2 + RAND()*0.6 - 0.3`. The group number, nudged sideways at random.
+   - **C2:** `=working!Y2`. Leisure.
+3. Fill them down to row 2001: type `A2:C2001` in the **Name box** and press **Enter**, then press
+   **Ctrl/Cmd + D**.
+4. With A2:C2001 still selected, copy, then paste values only on top
+   (**Ctrl/Cmd + Shift + V**). `RAND()` picks new numbers every time you edit anything, so without
+   this the dots move around.
+5. Add one row for each group's median, under the data:
+   - **A2002:A2005:** `0`, `1`, `2`, `3`.
+   - **B2002:** `=A2002`. No nudge, so the median sits in the middle of its group.
+   - **D2002:** `=MEDIAN(FILTER(C$2:C$2001, A$2:A$2001 = A2002))`.
+   - Select **B2002:D2005** and press **Ctrl/Cmd + D** to fill both formulas down. Column C stays
+     empty in these rows.
+   - **E2002:E2005:** `0 children`, `1 child`, `2 children`, `3+ children`.
+
+Check: the medians are 253, 165, 150 and 120 minutes.
+
+**Make the chart:**
+
+1. Type `B1:D2005` in the Name box and press **Enter**. **Insert > Chart.**
+2. **Setup > Chart type: Scatter chart.** Check that the X-axis is `x` and the two series are
+   `Leisure (mins)` and `Group median`.
+3. **Customize > Series:**
+   - `Leisure (mins)`: the smallest point size, gray, opacity about 20%.
+   - `Group median`: the largest point size, shape **Square**, a strong color that stands out
+     from the gray.
+4. Name the groups on the chart. Under **Setup**, open the `Group median` series' **⋮** menu >
+   **Add labels**, and choose **E2002:E2005**. [Confirm the menu and that the labels show.]{.tbd}
+5. **Customize > Horizontal axis:** min `-0.5`, max `3.5`, and turn off the axis labels. Their
+   numbers would fall between the groups (-0.5, 0.5, 1.5 …); the median labels name the groups
+   instead. [Confirm the option for hiding axis labels.]{.tbd}
+6. **Customize > Vertical axis:** min `-30`, so the people with 0 minutes lift off the axis line,
+   and max `1440`.
+7. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
+   axis "Number of children in household", vertical axis "Leisure on diary day (minutes)".
+8. Right-click the chart > **Alt text**, and describe what it shows.
+
+Things to notice: the medians step down as the number of children rises, and each group has a long
+upper tail, which is why the median is a better center than the average here. The no-children group
+is the densest: it has 1,137 people, against 180 with 3+.
 
 ::: {.placeholder}
 **Screenshot** `images/extras-strip-plot.png`: the finished strip plot of leisure by children

@@ -61,22 +61,24 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
   - [ ] `2` → `Non-metropolitan`
   - [ ] `3` → `Not identified`
 - [ ] Log the recode on the **log** sheet.
-- [ ] Select column **A**. **Format > Number > Custom number format**: `0`.
 
-**Break.** Catch-up copy: [link TBD]{.tbd}
+**Break.**
 
 # 5. Making data usable: cleaning
 
 - [ ] **Data > Create a filter.** Open the Sex filter and read the value list.
-- [ ] **Data > Data cleanup > Trim whitespace** on the data.
 - [ ] Fix typos in column **G** with Find and replace (**Match entire cell contents**):
       `Femal` → `Female`, `Mole` → `Male`.
-- [ ] Fix capitalization: **W2** `=PROPER(G2)`, fill down, select **W2:W** (click W2, then
-      **Ctrl/Cmd + Shift + ↓**), copy, paste values only into **G2**, clear W.
+- [ ] Fix capitalization: **W2** `=PROPER(G2)`, fill down (double-click the blue circle), select
+      **W2:W** (click W2, then **Ctrl/Cmd + Shift + ↓**), copy, paste values only into **G2**,
+      clear W.
+- [ ] Open the Education level filter and read the value list.
+- [ ] Select all the data (**Ctrl/Cmd + A**). **Data > Data cleanup > Trim whitespace.** Cells
+      trimmed: ______
 - [ ] Fix spellings in column **E** with Find and replace (**Match entire cell contents**):
       `Bachelors` → `Bachelor's`, `Masters` → `Master's`.
 - [ ] Select **O2:Q** (not the header). Find and replace: `"` → nothing, ` min` → nothing, `min` →
-      nothing. Then **Format > Number > Number**.
+      nothing. Then **Format > Number > Number**, and **Decrease decimal places** twice.
 - [ ] On a new sheet, compare `=AVERAGE(working!K2:K)` and `=AVERAGEIF(working!K2:K, ">=0")`.
       Difference: ______
 - [ ] **W1** `Work hours missing`, **W2** `=OR(K2=-1, K2=-4)`, fill down.
@@ -88,8 +90,6 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
       ______
 - [ ] One Case is still listed twice (Age 37 vs. 73): check **raw** (37), delete the 73 row.
 - [ ] Clear column X. Log the duplicates. Rows left: 2,000.
-
-Catch-up copy: [link TBD]{.tbd}
 
 # 6. Making new variables with formulas
 
@@ -108,8 +108,6 @@ Catch-up copy: [link TBD]{.tbd}
       =IFS(K2=-1, "Not working", K2=-4, "Hours vary", K2>=settings!$B$1, "Full time", K2>=0, "Part time")
       ```
 
-Catch-up copy: [link TBD]{.tbd}
-
 # 7. Exploring: summaries and pivot tables
 
 - [ ] New sheet **summary**: `COUNTA`, `AVERAGE`, `MEDIAN`, `MIN`, `MAX`, `STDEV`, `COUNTIF` on
@@ -119,14 +117,13 @@ Catch-up copy: [link TBD]{.tbd}
 - [ ] Pivot table 3: **Rows** Education level; **Values** Leisure (AVERAGE).
 - [ ] Add **Columns** Work status. Compare the Full time column across education levels.
 
-Catch-up copy: [link TBD]{.tbd}
-
 # 8. Visualizing distributions
 
 Scatter with trendline:
 
 - [ ] Select column **F**, Ctrl-click column **Y**. **Insert > Chart > Scatter chart.**
-- [ ] **Customize > Series**: small points, about 30% opacity.
+- [ ] **Customize > Series**: small points, about 30% opacity, one color. Trendline black or
+      dark gray.
 - [ ] **Trendline**: Polynomial, degree 2, Use equation, Show R².
 - [ ] Titles: "Leisure time by age"; "Age (years)"; "Leisure on diary day (minutes)".
 - [ ] Vertical axis max 1440. Alt text.
@@ -137,7 +134,10 @@ Grouped histogram:
 - [ ] Right-click a row value > **Create pivot group rule**, interval 120.
 - [ ] **Columns** Children group; **Filters** Children group, keep 0 and 3+.
 - [ ] **Values** Case (COUNTA), **Show as: % of column.**
-- [ ] **Insert > Chart > Column chart.** Titles and alt text.
+- [ ] **Insert > Chart > Column chart.**
+- [ ] **Customize > Series**: a dark and a light shade of one color for the two groups.
+- [ ] Title (the question); axes "Leisure on diary day (minutes, 2-hour groups)" and "Percent of
+      group". Alt text.
 - [ ] Download a chart: **⋮ > Download > PNG** or **SVG**.
 
 # 9. Wrapping up
