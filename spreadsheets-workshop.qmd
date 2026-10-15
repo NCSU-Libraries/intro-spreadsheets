@@ -900,6 +900,9 @@ Building it from whole columns (`working!A1:AB`) avoids this.
 We start with the chart most people make first: group averages, straight from a pivot table. Then
 we look at what those averages hide.
 
+**Fell behind?** Make a copy of the finished workbook, with everything up to this point done:
+[link TBD]{.tbd}. Use **File > Make a copy**, as in @sec-setup.
+
 ## A chart from a pivot table: group averages
 
 The question 5 pivot table from @sec-explore already has the numbers: average chores and average
