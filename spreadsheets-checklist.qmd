@@ -114,7 +114,14 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 - [ ] Pivot table 3: **Rows** Education level; **Values** Leisure (AVERAGE).
 - [ ] Add **Columns** Work status. Compare the Full time column across education levels.
 
-# 8. Visualizing distributions
+# 8. Visualizing averages and distributions
+
+Chart of group averages:
+
+- [ ] Click in the question 5 pivot table (children group). **Insert > Chart > Column chart.**
+- [ ] **Customize > Series**: one dark and one light color for chores and leisure.
+- [ ] Titles: "Average chores and leisure by number of children"; "Children under 18 in
+      household"; "Average minutes on diary day". Alt text.
 
 Scatter with trendline:
 

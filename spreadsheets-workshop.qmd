@@ -893,12 +893,44 @@ Building it from whole columns (`working!A1:AB`) avoids this.
 
 ------------------------------------------------------------------------
 
-# Visualizing distributions {#sec-visualize}
+# Visualizing averages and distributions {#sec-visualize}
 
 > **Question 7:** How do we show the answer?
 
-An average is a single number, but the interesting part is often the **distribution**: how spread
-out people are, and who sits far from the rest. Both charts here show the distribution.
+We start with the chart most people make first: group averages, straight from a pivot table. Then
+we look at what those averages hide.
+
+## A chart from a pivot table: group averages
+
+The question 5 pivot table from @sec-explore already has the numbers: average chores and average
+leisure for each children group. A column chart puts them side by side.
+
+1. Go to the question 5 pivot table and click any cell in it.
+2. **Insert > Chart.** If Sheets picks another type, choose **Setup > Chart type: Column chart.**
+   Each children group gets two bars, one for chores and one for leisure.
+3. **Customize > Series.** Give chores and leisure two clearly different colors, one dark and one
+   light, so they still differ in grayscale.
+4. **Customize > Chart & axis titles:** title "Average chores and leisure by number of children",
+   horizontal axis "Children under 18 in household", vertical axis "Average minutes on diary day".
+5. Right-click the chart > **Alt text**, and describe what it shows.
+
+::: {.placeholder}
+**Screenshot** `images/visualize-pivot-averages.png`: the finished column chart, two bars per
+children group, chores rising and leisure falling from 0 to 3+.
+:::
+
+::: {.callout-tip}
+## Extra: make it clearer
+
+The DSS workshop on designing visualizations covers making a chart like this clear and accessible:
+sorting, labels, color and contrast. [Link TBD]{.tbd}
+:::
+
+## What an average hides
+
+Each bar is one number standing in for hundreds of people. The interesting part is often the
+**distribution**: how spread out people are, and who sits far from the rest. The next two charts
+show it.
 
 ![Artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/visualize-summary-hiding.jpg){fig-alt="Two cartoon bar charts with error bars. The left bar is solid grey, hiding a net full of colorful round creatures behind it. The right bar is see-through, showing creatures stacked inside, while others float above it. The caption asks: are your summary statistics hiding something interesting?" width="75%"}
 
@@ -994,14 +1026,6 @@ Click the chart's **⋮** menu > **Download** > **PNG image** or **SVG**. SVG st
 which suits posters and papers.
 
 ::: {.callout-tip}
-## Extra: a chart of group averages
-
-The classic chart from a pivot table: click in the question 5 pivot table, **Insert > Chart >
-Column chart**. The DSS workshop on designing visualizations covers making it clear and accessible.
-[Link TBD]{.tbd}
-:::
-
-::: {.callout-tip}
 ## Extra: box plots, violin plots and error bars
 
 Sheets doesn't have these built in. Its error bars can only be one constant, a percentage, or one
@@ -1037,7 +1061,7 @@ with the data, and in your own work, so does the log.
   and duplicates.
 - Made new variables with formulas.
 - Summarized with pivot tables.
-- Charted distributions.
+- Charted group averages, then the distributions behind them.
 
 And the main lesson: **how you prepare data changes your conclusions.** Write down every
 decision.
