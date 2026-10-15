@@ -62,7 +62,7 @@ Time Use Survey, and use it to answer one question that gets sharper as we go:
 By the end of this session you will be able to:
 
 1. Describe tidy, rectangular data, and say when a spreadsheet is (and isn't) the right tool.
-2. Set up a workbook that keeps raw data untouched and records your changes.
+2. Set up a workbook that keeps raw data untouched and has a place to record your changes.
 3. Use a data dictionary to rename columns, recode values and write validation rules.
 4. Find and fix common data problems: inconsistent text, extra spaces, numbers stored as text,
    missing-value codes, out-of-range values and duplicates.
@@ -218,8 +218,9 @@ sheet, and use **File > Import > Upload**.
 - **raw**: the data as it came from ATUS. **Never edit this sheet.**
 - **working**: a copy we'll prepare and analyze. Some of it has already been tidied, the way you
   might receive data from a collaborator. The rest is up to you.
-- **log**: where you record each change you make: the date, the column, what
-  changed and why.
+- **log**: where you record each change you make: the date, the column, what changed and why. In
+  your own work, every change goes here. Today's data is for practice, so we won't fill it in, but
+  the steps say where you would.
 
 The `working` sheet's columns, for reference:
 
@@ -414,8 +415,7 @@ there. Pick one style and use it for every column.
 ![Artwork by [Allison Horst](https://github.com/allisonhorst/stats-illustrations), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/understand-name-cases.jpg){fig-alt="Illustration titled 'in that case'. A screaming snake labeled SCREAMING_SNAKE_CASE (upper snake), a kebab skewer labeled kebab-case (words on a skewer), a green snake labeled snake_case (lower snake), and a camel wearing headphones labeled camelCase, first word lower, capitalize all following words. A note says see also UpperCamel, aka PascalCase." width="75%"}
 
 1. Click cell **H1** and type `Number of children`.
-2. Click cell **K1** and type `Work hours per week`.
-3. Add both changes to the **log** sheet.
+2. Click cell **K1** and type `Work hours per week`. *In your own work, you'd log both renames.*
 
 ## Codes or labels?
 
@@ -443,7 +443,7 @@ The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3
 5. Check **Match entire cell contents**.
 6. **Replace all.** The dialog says how many cells changed.
 7. Repeat for `1` → `Metropolitan`, `2` → `Non-metropolitan` and `3` → `Not identified`.
-8. Log the recode on the **log** sheet.
+   *In your own work, you'd log the recode.*
 
 ::: {.placeholder}
 **Screenshot** `images/understand-find-replace.png`: the Find and replace dialog with Specific
@@ -538,7 +538,7 @@ column, then put the results back.
 3. Select **W2:W** (click W2, then **Ctrl/Cmd + Shift + ↓**), copy, click **G2**, then
    **Edit > Paste special > Values only**
    (**Ctrl/Cmd + Shift + V**). Start at row 2 so the header isn't overwritten.
-4. Clear column W. Log the fix on the **log** sheet.
+4. Clear column W. *In your own work, you'd log the fix.*
 
 `UPPER()` and `LOWER()` work the same way. Pick one convention per column and stick to it.
 
@@ -578,7 +578,8 @@ want to keep the original.
    Trim whitespace.** Sheets reports how many cells it trimmed: 9.
 2. Select column **E**. Find and replace, with **Match entire cell contents** checked:
    `Bachelors` → `Bachelor's` and `Masters` → `Master's`.
-3. Open the Education level filter again: each level is listed once. Log both fixes.
+3. Open the Education level filter again: each level is listed once.
+   *In your own work, you'd log both fixes.*
 
 ## Fix numbers stored as text
 
@@ -631,7 +632,7 @@ What to do with codes like these:
 
 1. In **W1** type `Work hours missing`. In **W2** type `=OR(K2=-1, K2=-4)`.
 2. Fill down. Each row now says TRUE or FALSE, a flag you can filter and count.
-3. Log your decision on the **log** sheet.
+   *In your own work, you'd log this decision and why.*
 
 ::: {.callout-warning}
 ## Gotcha: a flag goes in a column, not in a color
@@ -658,7 +659,8 @@ One example shows the whole process. For a flagged value, decide whether it's an
 real:
 
 - **Age 150:** impossible. An entry error. The **raw** sheet is the source here: find this Case
-  there (**Ctrl/Cmd + F**) and you'll see the real age, 33. Correct it, and log it.
+  there (**Ctrl/Cmd + F**) and you'll see the real age, 33. Correct it. *In your own work, you'd log the
+  correction.*
 - **Age 80 and 85:** real, but not exact. ATUS *top-codes* age: everyone 80–84 is recorded as 80,
   and 85 or older as 85. Check the documentation before you "fix" a value that looks odd.
 
@@ -685,7 +687,8 @@ Flag first, then decide:
    Sheets reports how many rows it removed: 5.
 4. Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and
    73). Find that Case in **raw**: the real age is 37. Right-click the row with 73 > **Delete row**.
-5. Clear column X. Log what you removed. The sheet now has 2,000 rows: 2,000 different people.
+5. Clear column X. The sheet now has 2,000 rows: 2,000 different people.
+   *In your own work, you'd log what you removed.*
 
 ::: {.placeholder}
 **Screenshot** `images/clean-remove-duplicates.png`: the Remove duplicates dialog with Data has
@@ -783,7 +786,7 @@ with the settings sheet's B1 visible or highlighted.
 
 `IFS` stops at the first true condition. If "Part time" (`K2>=0`) came before the missing codes,
 -1 would never be checked. And decide where boundaries go: is 35 hours full time (`>=`) or part
-time (`>`)? Write the decision in the **log** sheet.
+time (`>`)? In your own work, write the decision in the log.
 :::
 
 ::: {.callout-tip}
@@ -868,7 +871,8 @@ from about 66 to 117 minutes and leisure falls from about 298 to 174.
 Much of the education difference comes from who is working: 64% of people with no diploma have
 work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer depends on a decision from @sec-clean:
 reading -1 as "not working", rather than dropping it or treating it as 0. **How you prepare data
-changes your conclusions,** which is why every decision goes in the log.
+changes your conclusions,** which is why, in your own work, every decision goes in the
+log.
 
 ::: {.callout-warning}
 ## Gotcha: a pivot table only sees its range
@@ -1020,8 +1024,8 @@ standard deviation for the whole series, not a separate value for each bar.
 ## Take your data with you
 
 **File > Download > Comma-separated values (.csv)** saves the current sheet as a CSV, which opens
-in R, Python, SPSS, Stata and almost everything else. Download **README** and **log** too: the data dictionary
-and your log belong with the data.
+in R, Python, SPSS, Stata and almost everything else. Download **README** too: the data dictionary belongs
+with the data, and in your own work, so does the log.
 
 ## What we did
 

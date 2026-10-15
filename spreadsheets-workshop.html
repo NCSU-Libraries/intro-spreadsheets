@@ -2332,7 +2332,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>By the end of this session you will be able to:</p>
 <ol type="1">
 <li>Describe tidy, rectangular data, and say when a spreadsheet is (and isn’t) the right tool.</li>
-<li>Set up a workbook that keeps raw data untouched and records your changes.</li>
+<li>Set up a workbook that keeps raw data untouched and has a place to record your changes.</li>
 <li>Use a data dictionary to rename columns, recode values and write validation rules.</li>
 <li>Find and fix common data problems: inconsistent text, extra spaces, numbers stored as text, missing-value codes, out-of-range values and duplicates.</li>
 <li>Write formulas that create new variables.</li>
@@ -2541,7 +2541,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><strong>README</strong>: the data dictionary: what each column means, its allowed values, and what its codes are.</li>
 <li><strong>raw</strong>: the data as it came from ATUS. <strong>Never edit this sheet.</strong></li>
 <li><strong>working</strong>: a copy we’ll prepare and analyze. Some of it has already been tidied, the way you might receive data from a collaborator. The rest is up to you.</li>
-<li><strong>log</strong>: where you record each change you make: the date, the column, what changed and why.</li>
+<li><strong>log</strong>: where you record each change you make: the date, the column, what changed and why. In your own work, every change goes here. Today’s data is for practice, so we won’t fill it in, but the steps say where you would.</li>
 </ul>
 <p>The <code>working</code> sheet’s columns, for reference:</p>
 <table class="caption-top table">
@@ -2812,8 +2812,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 <ol type="1">
 <li>Click cell <strong>H1</strong> and type <code>Number of children</code>.</li>
-<li>Click cell <strong>K1</strong> and type <code>Work hours per week</code>.</li>
-<li>Add both changes to the <strong>log</strong> sheet.</li>
+<li>Click cell <strong>K1</strong> and type <code>Work hours per week</code>. <em>In your own work, you’d log both renames.</em></li>
 </ol>
 </section>
 <section id="codes-or-labels" class="level2" data-number="4.3">
@@ -2835,8 +2834,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><strong>Search:</strong> <strong>Specific range</strong>, and check it says <code>working!D1:D</code> (or similar). <span class="tbd">Confirm display</span></li>
 <li>Check <strong>Match entire cell contents</strong>.</li>
 <li><strong>Replace all.</strong> The dialog says how many cells changed.</li>
-<li>Repeat for <code>1</code> → <code>Metropolitan</code>, <code>2</code> → <code>Non-metropolitan</code> and <code>3</code> → <code>Not identified</code>.</li>
-<li>Log the recode on the <strong>log</strong> sheet.</li>
+<li>Repeat for <code>1</code> → <code>Metropolitan</code>, <code>2</code> → <code>Non-metropolitan</code> and <code>3</code> → <code>Not identified</code>. <em>In your own work, you’d log the recode.</em></li>
 </ol>
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/understand-find-replace.png</code>: the Find and replace dialog with Specific range, the D column range and Match entire cell contents checked.</p>
@@ -2946,7 +2944,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>In <strong>W1</strong> type <code>helper</code>. In <strong>W2</strong> type <code>=PROPER(G2)</code>.</li>
 <li>Fill down: double-click the <strong>fill handle</strong>, the small blue circle at the bottom right of the selected cell. Sheets copies the formula down to the last row of the data.</li>
 <li>Select <strong>W2:W</strong> (click W2, then <strong>Ctrl/Cmd + Shift + ↓</strong>), copy, click <strong>G2</strong>, then <strong>Edit &gt; Paste special &gt; Values only</strong> (<strong>Ctrl/Cmd + Shift + V</strong>). Start at row 2 so the header isn’t overwritten.</li>
-<li>Clear column W. Log the fix on the <strong>log</strong> sheet.</li>
+<li>Clear column W. <em>In your own work, you’d log the fix.</em></li>
 </ol>
 <p><code>UPPER()</code> and <code>LOWER()</code> work the same way. Pick one convention per column and stick to it.</p>
 <div class="placeholder">
@@ -2992,7 +2990,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>Click any cell in the data, then <strong>Ctrl/Cmd + A</strong> to select it all. <strong>Data &gt; Data cleanup &gt; Trim whitespace.</strong> Sheets reports how many cells it trimmed: 9.</li>
 <li>Select column <strong>E</strong>. Find and replace, with <strong>Match entire cell contents</strong> checked: <code>Bachelors</code> → <code>Bachelor&#39;s</code> and <code>Masters</code> → <code>Master&#39;s</code>.</li>
-<li>Open the Education level filter again: each level is listed once. Log both fixes.</li>
+<li>Open the Education level filter again: each level is listed once. <em>In your own work, you’d log both fixes.</em></li>
 </ol>
 </section>
 <section id="fix-numbers-stored-as-text" class="level2" data-number="5.4">
@@ -3042,8 +3040,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </ul>
 <ol type="1">
 <li>In <strong>W1</strong> type <code>Work hours missing</code>. In <strong>W2</strong> type <code>=OR(K2=-1, K2=-4)</code>.</li>
-<li>Fill down. Each row now says TRUE or FALSE, a flag you can filter and count.</li>
-<li>Log your decision on the <strong>log</strong> sheet.</li>
+<li>Fill down. Each row now says TRUE or FALSE, a flag you can filter and count. <em>In your own work, you’d log this decision and why.</em></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -3085,7 +3082,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>The red triangles on Age (from <a href="#sec-entry" class="quarto-xref">Section 3</a>) mark values outside the allowed range. For a quick overview of any column, select it and use <strong>Data &gt; Column stats</strong>, which shows how the values are spread and which are most common.</p>
 <p>One example shows the whole process. For a flagged value, decide whether it’s an error, a code, or real:</p>
 <ul>
-<li><strong>Age 150:</strong> impossible. An entry error. The <strong>raw</strong> sheet is the source here: find this Case there (<strong>Ctrl/Cmd + F</strong>) and you’ll see the real age, 33. Correct it, and log it.</li>
+<li><strong>Age 150:</strong> impossible. An entry error. The <strong>raw</strong> sheet is the source here: find this Case there (<strong>Ctrl/Cmd + F</strong>) and you’ll see the real age, 33. Correct it. <em>In your own work, you’d log the correction.</em></li>
 <li><strong>Age 80 and 85:</strong> real, but not exact. ATUS <em>top-codes</em> age: everyone 80–84 is recorded as 80, and 85 or older as 85. Check the documentation before you “fix” a value that looks odd.</li>
 </ul>
 <p>What to do with a confirmed error: correct it from the source if you can; otherwise make the cell empty and log it. Don’t delete the whole row without recording why.</p>
@@ -3110,7 +3107,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>Filter column X for values greater than 1 to see every repeated Case ID.</li>
 <li>For exact duplicates: select the data, <strong>Data &gt; Data cleanup &gt; Remove duplicates</strong>, tick <strong>Data has header row</strong>, and choose which columns must match (all of them, for exact duplicates). Sheets reports how many rows it removed: 5.</li>
 <li>Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and 73). Find that Case in <strong>raw</strong>: the real age is 37. Right-click the row with 73 &gt; <strong>Delete row</strong>.</li>
-<li>Clear column X. Log what you removed. The sheet now has 2,000 rows: 2,000 different people.</li>
+<li>Clear column X. The sheet now has 2,000 rows: 2,000 different people. <em>In your own work, you’d log what you removed.</em></li>
 </ol>
 <div class="placeholder">
 <p><strong>Screenshot</strong> <code>images/clean-remove-duplicates.png</code>: the Remove duplicates dialog with Data has header row checked.</p>
@@ -3199,7 +3196,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>IFS</code> stops at the first true condition. If “Part time” (<code>K2&gt;=0</code>) came before the missing codes, -1 would never be checked. And decide where boundaries go: is 35 hours full time (<code>&gt;=</code>) or part time (<code>&gt;</code>)? Write the decision in the <strong>log</strong> sheet.</p>
+<p><code>IFS</code> stops at the first true condition. If “Part time” (<code>K2&gt;=0</code>) came before the missing codes, -1 would never be checked. And decide where boundaries go: is 35 hours full time (<code>&gt;=</code>) or part time (<code>&gt;</code>)? In your own work, write the decision in the log.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -3303,7 +3300,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>Add <strong>Columns: Work status.</strong> Now each education level is split by whether people work.</li>
 <li>Compare the <strong>Full time</strong> column across education levels. The steady drop is gone: full-time workers at every level report roughly 170 to 235 minutes, with no pattern by degree.</li>
 </ol>
-<p>Much of the education difference comes from who is working: 64% of people with no diploma have work hours of -1 (not working), against about 26–29% with a bachelor’s or master’s. The answer depends on a decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>How you prepare data changes your conclusions,</strong> which is why every decision goes in the log.</p>
+<p>Much of the education difference comes from who is working: 64% of people with no diploma have work hours of -1 (not working), against about 26–29% with a bachelor’s or master’s. The answer depends on a decision from <a href="#sec-clean" class="quarto-xref">Section 5</a>: reading -1 as “not working”, rather than dropping it or treating it as 0. <strong>How you prepare data changes your conclusions,</strong> which is why, in your own work, every decision goes in the log.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3515,7 +3512,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <h1 data-number="9"><span class="header-section-number">9</span> Wrapping up</h1>
 <section id="take-your-data-with-you" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="take-your-data-with-you"><span class="header-section-number">9.1</span> Take your data with you</h2>
-<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> and <strong>log</strong> too: the data dictionary and your log belong with the data.</p>
+<p><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> saves the current sheet as a CSV, which opens in R, Python, SPSS, Stata and almost everything else. Download <strong>README</strong> too: the data dictionary belongs with the data, and in your own work, so does the log.</p>
 </section>
 <section id="what-we-did" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="what-we-did"><span class="header-section-number">9.2</span> What we did</h2>

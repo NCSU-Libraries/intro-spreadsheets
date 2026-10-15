@@ -38,7 +38,7 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 # 2. Set up your workbook
 
 - [ ] Open the workbook (link in the guide, section 2) and **File > Make a copy**. Name it "[Your name] DSTI spreadsheets".
-- [ ] Find the four sheets: **raw** (never edit), **README**, **working**, **log**.
+- [ ] Find the four sheets: **raw** (never edit), **README**, **working**, **log** (not used today).
 - [ ] On **working**: **View > Freeze > 1 row**.
 - [ ] **Ctrl + ↓** in column A to find the last row. Respondents: ______
 
@@ -53,14 +53,12 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 # 4. Making data understandable
 
 - [ ] Rename **H1** to `Number of children` and **K1** to `Work hours per week`.
-- [ ] Log both renames on the **log** sheet.
 - [ ] Select column **D**. **Edit > Find and replace**, **Specific range**, **Match entire cell
       contents** checked:
   - [ ] `-1` → (empty) *first*
   - [ ] `1` → `Metropolitan`
   - [ ] `2` → `Non-metropolitan`
   - [ ] `3` → `Not identified`
-- [ ] Log the recode on the **log** sheet.
 
 **Break.**
 
@@ -82,14 +80,13 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 - [ ] On a new sheet, compare `=AVERAGE(working!K2:K)` and `=AVERAGEIF(working!K2:K, ">=0")`.
       Difference: ______
 - [ ] **W1** `Work hours missing`, **W2** `=OR(K2=-1, K2=-4)`, fill down.
-- [ ] Log the missing-value decision on the **log** sheet.
-- [ ] Check Age with **Data > Column stats**. Age 150: error; look up the Case in **raw** (age 33), correct it and log it. Ages 80 and 85:
+- [ ] Check Age with **Data > Column stats**. Age 150: error; look up the Case in **raw** (age 33), correct it. Ages 80 and 85:
       real (top-coded), so leave them.
 - [ ] **X2** `=COUNTIF(A:A, A2)`, fill down, filter for values over 1.
 - [ ] **Data > Data cleanup > Remove duplicates** (header row checked, all columns). Rows removed:
       ______
 - [ ] One Case is still listed twice (Age 37 vs. 73): check **raw** (37), delete the 73 row.
-- [ ] Clear column X. Log the duplicates. Rows left: 2,000.
+- [ ] Clear column X. Rows left: 2,000.
 
 # 6. Making new variables with formulas
 
@@ -142,6 +139,6 @@ Grouped histogram:
 
 # 9. Wrapping up
 
-- [ ] **File > Download > Comma-separated values (.csv)** for **working**, **README** and **log**.
+- [ ] **File > Download > Comma-separated values (.csv)** for **working** and **README**.
 - [ ] Evaluation: [link TBD]{.tbd}
 - [ ] Get Data Help: go.ncsu.edu/getdatahelp · getdatahelp@ncsu.edu

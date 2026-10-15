@@ -2223,7 +2223,7 @@ Print from the browser (File > Print); each section starts on a new page.
 <h1>2. Set up your workbook</h1>
 <ul class="task-list">
 <li><label><input type="checkbox">Open the workbook (link in the guide, section 2) and <strong>File &gt; Make a copy</strong>. Name it “[Your name] DSTI spreadsheets”.</label></li>
-<li><label><input type="checkbox">Find the four sheets: <strong>raw</strong> (never edit), <strong>README</strong>, <strong>working</strong>, <strong>log</strong>.</label></li>
+<li><label><input type="checkbox">Find the four sheets: <strong>raw</strong> (never edit), <strong>README</strong>, <strong>working</strong>, <strong>log</strong> (not used today).</label></li>
 <li><label><input type="checkbox">On <strong>working</strong>: <strong>View &gt; Freeze &gt; 1 row</strong>.</label></li>
 <li><label><input type="checkbox"><strong>Ctrl + ↓</strong> in column A to find the last row. Respondents: ______</label></li>
 </ul>
@@ -2241,7 +2241,6 @@ Print from the browser (File > Print); each section starts on a new page.
 <h1>4. Making data understandable</h1>
 <ul class="task-list">
 <li><label><input type="checkbox">Rename <strong>H1</strong> to <code>Number of children</code> and <strong>K1</strong> to <code>Work hours per week</code>.</label></li>
-<li><label><input type="checkbox">Log both renames on the <strong>log</strong> sheet.</label></li>
 <li><label><input type="checkbox">Select column <strong>D</strong>. <strong>Edit &gt; Find and replace</strong>, <strong>Specific range</strong>, <strong>Match entire cell contents</strong> checked:</label>
 <ul class="task-list">
 <li><label><input type="checkbox"><code>-1</code> → (empty) <em>first</em></label></li>
@@ -2249,7 +2248,6 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox"><code>2</code> → <code>Non-metropolitan</code></label></li>
 <li><label><input type="checkbox"><code>3</code> → <code>Not identified</code></label></li>
 </ul></li>
-<li><label><input type="checkbox">Log the recode on the <strong>log</strong> sheet.</label></li>
 </ul>
 <p><strong>Break.</strong></p>
 </section>
@@ -2265,12 +2263,11 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">Select <strong>O2:Q</strong> (not the header). Find and replace: <code>&quot;</code> → nothing, <code>min</code> → nothing, <code>min</code> → nothing. Then <strong>Format &gt; Number &gt; Number</strong>, and <strong>Decrease decimal places</strong> twice.</label></li>
 <li><label><input type="checkbox">On a new sheet, compare <code>=AVERAGE(working!K2:K)</code> and <code>=AVERAGEIF(working!K2:K, &quot;&gt;=0&quot;)</code>. Difference: ______</label></li>
 <li><label><input type="checkbox"><strong>W1</strong> <code>Work hours missing</code>, <strong>W2</strong> <code>=OR(K2=-1, K2=-4)</code>, fill down.</label></li>
-<li><label><input type="checkbox">Log the missing-value decision on the <strong>log</strong> sheet.</label></li>
-<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Age 150: error; look up the Case in <strong>raw</strong> (age 33), correct it and log it. Ages 80 and 85: real (top-coded), so leave them.</label></li>
+<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Age 150: error; look up the Case in <strong>raw</strong> (age 33), correct it. Ages 80 and 85: real (top-coded), so leave them.</label></li>
 <li><label><input type="checkbox"><strong>X2</strong> <code>=COUNTIF(A:A, A2)</code>, fill down, filter for values over 1.</label></li>
 <li><label><input type="checkbox"><strong>Data &gt; Data cleanup &gt; Remove duplicates</strong> (header row checked, all columns). Rows removed: ______</label></li>
 <li><label><input type="checkbox">One Case is still listed twice (Age 37 vs. 73): check <strong>raw</strong> (37), delete the 73 row.</label></li>
-<li><label><input type="checkbox">Clear column X. Log the duplicates. Rows left: 2,000.</label></li>
+<li><label><input type="checkbox">Clear column X. Rows left: 2,000.</label></li>
 </ul>
 </section>
 <section id="making-new-variables-with-formulas" class="level1">
@@ -2325,7 +2322,7 @@ Print from the browser (File > Print); each section starts on a new page.
 <section id="wrapping-up" class="level1">
 <h1>9. Wrapping up</h1>
 <ul class="task-list">
-<li><label><input type="checkbox"><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> for <strong>working</strong>, <strong>README</strong> and <strong>log</strong>.</label></li>
+<li><label><input type="checkbox"><strong>File &gt; Download &gt; Comma-separated values (.csv)</strong> for <strong>working</strong> and <strong>README</strong>.</label></li>
 <li><label><input type="checkbox">Evaluation: <span class="tbd">link TBD</span></label></li>
 <li><label><input type="checkbox">Get Data Help: go.ncsu.edu/getdatahelp · getdatahelp@ncsu.edu</label></li>
 </ul>
