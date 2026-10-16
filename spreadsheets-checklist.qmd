@@ -95,16 +95,16 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 - [ ] **Y1** `Leisure (mins)`, **Y2** `=SUM(S2:V2)`. Fill X2:Y2 down. Check one row by hand.
 - [ ] **Z1** `Age group`, **Z2** (then fill down):
 
-      ```
-      =IFS(F2<25, "15-24", F2<35, "25-34", F2<45, "35-44", F2<55, "45-54", F2<65, "55-64", TRUE, "65+")
-      ```
+  ```
+  =IFS(F2<25, "15-24", F2<35, "25-34", F2<45, "35-44", F2<55, "45-54", F2<65, "55-64", TRUE, "65+")
+  ```
 - [ ] **AA1** `Children group`: your own formula giving "0", "1", "2" or "3+". Fill down.
 - [ ] New sheet **settings**: **A1** `Full time from (hours)`, **B1** `35`.
 - [ ] **AB1** `Work status`, **AB2** (then fill down):
 
-      ```
-      =IFS(K2=-1, "Not working", K2=-4, "Hours vary", K2>=settings!$B$1, "Full time", K2>=0, "Part time")
-      ```
+  ```
+  =IFS(K2=-1, "Not working", K2=-4, "Hours vary", K2>=settings!$B$1, "Full time", K2>=0, "Part time")
+  ```
 
 # 7. Exploring: summaries and pivot tables
 

@@ -2276,15 +2276,11 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><p><label><input type="checkbox"><strong>X1</strong> <code>Chores (mins)</code>, <strong>X2</strong> <code>=SUM(M2:P2)</code>.</label></p></li>
 <li><p><label><input type="checkbox"><strong>Y1</strong> <code>Leisure (mins)</code>, <strong>Y2</strong> <code>=SUM(S2:V2)</code>. Fill X2:Y2 down. Check one row by hand.</label></p></li>
 <li><p><label><input type="checkbox"><strong>Z1</strong> <code>Age group</code>, <strong>Z2</strong> (then fill down):</label></p>
-<pre><code>```
-=IFS(F2&lt;25, &quot;15-24&quot;, F2&lt;35, &quot;25-34&quot;, F2&lt;45, &quot;35-44&quot;, F2&lt;55, &quot;45-54&quot;, F2&lt;65, &quot;55-64&quot;, TRUE, &quot;65+&quot;)
-```</code></pre></li>
+<pre><code>=IFS(F2&lt;25, &quot;15-24&quot;, F2&lt;35, &quot;25-34&quot;, F2&lt;45, &quot;35-44&quot;, F2&lt;55, &quot;45-54&quot;, F2&lt;65, &quot;55-64&quot;, TRUE, &quot;65+&quot;)</code></pre></li>
 <li><p><label><input type="checkbox"><strong>AA1</strong> <code>Children group</code>: your own formula giving “0”, “1”, “2” or “3+”. Fill down.</label></p></li>
 <li><p><label><input type="checkbox">New sheet <strong>settings</strong>: <strong>A1</strong> <code>Full time from (hours)</code>, <strong>B1</strong> <code>35</code>.</label></p></li>
 <li><p><label><input type="checkbox"><strong>AB1</strong> <code>Work status</code>, <strong>AB2</strong> (then fill down):</label></p>
-<pre><code>```
-=IFS(K2=-1, &quot;Not working&quot;, K2=-4, &quot;Hours vary&quot;, K2&gt;=settings!$B$1, &quot;Full time&quot;, K2&gt;=0, &quot;Part time&quot;)
-```</code></pre></li>
+<pre><code>=IFS(K2=-1, &quot;Not working&quot;, K2=-4, &quot;Hours vary&quot;, K2&gt;=settings!$B$1, &quot;Full time&quot;, K2&gt;=0, &quot;Part time&quot;)</code></pre></li>
 </ul>
 </section>
 <section id="exploring-summaries-and-pivot-tables" class="level1">
