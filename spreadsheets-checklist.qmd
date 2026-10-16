@@ -45,7 +45,8 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 # 3. Entering data well
 
 - [ ] Read the allowed values for Sex and the range for Age on **README**.
-- [ ] Select **G2:G**. **Data > Data validation > Add rule**: Dropdown with `Female` and `Male`.
+- [ ] Select **G2:G**. **Data > Data validation > Add rule**: Dropdown: delete every value
+      Sheets fills in except `Female` and `Male`.
       **Advanced options > Show a warning.**
 - [ ] Rule for **F2:F** (Age): is between 15 and 85.
 - [ ] Hover over a red triangle to see why the cell is flagged. Leave the flags for section 5.

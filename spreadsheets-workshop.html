@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="NC State University Libraries — Data Science Services">
-<meta name="dcterms.date" content="2026-10-14">
+<meta name="dcterms.date" content="2026-10-16">
 
 <title>Introduction to Working with Spreadsheets</title>
 <style>
@@ -2284,7 +2284,7 @@ pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 14, 2026</p>
+      <p class="date">October 16, 2026</p>
     </div>
   </div>
   
@@ -2741,7 +2741,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>On <strong>README</strong>, look up the allowed values for Sex and the allowed range for Age.</li>
 <li>On <strong>working</strong>, select <strong>G2:G</strong> (all of Sex below the header: click G2, then <strong>Ctrl/Cmd + Shift + ↓</strong>).</li>
 <li><strong>Data &gt; Data validation &gt; Add rule.</strong></li>
-<li>Criteria: <strong>Dropdown</strong>. Add the two allowed labels from the README, <code>Female</code> and <code>Male</code>, one per item.</li>
+<li>Criteria: <strong>Dropdown</strong>. Sheets fills in every value it finds in the column. Delete all but the two allowed labels from the README, <code>Female</code> and <code>Male</code>.</li>
 <li>Open <strong>Advanced options</strong> and choose <strong>Show a warning</strong>. Click <strong>Done</strong>.</li>
 <li>Add one more rule the same way: select <strong>F2:F</strong> (Age), criteria <strong>Is between</strong> 15 and 85.</li>
 </ol>
@@ -2941,7 +2941,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>Without <strong>Match entire cell contents</strong>, replacing “Femal” with “Female” also changes every correct “Female” into “Femalee”. Check the box every time you recode.</p>
 </div>
 </div>
-<p><strong>Capitalization</strong> (“female”, “MALE”): a few cells have these, but the filter list doesn’t show them. It ignores case, so “female” is listed under “Female”. Pivot tables and <code>COUNTIF</code> ignore case too, so inside Sheets the problem stays hidden. R and Python don’t ignore case: there, “female” and “Female” become two groups as soon as the data leaves Sheets. Fix it with a formula in a helper column, then put the results back.</p>
+<p><strong>Capitalization</strong> (“female”, “MALE”): a few cells have these, but the filter list doesn’t show them. It ignores case, so “female” is listed under “Female”. Pivot tables and <code>COUNTIF</code> ignore case too. The one place they show is the validation rule from <a href="#sec-entry" class="quarto-xref">Section 3</a>: it does check case, so these cells still have red triangles. R and Python don’t ignore case: there, “female” and “Female” become two groups as soon as the data leaves Sheets. Fix it with a formula in a helper column, then put the results back.</p>
 <ol type="1">
 <li>In <strong>W1</strong> type <code>helper</code>. In <strong>W2</strong> type <code>=PROPER(G2)</code>.</li>
 <li>Fill down: double-click the <strong>fill handle</strong>, the small blue circle at the bottom right of the selected cell. Sheets copies the formula down to the last row of the data.</li>

@@ -346,8 +346,8 @@ cell that breaks it, which turns the data dictionary into a checklist.
 2. On **working**, select **G2:G** (all of Sex below the header: click G2, then
    **Ctrl/Cmd + Shift + ↓**).
 3. **Data > Data validation > Add rule.**
-4. Criteria: **Dropdown**. Add the two allowed labels from the README, `Female` and `Male`, one per
-   item.
+4. Criteria: **Dropdown**. Sheets fills in every value it finds in the column. Delete all but the
+   two allowed labels from the README, `Female` and `Male`.
 5. Open **Advanced options** and choose **Show a warning**. Click **Done**.
 6. Add one more rule the same way: select **F2:F** (Age), criteria **Is between** 15 and 85.
 
@@ -528,7 +528,8 @@ Without **Match entire cell contents**, replacing "Femal" with "Female" also cha
 
 **Capitalization** ("female", "MALE"): a few cells have these, but the filter list doesn't show
 them. It ignores case, so "female" is listed under "Female". Pivot tables and `COUNTIF` ignore case
-too, so inside Sheets the problem stays hidden. R and Python don't ignore case: there, "female" and
+too. The one place they show is the validation rule from @sec-entry: it does check case, so these
+cells still have red triangles. R and Python don't ignore case: there, "female" and
 "Female" become two groups as soon as the data leaves Sheets. Fix it with a formula in a helper
 column, then put the results back.
 
