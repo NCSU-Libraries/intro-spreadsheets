@@ -3601,16 +3601,17 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>Sheets has no strip plot, so we build one from a scatter chart. The chart data goes on its own sheet, because the median rows sit under the data, which <code>working</code> must never have.</p>
 <p><strong>Build the chart data:</strong></p>
 <ol type="1">
-<li>Add a sheet named <strong>strip</strong>. In row 1 type the headers: <strong>A1</strong> <code>Group</code>, <strong>B1</strong> <code>x</code>, <strong>C1</strong> <code>Leisure (mins)</code>, <strong>D1</strong> <code>Group median</code>, <strong>E1</strong> <code>Label</code>.</li>
-<li>Type these formulas in row 2:
+<li><p>Add a sheet named <strong>strip</strong>. In row 1 type the headers: <strong>A1</strong> <code>Group</code>, <strong>B1</strong> <code>x</code>, <strong>C1</strong> <code>Leisure (mins)</code>, <strong>D1</strong> <code>Group median</code>, <strong>E1</strong> <code>Label</code>.</p>
+<p>A new sheet has only 1,000 rows, and this one needs 2,005. Press <strong>Ctrl/Cmd + ↓</strong> to go to the bottom. Under the last row, in <strong>Add [ ] more rows at the bottom</strong>, type <code>1005</code> and click <strong>Add</strong>.</p></li>
+<li><p>Type these formulas in row 2:</p>
 <ul>
 <li><strong>A2:</strong> <code>=MIN(working!H2, 3)</code>. The number of children, with 3 standing for “3 or more”.</li>
 <li><strong>B2:</strong> <code>=A2 + RAND()*0.6 - 0.3</code>. The group number, nudged sideways at random.</li>
 <li><strong>C2:</strong> <code>=working!Y2</code>. Leisure.</li>
 </ul></li>
-<li>Fill them down to row 2001: type <code>A2:C2001</code> in the <strong>Name box</strong> and press <strong>Enter</strong>, then press <strong>Ctrl/Cmd + D</strong>.</li>
-<li>With A2:C2001 still selected, copy, then paste values only on top (<strong>Ctrl/Cmd + Shift + V</strong>). <code>RAND()</code> picks new numbers every time you edit anything, so without this the dots move around.</li>
-<li>Add one row for each group’s median, under the data:
+<li><p>Fill them down to row 2001: type <code>A2:C2001</code> in the <strong>Name box</strong> and press <strong>Enter</strong>, then press <strong>Ctrl/Cmd + D</strong>.</p></li>
+<li><p>With A2:C2001 still selected, copy, then paste values only on top (<strong>Ctrl/Cmd + Shift + V</strong>). <code>RAND()</code> picks new numbers every time you edit anything, so without this the dots move around.</p></li>
+<li><p>Add one row for each group’s median, under the data:</p>
 <ul>
 <li><strong>A2002:A2005:</strong> <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>.</li>
 <li><strong>B2002:</strong> <code>=A2002</code>. No nudge, so the median sits in the middle of its group.</li>

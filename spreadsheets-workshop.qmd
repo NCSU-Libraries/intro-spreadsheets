@@ -1139,6 +1139,10 @@ sheet, because the median rows sit under the data, which `working` must never ha
 
 1. Add a sheet named **strip**. In row 1 type the headers: **A1** `Group`, **B1** `x`, **C1**
    `Leisure (mins)`, **D1** `Group median`, **E1** `Label`.
+
+   A new sheet has only 1,000 rows, and this one needs 2,005. Press **Ctrl/Cmd + ↓** to go to the
+   bottom. Under the last row, in **Add [ ] more rows at the bottom**, type `1005` and click
+   **Add**.
 2. Type these formulas in row 2:
    - **A2:** `=MIN(working!H2, 3)`. The number of children, with 3 standing for "3 or more".
    - **B2:** `=A2 + RAND()*0.6 - 0.3`. The group number, nudged sideways at random.
