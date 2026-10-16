@@ -121,7 +121,8 @@ Fell behind? Copy the finished workbook (link in the guide, section 8).
 
 Chart of group averages:
 
-- [ ] Click in the question 5 pivot table (children group). **Insert > Chart > Column chart.**
+- [ ] In the question 5 pivot table (children group), untick **Show totals** under Rows.
+- [ ] Click in the pivot table. **Insert > Chart > Column chart.**
 - [ ] **Customize > Series**: one dark and one light color for chores and leisure.
 - [ ] Titles: "Average chores and leisure by number of children"; "Children under 18 in
       household"; "Average minutes on diary day". Alt text.
@@ -141,7 +142,8 @@ Grouped histogram:
 - [ ] Right-click a row value > **Create pivot group rule**, interval 120.
 - [ ] **Columns** Children group; **Filters** Children group, keep 0 and 3+.
 - [ ] **Values** Case (COUNTA), **Show as: % of column.**
-- [ ] **Insert > Chart > Column chart.**
+- [ ] Untick **Show totals** under Rows and under Columns.
+- [ ] Click in the pivot table. **Insert > Chart > Column chart.**
 - [ ] **Customize > Series**: a dark and a light shade of one color for the two groups.
 - [ ] Title (the question); axes "Leisure on diary day (minutes, 2-hour groups)" and "Percent of
       group". Alt text.

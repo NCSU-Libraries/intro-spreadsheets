@@ -909,9 +909,12 @@ we look at what those averages hide.
 The question 5 pivot table from @sec-explore already has the numbers: average chores and average
 leisure for each children group. A column chart puts them side by side.
 
-1. Go to the question 5 pivot table and click any cell in it.
-2. **Insert > Chart.** If Sheets picks another type, choose **Setup > Chart type: Column chart.**
-   Each children group gets two bars, one for chores and one for leisure.
+1. Go to the question 5 pivot table and click any cell in it. In the pivot table editor, under
+   **Rows**, untick **Show totals**. Otherwise the chart gets an extra pair of bars for the Grand
+   Total.
+2. Click any cell in the pivot table again. **Insert > Chart.** If Sheets picks another type, choose
+   **Setup > Chart type: Column chart.** Each children group gets two bars, one for chores and one
+   for leisure.
 3. **Customize > Series.** Give chores and leisure two clearly different colors, one dark and one
    light, so they still differ in grayscale.
 4. **Customize > Chart & axis titles:** title "Average chores and leisure by number of children",
@@ -995,15 +998,17 @@ minutes (a bin) and not a category, it works as a histogram: one bar per group i
 3. **Columns: Add > Children group.** Then **Filters: Add > Children group**, and under **Status**
    keep only **0** and **3+**.
 4. **Values: Add > Case**, summarized by **COUNTA**. Then **Show as: % of column.**
-5. Click in the pivot table. **Insert > Chart.** If Sheets picks another type, choose **Setup >
-   Chart type: Column chart.** Each bin has two bars, one per group.
-6. **Customize > Series.** Choose each group in turn and give it a color: a dark and a light shade
+5. Untick **Show totals** under **Rows** and under **Columns**. Otherwise the chart gets an extra
+   bin and a third bar in each bin for the Grand Total.
+6. Click any cell in the pivot table. **Insert > Chart.** If Sheets picks another type, choose
+   **Setup > Chart type: Column chart.** Each bin has two bars, one per group.
+7. **Customize > Series.** Choose each group in turn and give it a color: a dark and a light shade
    of one color. The groups have an order (no children, then 3+), and shades still tell them apart
    in grayscale and for people with color vision deficiency.
-7. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
+8. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
    3+ children have less leisure time than those with none?". Horizontal axis "Leisure on diary
    day (minutes, 2-hour groups)", vertical axis "Percent of group".
-8. Right-click the chart > **Alt text**, and describe what it shows.
+9. Right-click the chart > **Alt text**, and describe what it shows.
 
 ![The finished grouped histogram, as percentages of each group.](images/visualize-grouped-histogram.png){fig-alt="Column chart titled Do people with 3+ children have less leisure time than those with none? Two-hour leisure bins from 0-119 to 1200-1319 minutes run along the bottom, with two bars in each: dark red for 0 children and light red for 3+. The vertical axis runs from 0% to 50%. In the 0-119 bin, 3+ is about 47% and 0 about 19%. The two are about equal at 120-239 (about 26%), and from 240 minutes up the dark red bars are taller, trailing off by 840-959." width="80%"}
 
