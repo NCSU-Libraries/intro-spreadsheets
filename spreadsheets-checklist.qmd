@@ -130,8 +130,8 @@ Chart of group averages:
 Scatter with trendline:
 
 - [ ] Select column **F**, Ctrl-click column **Y**. **Insert > Chart > Scatter chart.**
-- [ ] **Customize > Series**: small points, about 30% opacity, one color. Trendline black or
-      dark gray.
+- [ ] **Customize > Series**: Point size 2px; Color, *then* Fill opacity about 30%; trendline
+      Line color black or dark gray.
 - [ ] **Trendline**: Polynomial, degree 2, Use equation, Show R².
 - [ ] Titles: "Leisure time by age"; "Age (years)"; "Leisure on diary day (minutes)".
 - [ ] Vertical axis max 1440. Alt text.

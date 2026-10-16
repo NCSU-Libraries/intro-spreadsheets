@@ -3387,10 +3387,10 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><strong>Insert &gt; Chart.</strong> In the chart editor, <strong>Setup &gt; Chart type: Scatter chart.</strong> Check that Age is on the X-axis.</li>
 <li><strong>Customize &gt; Series:</strong>
 <ul>
-<li>Point size: small. Opacity: about 30%, so crowded areas look darker.</li>
+<li><strong>Point size:</strong> 2px.</li>
+<li><strong>Format &gt; Color:</strong> one color for all the points. Then <strong>Fill opacity:</strong> about 30%, so crowded areas look darker. Set the color first: changing it puts the opacity back to 100%.</li>
 <li>Tick <strong>Trendline</strong>. Type: <strong>Polynomial</strong>, degree <strong>2</strong>. Label: <strong>Use equation</strong>. Tick <strong>Show R²</strong>.</li>
-<li>Point color: one color for all the points.</li>
-<li>Trendline color: black or dark gray, so it stands out from the points.</li>
+<li><strong>Line color</strong> (in the trendline options): black or dark gray, so it stands out from the points.</li>
 </ul></li>
 <li><strong>Customize &gt; Chart &amp; axis titles:</strong> title “Leisure time by age”, horizontal axis “Age (years)”, vertical axis “Leisure on diary day (minutes)”.</li>
 <li><strong>Customize &gt; Vertical axis:</strong> max <strong>1440</strong>.</li>
@@ -3627,8 +3627,8 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><strong>Setup &gt; Chart type: Scatter chart.</strong> Check that the X-axis is <code>x</code> and the two series are <code>Leisure (mins)</code> and <code>Group median</code>.</li>
 <li><strong>Customize &gt; Series:</strong>
 <ul>
-<li><code>Leisure (mins)</code>: the smallest point size, gray, opacity about 20%.</li>
-<li><code>Group median</code>: the largest point size, shape <strong>Square</strong>, a strong color that stands out from the gray.</li>
+<li><code>Leisure (mins)</code>: <strong>Point size</strong> 2px, <strong>Color</strong> gray, then <strong>Fill opacity</strong> about 20%.</li>
+<li><code>Group median</code>: <strong>Point size</strong> 14px, <strong>Point shape</strong> Square, and a strong <strong>Color</strong> that stands out from the gray.</li>
 </ul></li>
 <li>Name the groups on the chart. Under <strong>Setup</strong>, open the <code>Group median</code> series’ <strong>⋮</strong> menu &gt; <strong>Add labels</strong>, and choose <strong>E2002:E2005</strong>. <span class="tbd">Confirm the menu and that the labels show.</span></li>
 <li><strong>Customize &gt; Horizontal axis:</strong> min <code>-0.5</code>, max <code>3.5</code>, and turn off the axis labels. Their numbers would fall between the groups (-0.5, 0.5, 1.5 …); the median labels name the groups instead. <span class="tbd">Confirm the option for hiding axis labels.</span></li>

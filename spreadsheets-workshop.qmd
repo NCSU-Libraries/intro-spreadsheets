@@ -948,11 +948,13 @@ show it.
 2. **Insert > Chart.** In the chart editor, **Setup > Chart type: Scatter chart.** Check that Age
    is on the X-axis.
 3. **Customize > Series:**
-   - Point size: small. Opacity: about 30%, so crowded areas look darker.
+   - **Point size:** 2px.
+   - **Format > Color:** one color for all the points. Then **Fill opacity:** about 30%, so
+     crowded areas look darker. Set the color first: changing it puts the opacity back to 100%.
    - Tick **Trendline**. Type: **Polynomial**, degree **2**. Label: **Use equation**. Tick
      **Show R²**.
-   - Point color: one color for all the points.
-   - Trendline color: black or dark gray, so it stands out from the points.
+   - **Line color** (in the trendline options): black or dark gray, so it stands out from the
+     points.
 4. **Customize > Chart & axis titles:** title "Leisure time by age", horizontal axis "Age (years)",
    vertical axis "Leisure on diary day (minutes)".
 5. **Customize > Vertical axis:** max **1440**.
@@ -1168,9 +1170,9 @@ Check: the medians are 253, 165, 150 and 120 minutes.
 2. **Setup > Chart type: Scatter chart.** Check that the X-axis is `x` and the two series are
    `Leisure (mins)` and `Group median`.
 3. **Customize > Series:**
-   - `Leisure (mins)`: the smallest point size, gray, opacity about 20%.
-   - `Group median`: the largest point size, shape **Square**, a strong color that stands out
-     from the gray.
+   - `Leisure (mins)`: **Point size** 2px, **Color** gray, then **Fill opacity** about 20%.
+   - `Group median`: **Point size** 14px, **Point shape** Square, and a strong **Color** that
+     stands out from the gray.
 4. Name the groups on the chart. Under **Setup**, open the `Group median` series' **⋮** menu >
    **Add labels**, and choose **E2002:E2005**. [Confirm the menu and that the labels show.]{.tbd}
 5. **Customize > Horizontal axis:** min `-0.5`, max `3.5`, and turn off the axis labels. Their
