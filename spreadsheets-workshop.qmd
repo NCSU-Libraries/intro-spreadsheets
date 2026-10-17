@@ -919,7 +919,7 @@ leisure for each children group. A column chart puts them side by side.
    light, so they still differ in grayscale.
 4. **Customize > Chart & axis titles:** title "Average chores and leisure by number of children",
    horizontal axis "Children under 18 in household", vertical axis "Average minutes on diary day".
-5. Right-click the chart > **Alt text**, and describe what it shows.
+5. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 ::: {.placeholder}
 **Screenshot** `images/visualize-pivot-averages.png`: the finished column chart, two bars per
@@ -958,7 +958,7 @@ show it.
 4. **Customize > Chart & axis titles:** title "Leisure time by age", horizontal axis "Age (years)",
    vertical axis "Leisure on diary day (minutes)".
 5. **Customize > Vertical axis:** max **1440**.
-6. Right-click the chart > **Alt text**, and describe what it shows.
+6. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 ![The finished scatter, with the trendline's equation and R² in the legend.](images/visualize-scatter-trendline.png){fig-alt="Scatter chart titled Leisure time by age. Age runs from about 15 to 85 along the bottom and leisure minutes from 0 to 1500 up the side. Semi-transparent red dots form vertical columns at each age, densest below 500 minutes, with full columns at 80 and 85. A black curved trendline sits near 200 minutes until about 40, then rises to about 450 at 85. The legend reads 260 + -4.46x + 0.0788x^2, R² = 0.095." width="80%"}
 
@@ -1010,7 +1010,7 @@ minutes (a bin) and not a category, it works as a histogram: one bar per group i
 8. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
    3+ children have less leisure time than those with none?". Horizontal axis "Leisure on diary
    day (minutes, 2-hour groups)", vertical axis "Percent of group".
-9. Right-click the chart > **Alt text**, and describe what it shows.
+9. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 ![The finished grouped histogram, as percentages of each group.](images/visualize-grouped-histogram.png){fig-alt="Column chart titled Do people with 3+ children have less leisure time than those with none? Two-hour leisure bins from 0-119 to 1200-1319 minutes run along the bottom, with two bars in each: dark red for 0 children and light red for 3+. The vertical axis runs from 0% to 50%. In the 0-119 bin, 3+ is about 47% and 0 about 19%. The two are about equal at 120-239 (about 26%), and from 240 minutes up the dark red bars are taller, trailing off by 840-959." width="80%"}
 
@@ -1182,7 +1182,7 @@ Check: the medians are 253, 165, 150 and 120 minutes.
    and max `1440`.
 7. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
    axis "Number of children in household", vertical axis "Leisure on diary day (minutes)".
-8. Right-click the chart > **Alt text**, and describe what it shows.
+8. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 Things to notice: the medians step down as the number of children rises, and each group has a long
 upper tail, which is why the median is a better center than the average here. The no-children group

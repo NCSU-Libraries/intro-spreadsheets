@@ -125,7 +125,7 @@ Chart of group averages:
 - [ ] Click in the pivot table. **Insert > Chart > Column chart.**
 - [ ] **Customize > Series**: one dark and one light color for chores and leisure.
 - [ ] Titles: "Average chores and leisure by number of children"; "Children under 18 in
-      household"; "Average minutes on diary day". Alt text.
+      household"; "Average minutes on diary day". Alt text (chart **⋮** menu).
 
 Scatter with trendline:
 
