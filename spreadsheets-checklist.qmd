@@ -119,7 +119,7 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 
 # 8. Visualizing averages and distributions
 
-Fell behind? Copy the finished workbook (link in the guide, section 8).
+Fell behind? Go to **go.ncsu.edu/dss-atus-final** and click **Make a copy**.
 
 Chart of group averages:
 

@@ -877,7 +877,8 @@ We start with the chart most people make first: group averages, straight from a 
 we look at what those averages hide.
 
 **Fell behind?** Make a copy of the finished workbook, with everything up to this point done:
-[link TBD]{.tbd}. Click **Make a copy**, as in @sec-setup.
+[go.ncsu.edu/dss-atus-final](https://go.ncsu.edu/dss-atus-final). Click **Make a copy**, as in
+@sec-setup.
 
 ## A chart from a pivot table: group averages
 
@@ -902,8 +903,9 @@ leisure for each children group. A column chart puts them side by side.
 ::: {.callout-tip}
 ## Extra: make it clearer
 
-The DSS workshop on designing visualizations covers making a chart like this clear and accessible:
-sorting, labels, color and contrast. [Link TBD]{.tbd}
+The DSS data visualization workshops cover making a chart like this clear and accessible:
+sorting, labels, color and contrast. See
+[go.ncsu.edu/datavizworkshops](https://go.ncsu.edu/datavizworkshops).
 :::
 
 ## What an average hides
@@ -1050,7 +1052,8 @@ decision.
 ## Where to go next
 
 - **R or Python,** when you need steps you can repeat, bigger data, or more statistics.
-- **Designing visualizations,** the DSS workshop. [Link TBD]{.tbd}
+- **Designing visualizations:** the DSS data visualization workshops,
+  [go.ncsu.edu/datavizworkshops](https://go.ncsu.edu/datavizworkshops).
 - **Get Data Help:** [go.ncsu.edu/getdatahelp](https://go.ncsu.edu/getdatahelp), or
   getdatahelp@ncsu.edu.
 - **Practice:** the [extra activities](#sec-extras) below.
