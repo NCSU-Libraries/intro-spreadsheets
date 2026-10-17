@@ -893,7 +893,9 @@ Building it from whole columns (`working!A1:AB`) avoids this.
 
 - **Filters: Add > Work status,** and untick "Hours vary". The answer barely changes; checking
   that is good practice.
-- **Show as: % of row** turns counts into percentages within each row.
+- **See who's working:** in the question 6 pivot table, change the value to **Case**, summarized
+  by **COUNTA**, with **Show as: % of row**. The **Not working** column gives the 64% and 26–29%
+  above.
 - To edit a pivot table's numbers or re-sort freely, copy it and **paste values only** somewhere
   else.
 :::
