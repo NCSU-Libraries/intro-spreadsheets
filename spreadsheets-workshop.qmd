@@ -673,10 +673,7 @@ Flag first, then decide:
 5. Clear column X. The sheet now has 2,000 rows: 2,000 different people.
    *In your own work, you'd log what you removed.*
 
-::: {.placeholder}
-**Screenshot** `images/clean-remove-duplicates.png`: the Remove duplicates dialog with Data has
-header row checked.
-:::
+![Remove duplicates with Data has header row ticked and every column selected, so only exact duplicate rows go.](images/clean-remove-duplicates.png){fig-alt="The Remove duplicates dialog. It says how many rows and columns are selected. Data has header row is checked. Under Columns to analyze, Select all is checked, and so is each column listed: Column A - Case, Column B - Diary Year, through Column H - TRCHILDNUM. Cancel and Remove duplicates buttons are at the bottom." width="40%"}
 
 **Checkpoint.** The `working` sheet is now ready to analyze.
 
@@ -758,11 +755,6 @@ and easy to change, instead of being buried in every formula:
    ```
 
 3. Fill down.
-
-::: {.placeholder}
-**Screenshot** `images/variables-ifs-work-status.png`: the work status formula in the formula bar,
-with the settings sheet's B1 visible or highlighted.
-:::
 
 ::: {.callout-warning}
 ## Gotcha: order and boundaries
