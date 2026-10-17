@@ -334,7 +334,8 @@ subtract one date from another. Two habits keep dates safe:
 ![xkcd 1179, "ISO 8601", by [Randall Munroe](https://xkcd.com/1179/), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/).](images/entry-dates-iso8601.png){fig-alt="A comic titled 'Public service announcement'. It says that because different ways of writing dates as numbers cause confusion, ISO set a global standard in 1988, and the correct way to write numeric dates is 2013-02-27. Below, a long list of discouraged formats includes 02/27/2013, 27/02/2013, 20130227, 2013.02.27 and several joke formats, with a cat hissing at one of them." width="45%"}
 
 Try it: in an empty cell on a new sheet, type `2007-01-12`, then use **Format > Number > Number**.
-You'll see 39094, the day count. Undo with **Ctrl/Cmd + Z**.
+You'll see 39,094.00: the day count, with the comma and two decimal places the Number format
+adds. Undo with **Ctrl/Cmd + Z**.
 
 ## Validation rules from the data dictionary
 
