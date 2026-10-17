@@ -501,8 +501,9 @@ when you share.
 ::: {.callout-warning}
 ## Gotcha: never sort one column on its own
 
-Selecting one column and sorting it reorders that column only, so every value moves to the wrong
-person. Sort with the filter button (**Sort A → Z**), or select the whole data range first.
+Selecting one column and using **Data > Sort range** reorders that column only, so every value
+moves to the wrong person. Sort whole rows instead: the filter button (**Sort A → Z**), or the
+column letter's menu (**Sort sheet A to Z**).
 :::
 
 ## Fix inconsistent text
