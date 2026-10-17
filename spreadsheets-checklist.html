@@ -2263,7 +2263,8 @@ Print from the browser (File > Print); each section starts on a new page.
 <li><label><input type="checkbox">Select <strong>O2:Q</strong> (not the header). Find and replace: <code>&quot;</code> → nothing, <code>min</code> → nothing, <code>min</code> → nothing. Then <strong>Format &gt; Number &gt; Number</strong>, and <strong>Decrease decimal places</strong> twice.</label></li>
 <li><label><input type="checkbox">On a new sheet, compare <code>=AVERAGE(working!K2:K)</code> and <code>=AVERAGEIF(working!K2:K, &quot;&gt;=0&quot;)</code>. Difference: ______</label></li>
 <li><label><input type="checkbox"><strong>W1</strong> <code>Work hours missing</code>, <strong>W2</strong> <code>=OR(K2=-1, K2=-4)</code>, fill down.</label></li>
-<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Age 150: error; look up the Case in <strong>raw</strong> (age 33), correct it. Ages 80 and 85: real (top-coded), so leave them.</label></li>
+<li><label><input type="checkbox">Check Age with <strong>Data &gt; Column stats</strong>. Ages 80 and 85: real (top-coded), so leave them.</label></li>
+<li><label><input type="checkbox">Age filter &gt; <strong>Filter by condition</strong> &gt; <strong>Greater than</strong> <code>85</code>. Look up that Case in <strong>raw</strong> (<strong>Ctrl/Cmd + F</strong>): age 33. Correct it, then set the Age filter back to <strong>None</strong>.</label></li>
 <li><label><input type="checkbox"><strong>X2</strong> <code>=COUNTIF(A:A, A2)</code>, fill down, filter for values over 1.</label></li>
 <li><label><input type="checkbox"><strong>Data &gt; Data cleanup &gt; Remove duplicates</strong> (header row checked, all columns). Rows removed: ______</label></li>
 <li><label><input type="checkbox">One Case is still listed twice (Age 37 vs. 73): check <strong>raw</strong> (37), delete the 73 row.</label></li>

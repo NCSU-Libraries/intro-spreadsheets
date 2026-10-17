@@ -81,8 +81,9 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 - [ ] On a new sheet, compare `=AVERAGE(working!K2:K)` and `=AVERAGEIF(working!K2:K, ">=0")`.
       Difference: ______
 - [ ] **W1** `Work hours missing`, **W2** `=OR(K2=-1, K2=-4)`, fill down.
-- [ ] Check Age with **Data > Column stats**. Age 150: error; look up the Case in **raw** (age 33), correct it. Ages 80 and 85:
-      real (top-coded), so leave them.
+- [ ] Check Age with **Data > Column stats**. Ages 80 and 85: real (top-coded), so leave them.
+- [ ] Age filter > **Filter by condition** > **Greater than** `85`. Look up that Case in **raw**
+      (**Ctrl/Cmd + F**): age 33. Correct it, then set the Age filter back to **None**.
 - [ ] **X2** `=COUNTIF(A:A, A2)`, fill down, filter for values over 1.
 - [ ] **Data > Data cleanup > Remove duplicates** (header row checked, all columns). Rows removed:
       ______

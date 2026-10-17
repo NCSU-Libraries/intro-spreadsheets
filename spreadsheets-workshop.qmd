@@ -660,14 +660,19 @@ spread and which are most common.
 One example shows the whole process. For a flagged value, decide whether it's an error, a code, or
 real:
 
-- **Age 150:** impossible. An entry error. The **raw** sheet is the source here: find this Case
-  there (**Ctrl/Cmd + F**) and you'll see the real age, 33. Correct it. *In your own work, you'd log the
-  correction.*
+- **Age 150:** impossible: an entry error. The **raw** sheet is the source here.
 - **Age 80 and 85:** real, but not exact. ATUS *top-codes* age: everyone 80–84 is recorded as 80,
   and 85 or older as 85. Check the documentation before you "fix" a value that looks odd.
 
 What to do with a confirmed error: correct it from the source if you can; otherwise make the cell
 empty and log it. Don't delete the whole row without recording why.
+
+1. Click the filter button on **Age** > **Filter by condition** > **Greater than**, type `85`, and
+   click **OK**. Only the row with 150 is left.
+2. Note its Case in column A. On **raw**, press **Ctrl/Cmd + F** and search for that Case: the age
+   there is 33.
+3. Back on **working**, type `33` in the Age cell. *In your own work, you'd log the correction.*
+4. Clear the filter: Age's filter button > **Filter by condition** > **None** > **OK**.
 
 ![Column stats for Age. The axis runs out to 155 because of one impossible value, and the most common age is 80, the top-coded 80–84 group.](images/clean-column-stats.png){fig-alt="The Column stats panel for Age, with Distribution selected. A bar chart has four tall bars between ages 10 and 87, and the axis continues, empty, to 155. Below, a table of the most frequent values: 80 appears 57 times, then 36 (48), 39 (47), 41 (47) and 40 (45)." width="35%"}
 
