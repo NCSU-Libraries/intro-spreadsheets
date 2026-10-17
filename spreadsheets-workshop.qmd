@@ -898,10 +898,7 @@ leisure for each children group. A column chart puts them side by side.
    horizontal axis "Children under 18 in household", vertical axis "Average minutes on diary day".
 5. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
-::: {.placeholder}
-**Screenshot** `images/visualize-pivot-averages.png`: the finished column chart, two bars per
-children group, chores rising and leisure falling from 0 to 3+.
-:::
+![Average chores and leisure by number of children, charted from the question 5 pivot table.](images/visualize-pivot-averages.png){fig-alt="Bar chart titled Average time spent on chores and leisure activities by number of children. For each group, 0, 1, 2 and 3+, a green bar shows chores and an orange bar shows leisure, in minutes. Chores rise from about 66 minutes with no children to about 117 with 3+. Leisure falls from about 298 to about 174." width="80%"}
 
 ::: {.callout-tip}
 ## Extra: make it clearer
@@ -1149,31 +1146,26 @@ Check: the medians are 253, 165, 150 and 120 minutes.
    - `Leisure (mins)`: **Point size** 2px, **Color** gray, then **Fill opacity** about 20%.
    - `Group median`: **Point size** 14px, **Point shape** Square, and a strong **Color** that
      stands out from the gray.
-4. **Customize > Horizontal axis:** min `-0.5`, max `3.5`, so each group has room on both sides.
-5. **Customize > Vertical axis:** min `-30`, so the people with 0 minutes lift off the axis line,
+4. **Customize > Vertical axis:** min `-30`, so the people with 0 minutes lift off the axis line,
    and max `1440`.
-6. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
-   axis "Number of children in household: 0, 1, 2, 3+", vertical axis "Leisure on diary day
+5. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
+   axis "Number of children in household (3 = 3 or more)", vertical axis "Leisure on diary day
    (minutes)".
-7. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
+6. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 Things to notice: the medians step down as the number of children rises, and each group has a long
 upper tail, which is why the median is a better center than the average here. The no-children group
 is the densest: it has 1,137 people, against 180 with 3+.
 
+![The finished strip plot: one gray dot per person, and a square at each group's median.](images/extras-strip-plot.png){fig-alt="Scatter chart titled Leisure time by number of children. Four vertical bands of semi-transparent gray dots sit above 0, 1, 2 and 3 on the horizontal axis, with leisure minutes from 0 to about 1,300 on the vertical axis. The band at 0 is by far the densest. A red square marks each group's median, stepping down from about 250 minutes at 0 children to about 120 at 3." width="80%"}
+
 ::: {.callout-warning}
-## Gotcha: the axis numbers fall between the groups
+## Gotcha: the axis says 3, not 3+
 
-The horizontal axis numbers start at the minimum, so they read -0.5, 0.5, 1.5 …, and none sits
-under a group. Sheets can't put a label under each group. You can hide the numbers
-(**Customize > Horizontal axis**, **Text color** white) and give the order in the axis title, as
-above. Or download the chart as SVG and edit the labels in graphic design software, such as Adobe
-Illustrator, Canva, Affinity or Inkscape.
-:::
-
-::: {.placeholder}
-**Screenshot** `images/extras-strip-plot.png`: the finished strip plot of leisure by children
-group, with median markers.
+The horizontal axis is a number line, so its labels are numbers, and the last group reads "3"
+where it means "3 or more". Sheets can't swap an axis number for text, so say it in the axis title,
+as above. For a figure, you can download the chart as SVG and edit the labels in graphic design
+software, such as Adobe Illustrator, Canva, Affinity or Inkscape.
 :::
 
 ------------------------------------------------------------------------
