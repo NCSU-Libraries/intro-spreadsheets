@@ -37,7 +37,8 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 
 # 2. Set up your workbook
 
-- [ ] Open the workbook (link in the guide, section 2) and **File > Make a copy**. Name it "[Your name] DSTI spreadsheets".
+- [ ] Go to **go.ncsu.edu/dss-atus-working** and click **Make a copy**. Rename your copy
+      "[Your name] DSTI spreadsheets".
 - [ ] Find the four sheets: **raw** (never edit), **README**, **working**, **log** (not used today).
 - [ ] On **working**: **View > Freeze > 1 row**.
 - [ ] **Ctrl + ↓** in column A to find the last row. Respondents: ______

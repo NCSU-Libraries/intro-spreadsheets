@@ -120,11 +120,10 @@ change.**
 - **Row** and **column.** The **header** is the first row, which holds the column names.
 - **Formula bar:** the bar above the sheet that shows what's really in a cell. A cell can *show*
   a result, 147, while *storing* the formula that makes it, `=SUM(S2:V2)`.
+- **Name box:** left of the formula bar. It shows the address of the selected cell, and you can type
+  an address or range there to jump to it.
 
-::: {.placeholder}
-**Screenshot** `images/intro-sheets-anatomy.png`: a Google Sheets window with workbook name,
-sheet tabs, a selected cell, a range, the header row and the formula bar labeled.
-:::
+![The parts of a Google Sheets window, in the workbook we use today.](images/intro-sheets-anatomy.svg){fig-alt="A Google Sheets window showing the DSTI ATUS Data Working workbook, with orange labels. Workbook name points to the title at the top left. Name box points to the box showing A1, left of the formula bar. Formula bar, what's really in the selected cell, points to the bar showing Case. Column F points to the column letter F. Row 5 points to the row number 5. A dashed outline marks the header row, labeled Header row: the column names. Cell A1 (selected) points to the cell holding Case. Range F2:F6 outlines five ages. Sheet tabs: raw, README, log, working, outlines the tabs at the bottom."}
 
 ## Tidy data
 
@@ -194,20 +193,18 @@ back to the original and see what you changed.
 
 ## Make your copy
 
-1. Open the workbook: [DSTI ATUS Data Working](https://docs.google.com/spreadsheets/d/1A9IbG6Fm5DXdETl9tv0qm8pjV1LvKKRouo-V2oKVwF0/edit?usp=sharing). It opens view-only.
-2. **File > Make a copy.** Name it "[Your name] DSTI spreadsheets" and click **Make a copy**. Your
-   copy opens in a new tab.
+1. Go to [go.ncsu.edu/dss-atus-working](https://go.ncsu.edu/dss-atus-working). Google Sheets asks
+   whether you'd like to make a copy of DSTI ATUS Data Working.
+2. Click **Make a copy**. Your copy opens, named "Copy of DSTI ATUS Data Working".
+3. Click the name at the top left and rename it "[Your name] DSTI spreadsheets".
 
-::: {.placeholder}
-**Screenshot** `images/setup-make-copy.png`: the File menu with Make a copy highlighted, and the
-Make a copy dialog.
-:::
+![The link opens this page instead of the workbook itself, so you always get your own copy.](images/setup-make-copy.png){fig-alt="A Google Sheets page titled Copy document. It asks: Would you like to make a copy of DSTI ATUS Data Working? Below is a blue Make a copy button." width="60%"}
 
 ::: {.callout-warning}
-## Gotcha: "Make a copy" is greyed out or asks you to request access
+## Gotcha: the link asks you to sign in or request access
 
 You're probably signed in to a personal Google account, or not signed in. Switch to your NC State
-account (top right of the window) and try again. If it still fails, download [the workbook file](https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx), open a blank
+account (top right of the window) and try the link again. If it still fails, download [the workbook file](https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx), open a blank
 sheet, and use **File > Import > Upload**.
 :::
 
@@ -910,7 +907,7 @@ We start with the chart most people make first: group averages, straight from a 
 we look at what those averages hide.
 
 **Fell behind?** Make a copy of the finished workbook, with everything up to this point done:
-[link TBD]{.tbd}. Use **File > Make a copy**, as in @sec-setup.
+[link TBD]{.tbd}. Click **Make a copy**, as in @sec-setup.
 
 ## A chart from a pivot table: group averages
 
