@@ -868,9 +868,9 @@ from about 66 to 117 minutes and leisure falls from about 298 to 174.
 
 **Question 6:** people with more education report less leisure. Is that education, or work?
 
-1. Make a third pivot table. **Rows: Education level.** **Values:** average **Leisure (mins)**. The
-   gap: about 305 minutes for no diploma, against 177 to 193 for master's and professional degrees.
-   (Doctoral, at 260, is only 32 people.)
+1. Make a third pivot table. **Rows: Add > Education level.** **Values: Add > Leisure (mins)**,
+   summarized by **AVERAGE**. The gap: about 305 minutes for no diploma, against 177 to 193 for
+   professional and master's degrees.
 2. Add **Columns: Work status.** Now each education level is split by whether people work.
 3. Compare the **Full time** column across education levels. The steady drop is gone: full-time
    workers at every level report roughly 170 to 235 minutes, with no pattern by degree.
