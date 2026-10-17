@@ -35,8 +35,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 -->
 
 ::: {.placeholder}
-**Draft.** Column letters, row counts and results highlighted [like this]{.tbd} are provisional
-until the final dataset is ready. Dashed boxes like this one mark screenshots still to take.
+**Draft.** Links and checks highlighted [like this]{.tbd} are still to come.
 :::
 
 ::: callout-important
