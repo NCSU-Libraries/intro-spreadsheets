@@ -251,10 +251,6 @@ The `working` sheet's columns, for reference:
    The row number tells you how many respondents there are (one less than the row number, because
    of the header). Then scroll back up to the top.
 
-::: {.placeholder}
-**GIF** `images/setup-freeze-jump.gif`: freezing the header row, then jumping to the last row.
-:::
-
 The last row is 2007, so there are 2,006 rows of data. That answers question 1, almost: are they
 2,006 different people? @sec-clean finds out.
 
@@ -352,15 +348,9 @@ Two rules are enough to see how it works.
 Cells that break a rule now show a small red triangle in the corner. Hover over one to see why.
 Leave them for now: they're the to-do list for @sec-clean.
 
-::: {.placeholder}
-**Screenshot** `images/entry-validation-rule.png`: the Data validation sidebar with the Age rule
-filled in, Advanced options open.
-:::
+![The Age rule in the Data validation sidebar, with Advanced options open.](images/entry-validation-rule.png){fig-alt="The Data validation rules sidebar beside the Age column. Apply to range says working!F2:F2001. Criteria is Is between, with 15 and 85 in the two boxes. Under Advanced options, If the data is invalid is set to Show a warning rather than Reject the input. Remove rule and Done buttons are at the bottom." width="80%"}
 
-::: {.placeholder}
-**Screenshot** `images/entry-validation-flags.png`: a few flagged cells with red triangles, one
-hover message showing.
-:::
+![Hovering over a flagged cell. The small red triangle is in its top right corner.](images/entry-validation-flags.png){fig-alt="A few rows of the Sex column. The selected cell says Femal and has a small red triangle in its top right corner. A message box beside it reads: Invalid: Input must be an item on the specified list." width="60%"}
 
 ::: {.callout-warning}
 ## Gotcha: "Show a warning" or "Reject the input"?
