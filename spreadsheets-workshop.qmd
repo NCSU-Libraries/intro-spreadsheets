@@ -428,10 +428,7 @@ The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3
 7. Repeat for `1` → `Metropolitan`, `2` → `Non-metropolitan` and `3` → `Not identified`.
    *In your own work, you'd log the recode.*
 
-::: {.placeholder}
-**Screenshot** `images/understand-find-replace.png`: the Find and replace dialog with Specific
-range, the D column range and Match entire cell contents checked.
-:::
+![Find and replace, set up for the first recode: `-1` replaced with nothing in column D only.](images/understand-find-replace.png){fig-alt="The Find and replace dialog. Find holds -1 and Replace with is empty. Search is set to Specific range, working!D:D. Match entire cell contents is checked; Match case, Search using regular expressions and Also search within formulas are not. Buttons at the bottom: Find, Replace, Replace all and Done." width="55%"}
 
 ::: {.callout-warning}
 ## Gotcha: why -1 goes first, and why "Match entire cell contents" matters
@@ -527,11 +524,6 @@ column, then put the results back.
 4. Clear column W. *In your own work, you'd log the fix.*
 
 `UPPER()` and `LOWER()` work the same way. Pick one convention per column and stick to it.
-
-::: {.placeholder}
-**GIF** `images/clean-proper-paste-values.gif`: the helper column, fill down, paste values only
-back over G, clear W.
-:::
 
 ::: {.callout-warning}
 ## Gotcha: why paste values only?
