@@ -154,5 +154,4 @@ Grouped histogram:
 # 9. Wrapping up
 
 - [ ] **File > Download > Comma-separated values (.csv)** for **working** and **README**.
-- [ ] Evaluation: [link TBD]{.tbd}
 - [ ] Get Data Help: go.ncsu.edu/getdatahelp · getdatahelp@ncsu.edu

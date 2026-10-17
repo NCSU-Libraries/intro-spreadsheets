@@ -1000,10 +1000,7 @@ Sheets' own **Histogram** chart type can draw two groups, but it only counts, so
 exactly this way.
 :::
 
-::: {.placeholder}
-**Screenshot** `images/visualize-histogram-counts.png`: the misleading count version (Histogram
-chart type), for comparison with the percentage version.
-:::
+![The same chart showing counts (**Show as: Default**). The no-children bars tower over the 3+ bars because that group is six times bigger, which hides how differently the two groups spend their days.](images/visualize-histogram-counts.png){fig-alt="The same grouped column chart with counts instead of percentages, on a vertical axis from 0 to 400. The dark red bars for 0 children are much taller than the light red bars for 3+ in every bin: about 220 against 85 in 0-119 minutes, and about 305 against 45 in 120-239. From 360 minutes up, the 3+ bars almost vanish." width="80%"}
 
 ## Save your chart
 
@@ -1058,8 +1055,6 @@ decision.
 - **Get Data Help:** [go.ncsu.edu/getdatahelp](https://go.ncsu.edu/getdatahelp), or
   getdatahelp@ncsu.edu.
 - **Practice:** the [extra activities](#sec-extras) below.
-
-**Please fill out the evaluation:** [link TBD]{.tbd}
 
 ------------------------------------------------------------------------
 
