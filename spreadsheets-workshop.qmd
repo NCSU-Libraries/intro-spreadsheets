@@ -921,8 +921,9 @@ leisure for each children group. A column chart puts them side by side.
 2. Click any cell in the pivot table again. **Insert > Chart.** If Sheets picks another type, choose
    **Setup > Chart type: Column chart.** Each children group gets two bars, one for chores and one
    for leisure.
-3. **Customize > Series.** Give chores and leisure two clearly different colors, one dark and one
-   light, so they still differ in grayscale.
+3. **Customize > Series.** In the dropdown at the top (it starts on **Apply to all series**),
+   choose `AVERAGE of Chores (mins)` and give it a dark **Color**. Then choose
+   `AVERAGE of Leisure (mins)` and give it a light one, so they still differ in grayscale.
 4. **Customize > Chart & axis titles:** title "Average chores and leisure by number of children",
    horizontal axis "Children under 18 in household", vertical axis "Average minutes on diary day".
 5. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
@@ -1010,8 +1011,8 @@ minutes (a bin) and not a category, it works as a histogram: one bar per group i
    bin and a third bar in each bin for the Grand Total.
 6. Click any cell in the pivot table. **Insert > Chart.** If Sheets picks another type, choose
    **Setup > Chart type: Column chart.** Each bin has two bars, one per group.
-7. **Customize > Series.** Choose each group in turn and give it a color: a dark and a light shade
-   of one color. The groups have an order (no children, then 3+), and shades still tell them apart
+7. **Customize > Series.** In the dropdown at the top (it starts on **Apply to all series**),
+   choose each group in turn and give it a **Color**: a dark and a light shade of one color. The groups have an order (no children, then 3+), and shades still tell them apart
    in grayscale and for people with color vision deficiency.
 8. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
    3+ children have less leisure time than those with none?". Horizontal axis "Leisure on diary
