@@ -1208,16 +1208,18 @@ group, with median markers.
 
 # Reference: keyboard shortcuts {#sec-shortcuts .unnumbered}
 
-Mac users: use **Cmd** where this says **Ctrl**. **Ctrl + /** (Mac: **Cmd + /**) shows the full
-list in Sheets.
+Mac users: use **Cmd** where this says **Ctrl**. **Ctrl + /** (the slash key; Mac: **Cmd + /**)
+shows the full list in Sheets.
 
 | Shortcut | Does |
 |---|---|
-| Ctrl + ↓ ↑ ← → | Jump to the edge of the data |
+| Ctrl + ↓ (or ↑ ← →) | Jump to the edge of the data |
 | Ctrl + Shift + ↓ | Select to the bottom of the data |
-| Ctrl + Space / Shift + Space | Select the column / row |
+| Ctrl + Space | Select the column |
+| Shift + Space | Select the row |
 | Ctrl + A | Select all |
-| Ctrl + C / Ctrl + V | Copy / paste |
+| Ctrl + C | Copy |
+| Ctrl + V | Paste |
 | Ctrl + Shift + V | Paste values only |
 | Ctrl + D | Fill down |
 | Ctrl + Z | Undo |
