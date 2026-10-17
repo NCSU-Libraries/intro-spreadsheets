@@ -380,8 +380,7 @@ decide how to fix each one.
 ## Gotcha: dropdown chips change how the column looks
 
 A dropdown rule shows each cell as a colored chip. That's display only; the value is unchanged.
-To switch it off, choose **Display style: Plain text** in the rule's options.
-[Confirm option name]{.tbd}
+To switch it off, choose **Advanced options > Display style: Plain text** in the rule.
 :::
 
 ::: {.callout-tip}
@@ -439,8 +438,7 @@ The README gives Metropolitan's codes: 1 = Metropolitan, 2 = Non-metropolitan, 3
 1. Click the column letter **D** to select the whole column.
 2. **Edit > Find and replace** (Windows: **Ctrl + H**; Mac: **Cmd + Shift + H**).
 3. **Find:** `-1`. **Replace with:** leave empty.
-4. **Search:** **Specific range**, and check it says `working!D1:D` (or similar).
-   [Confirm display]{.tbd}
+4. **Search:** **Specific range**, and check it says `working!D:D`.
 5. Check **Match entire cell contents**.
 6. **Replace all.** The dialog says how many cells changed.
 7. Repeat for `1` → `Metropolitan`, `2` → `Non-metropolitan` and `3` → `Not identified`.
@@ -560,8 +558,7 @@ wrong cells and break. Pasting **values only** keeps the results and drops the f
 ## Gotcha: `PROPER()` and apostrophes
 
 `PROPER()` capitalizes the first letter after any character that isn't a letter, so "master's"
-becomes "Master'S". That's why we use it on Sex and not on Education level. [Confirm in
-Sheets.]{.tbd}
+becomes "Master'S". That's why we use it on Sex and not on Education level.
 :::
 
 ## Remove extra spaces and spelling variants
@@ -577,7 +574,8 @@ Trim whitespace removes the spaces in place. `=TRIM()` does the same in a helper
 want to keep the original.
 
 1. Click any cell in the data, then **Ctrl/Cmd + A** to select it all. **Data > Data cleanup >
-   Trim whitespace.** Sheets reports how many cells it trimmed: 9.
+   Trim whitespace.** Sheets reports how many cells it trimmed
+   (9). Click **OK**.
 2. Select column **E**. Find and replace, with **Match entire cell contents** checked:
    `Bachelors` → `Bachelor's` and `Masters` → `Master's`.
 3. Open the Education level filter again: each level is listed once.
@@ -1003,7 +1001,7 @@ minutes (a bin) and not a category, it works as a histogram: one bar per group i
 
 1. **Insert > Pivot table** from **working**, on a new sheet.
 2. **Rows: Add > Leisure (mins).** Right-click any value in the pivot's first column > **Create
-   pivot group rule.** Interval size: **120** (two-hour bins).
+   pivot group rule.** Interval size: **120** (two-hour bins). Click **OK**.
 3. **Columns: Add > Children group.** Then **Filters: Add > Children group**, and under **Status**
    keep only **0** and **3+**.
 4. **Values: Add > Case**, summarized by **COUNTA**. Then **Show as: % of column.**

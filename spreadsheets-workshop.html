@@ -2776,7 +2776,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A dropdown rule shows each cell as a colored chip. That’s display only; the value is unchanged. To switch it off, choose <strong>Display style: Plain text</strong> in the rule’s options. <span class="tbd">Confirm option name</span></p>
+<p>A dropdown rule shows each cell as a colored chip. That’s display only; the value is unchanged. To switch it off, choose <strong>Advanced options &gt; Display style: Plain text</strong> in the rule.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -2833,7 +2833,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li>Click the column letter <strong>D</strong> to select the whole column.</li>
 <li><strong>Edit &gt; Find and replace</strong> (Windows: <strong>Ctrl + H</strong>; Mac: <strong>Cmd + Shift + H</strong>).</li>
 <li><strong>Find:</strong> <code>-1</code>. <strong>Replace with:</strong> leave empty.</li>
-<li><strong>Search:</strong> <strong>Specific range</strong>, and check it says <code>working!D1:D</code> (or similar). <span class="tbd">Confirm display</span></li>
+<li><strong>Search:</strong> <strong>Specific range</strong>, and check it says <code>working!D:D</code>.</li>
 <li>Check <strong>Match entire cell contents</strong>.</li>
 <li><strong>Replace all.</strong> The dialog says how many cells changed.</li>
 <li>Repeat for <code>1</code> → <code>Metropolitan</code>, <code>2</code> → <code>Non-metropolitan</code> and <code>3</code> → <code>Not identified</code>. <em>In your own work, you’d log the recode.</em></li>
@@ -2975,7 +2975,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>PROPER()</code> capitalizes the first letter after any character that isn’t a letter, so “master’s” becomes “Master’S”. That’s why we use it on Sex and not on Education level. <span class="tbd">Confirm in Sheets.</span></p>
+<p><code>PROPER()</code> capitalizes the first letter after any character that isn’t a letter, so “master’s” becomes “Master’S”. That’s why we use it on Sex and not on Education level.</p>
 </div>
 </div>
 </section>
@@ -2990,7 +2990,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 <p>Trim whitespace removes the spaces in place. <code>=TRIM()</code> does the same in a helper column, if you want to keep the original.</p>
 <ol type="1">
-<li>Click any cell in the data, then <strong>Ctrl/Cmd + A</strong> to select it all. <strong>Data &gt; Data cleanup &gt; Trim whitespace.</strong> Sheets reports how many cells it trimmed: 9.</li>
+<li>Click any cell in the data, then <strong>Ctrl/Cmd + A</strong> to select it all. <strong>Data &gt; Data cleanup &gt; Trim whitespace.</strong> Sheets reports how many cells it trimmed (9). Click <strong>OK</strong>.</li>
 <li>Select column <strong>E</strong>. Find and replace, with <strong>Match entire cell contents</strong> checked: <code>Bachelors</code> → <code>Bachelor&#39;s</code> and <code>Masters</code> → <code>Master&#39;s</code>.</li>
 <li>Open the Education level filter again: each level is listed once. <em>In your own work, you’d log both fixes.</em></li>
 </ol>
@@ -3453,7 +3453,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </div>
 <ol type="1">
 <li><strong>Insert &gt; Pivot table</strong> from <strong>working</strong>, on a new sheet.</li>
-<li><strong>Rows: Add &gt; Leisure (mins).</strong> Right-click any value in the pivot’s first column &gt; <strong>Create pivot group rule.</strong> Interval size: <strong>120</strong> (two-hour bins).</li>
+<li><strong>Rows: Add &gt; Leisure (mins).</strong> Right-click any value in the pivot’s first column &gt; <strong>Create pivot group rule.</strong> Interval size: <strong>120</strong> (two-hour bins). Click <strong>OK</strong>.</li>
 <li><strong>Columns: Add &gt; Children group.</strong> Then <strong>Filters: Add &gt; Children group</strong>, and under <strong>Status</strong> keep only <strong>0</strong> and <strong>3+</strong>.</li>
 <li><strong>Values: Add &gt; Case</strong>, summarized by <strong>COUNTA</strong>. Then <strong>Show as: % of column.</strong></li>
 <li>Untick <strong>Show totals</strong> under <strong>Rows</strong> and under <strong>Columns</strong>. Otherwise the chart gets an extra bin and a third bar in each bin for the Grand Total.</li>
