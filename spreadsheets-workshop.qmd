@@ -241,10 +241,7 @@ The `working` sheet's columns, for reference:
 
 : The `working` sheet's columns. New columns you make go to the right, starting at W.
 
-::: {.placeholder}
-**Screenshot** `images/setup-three-sheets.png`: the bottom of the window showing the raw, README,
-working and log tabs.
-:::
+![The four sheet tabs, at the bottom of the window. Click a tab to switch sheets.](images/setup-three-sheets.png){fig-alt="The bottom of a Google Sheets window. After a plus button and a list button come four tabs: raw (selected), README, log and working, each with a small dropdown arrow." width="70%"}
 
 ## Find your way around the data
 
