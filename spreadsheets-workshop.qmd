@@ -1146,7 +1146,7 @@ sheet, because the median rows sit under the data, which `working` must never ha
 **Build the chart data:**
 
 1. Add a sheet named **strip**. In row 1 type the headers: **A1** `Group`, **B1** `x`, **C1**
-   `Leisure (mins)`, **D1** `Group median`, **E1** `Label`.
+   `Leisure (mins)`, **D1** `Group median`.
 
    A new sheet has only 1,000 rows, and this one needs 2,005. Press **Ctrl/Cmd + ↓** to go to the
    bottom. Under the last row, in **Add [ ] more rows at the bottom**, type `1005` and click
@@ -1166,7 +1166,6 @@ sheet, because the median rows sit under the data, which `working` must never ha
    - **D2002:** `=MEDIAN(FILTER(C$2:C$2001, A$2:A$2001 = A2002))`.
    - Select **B2002:D2005** and press **Ctrl/Cmd + D** to fill both formulas down. Column C stays
      empty in these rows.
-   - **E2002:E2005:** `0 children`, `1 child`, `2 children`, `3+ children`.
 
 Check: the medians are 253, 165, 150 and 120 minutes.
 
@@ -1179,24 +1178,31 @@ Check: the medians are 253, 165, 150 and 120 minutes.
    - `Leisure (mins)`: **Point size** 2px, **Color** gray, then **Fill opacity** about 20%.
    - `Group median`: **Point size** 14px, **Point shape** Square, and a strong **Color** that
      stands out from the gray.
-4. Name the groups on the chart. Under **Setup**, open the `Group median` series' **⋮** menu >
-   **Add labels**, and choose **E2002:E2005**. [Confirm the menu and that the labels show.]{.tbd}
-5. **Customize > Horizontal axis:** min `-0.5`, max `3.5`, and turn off the axis labels. Their
-   numbers would fall between the groups (-0.5, 0.5, 1.5 …); the median labels name the groups
-   instead. [Confirm the option for hiding axis labels.]{.tbd}
-6. **Customize > Vertical axis:** min `-30`, so the people with 0 minutes lift off the axis line,
+4. **Customize > Horizontal axis:** min `-0.5`, max `3.5`, so each group has room on both sides.
+5. **Customize > Vertical axis:** min `-30`, so the people with 0 minutes lift off the axis line,
    and max `1440`.
-7. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
-   axis "Number of children in household", vertical axis "Leisure on diary day (minutes)".
-8. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
+6. **Customize > Chart & axis titles:** title "Leisure time by number of children", horizontal
+   axis "Number of children in household: 0, 1, 2, 3+", vertical axis "Leisure on diary day
+   (minutes)".
+7. Click the chart's **⋮** menu (top right) > **Alt text**, and describe what it shows.
 
 Things to notice: the medians step down as the number of children rises, and each group has a long
 upper tail, which is why the median is a better center than the average here. The no-children group
 is the densest: it has 1,137 people, against 180 with 3+.
 
+::: {.callout-warning}
+## Gotcha: the axis numbers fall between the groups
+
+The horizontal axis numbers start at the minimum, so they read -0.5, 0.5, 1.5 …, and none sits
+under a group. Sheets can't put a label under each group. You can hide the numbers
+(**Customize > Horizontal axis**, **Text color** white) and give the order in the axis title, as
+above. Or download the chart as SVG and edit the labels in graphic design software, such as Adobe
+Illustrator, Canva, Affinity or Inkscape.
+:::
+
 ::: {.placeholder}
 **Screenshot** `images/extras-strip-plot.png`: the finished strip plot of leisure by children
-group, with median markers labeled.
+group, with median markers.
 :::
 
 ------------------------------------------------------------------------

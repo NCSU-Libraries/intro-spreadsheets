@@ -3607,7 +3607,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <p>Sheets has no strip plot, so we build one from a scatter chart. The chart data goes on its own sheet, because the median rows sit under the data, which <code>working</code> must never have.</p>
 <p><strong>Build the chart data:</strong></p>
 <ol type="1">
-<li><p>Add a sheet named <strong>strip</strong>. In row 1 type the headers: <strong>A1</strong> <code>Group</code>, <strong>B1</strong> <code>x</code>, <strong>C1</strong> <code>Leisure (mins)</code>, <strong>D1</strong> <code>Group median</code>, <strong>E1</strong> <code>Label</code>.</p>
+<li><p>Add a sheet named <strong>strip</strong>. In row 1 type the headers: <strong>A1</strong> <code>Group</code>, <strong>B1</strong> <code>x</code>, <strong>C1</strong> <code>Leisure (mins)</code>, <strong>D1</strong> <code>Group median</code>.</p>
 <p>A new sheet has only 1,000 rows, and this one needs 2,005. Press <strong>Ctrl/Cmd + ↓</strong> to go to the bottom. Under the last row, in <strong>Add [ ] more rows at the bottom</strong>, type <code>1005</code> and click <strong>Add</strong>.</p></li>
 <li><p>Type these formulas in row 2:</p>
 <ul>
@@ -3623,7 +3623,6 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><strong>B2002:</strong> <code>=A2002</code>. No nudge, so the median sits in the middle of its group.</li>
 <li><strong>D2002:</strong> <code>=MEDIAN(FILTER(C$2:C$2001, A$2:A$2001 = A2002))</code>.</li>
 <li>Select <strong>B2002:D2005</strong> and press <strong>Ctrl/Cmd + D</strong> to fill both formulas down. Column C stays empty in these rows.</li>
-<li><strong>E2002:E2005:</strong> <code>0 children</code>, <code>1 child</code>, <code>2 children</code>, <code>3+ children</code>.</li>
 </ul></li>
 </ol>
 <p>Check: the medians are 253, 165, 150 and 120 minutes.</p>
@@ -3636,15 +3635,27 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <li><code>Leisure (mins)</code>: <strong>Point size</strong> 2px, <strong>Color</strong> gray, then <strong>Fill opacity</strong> about 20%.</li>
 <li><code>Group median</code>: <strong>Point size</strong> 14px, <strong>Point shape</strong> Square, and a strong <strong>Color</strong> that stands out from the gray.</li>
 </ul></li>
-<li>Name the groups on the chart. Under <strong>Setup</strong>, open the <code>Group median</code> series’ <strong>⋮</strong> menu &gt; <strong>Add labels</strong>, and choose <strong>E2002:E2005</strong>. <span class="tbd">Confirm the menu and that the labels show.</span></li>
-<li><strong>Customize &gt; Horizontal axis:</strong> min <code>-0.5</code>, max <code>3.5</code>, and turn off the axis labels. Their numbers would fall between the groups (-0.5, 0.5, 1.5 …); the median labels name the groups instead. <span class="tbd">Confirm the option for hiding axis labels.</span></li>
+<li><strong>Customize &gt; Horizontal axis:</strong> min <code>-0.5</code>, max <code>3.5</code>, so each group has room on both sides.</li>
 <li><strong>Customize &gt; Vertical axis:</strong> min <code>-30</code>, so the people with 0 minutes lift off the axis line, and max <code>1440</code>.</li>
-<li><strong>Customize &gt; Chart &amp; axis titles:</strong> title “Leisure time by number of children”, horizontal axis “Number of children in household”, vertical axis “Leisure on diary day (minutes)”.</li>
+<li><strong>Customize &gt; Chart &amp; axis titles:</strong> title “Leisure time by number of children”, horizontal axis “Number of children in household: 0, 1, 2, 3+”, vertical axis “Leisure on diary day (minutes)”.</li>
 <li>Click the chart’s <strong>⋮</strong> menu (top right) &gt; <strong>Alt text</strong>, and describe what it shows.</li>
 </ol>
 <p>Things to notice: the medians step down as the number of children rises, and each group has a long upper tail, which is why the median is a better center than the average here. The no-children group is the densest: it has 1,137 people, against 180 with 3+.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Gotcha: the axis numbers fall between the groups
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The horizontal axis numbers start at the minimum, so they read -0.5, 0.5, 1.5 …, and none sits under a group. Sheets can’t put a label under each group. You can hide the numbers (<strong>Customize &gt; Horizontal axis</strong>, <strong>Text color</strong> white) and give the order in the axis title, as above. Or download the chart as SVG and edit the labels in graphic design software, such as Adobe Illustrator, Canva, Affinity or Inkscape.</p>
+</div>
+</div>
 <div class="placeholder">
-<p><strong>Screenshot</strong> <code>images/extras-strip-plot.png</code>: the finished strip plot of leisure by children group, with median markers labeled.</p>
+<p><strong>Screenshot</strong> <code>images/extras-strip-plot.png</code>: the finished strip plot of leisure by children group, with median markers.</p>
 </div>
 <hr>
 </section>
