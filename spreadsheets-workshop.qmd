@@ -483,7 +483,8 @@ validation rule from @sec-entry or easy to find with a filter. For each one, ask
 A filter hides rows that don't match what you choose, so you can look at one group or one problem
 at a time. Its list of values is also the quickest way to spot typos and inconsistent spellings.
 
-1. Click any cell in the data. **Data > Create a filter.** Each header gets a filter button.
+1. Click any cell in the data, then **Ctrl/Cmd + A** to select it all. **Data > Create a filter.**
+   Each header gets a filter button.
 2. Click the filter button on **Sex**. The list shows every distinct value in the column.
 3. Choose **Filter by values** to tick the values you want, or **Filter by condition** for rules
    like "greater than 85". **Cancel** closes the list without filtering.

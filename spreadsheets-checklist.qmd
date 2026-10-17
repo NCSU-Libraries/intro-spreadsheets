@@ -65,7 +65,7 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 
 # 5. Making data usable
 
-- [ ] **Data > Create a filter.** Open the Sex filter and read the value list.
+- [ ] Select all the data (**Ctrl/Cmd + A**). **Data > Create a filter.** Open the Sex filter and read the value list.
 - [ ] Fix typos in column **G** with Find and replace (**Match entire cell contents**):
       `Femal` → `Female`, `Mole` → `Male`.
 - [ ] Fix capitalization: **W2** `=PROPER(G2)`, fill down (double-click the blue circle), select
