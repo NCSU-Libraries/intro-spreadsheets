@@ -31,7 +31,7 @@ Section numbers match the guide. When a step changes in the guide, change it her
 Print from the browser (File > Print); each section starts on a new page.
 -->
 
-Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro-spreadsheets/.
+Full steps and explanations: the guide at **go.ncsu.edu/dsti-spreadsheets**.
 Mac users: **Cmd** where this says **Ctrl**.
 
 # 2. Set up your workbook
