@@ -23,6 +23,7 @@ Thumbs.db
 # Opening/closing slides: kept local for now (text is copied into the DSTI template)
 /slides.qmd
 /slides.html
+/slides.pptx
 
 # Data: only the attendee workbook is published (as a backup to the Google Sheet).
 # The teacher copy holds the cleaned answers; the original extract and codebook stay local.
