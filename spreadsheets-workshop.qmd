@@ -580,9 +580,9 @@ header safe.
 There's more than one kind of "missing", and they mean different things. Look at **Work hours per
 week** (column K) and the README:
 
-- **Empty cell:** no value recorded.
-- **-1:** not asked. ATUS asks about work hours only of people who are employed, so -1 means the
-  person isn't employed.
+- **Empty cell:** no value recorded. Column K has none, but you'll meet them in most data.
+- **-1:** not asked. ATUS labels it "Blank" (see the README). It asks about work hours only of
+  people who are employed, so -1 means the person isn't employed.
 - **-4:** hours vary.
 - **0:** a real zero.
 
