@@ -28,12 +28,11 @@ format:
 <!--
 The steps from spreadsheets-workshop.qmd, without the explanations, to print and tick off.
 Section numbers match the guide. When a step changes in the guide, change it here too.
-[text]{.tbd} marks the same provisional values as in the guide.
 Print from the browser (File > Print); each section starts on a new page.
 -->
 
-Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro-spreadsheets/. Mac users: **Cmd** where this says
-**Ctrl**.
+Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro-spreadsheets/.
+Mac users: **Cmd** where this says **Ctrl**.
 
 # 2. Set up your workbook
 
@@ -66,7 +65,8 @@ Full steps and explanations: the guide at https://ncsu-libraries.github.io/intro
 
 # 5. Making data usable
 
-- [ ] Select all the data (**Ctrl/Cmd + A**). **Data > Create a filter.** Open the Sex filter and read the value list.
+- [ ] Select all the data (**Ctrl/Cmd + A**). **Data > Create a filter.** Open the Sex filter and
+      read the value list.
 - [ ] Fix typos in column **G** with Find and replace (**Match entire cell contents**):
       `Femal` → `Female`, `Mole` → `Male`.
 - [ ] Fix capitalization: **W2** `=PROPER(G2)`, fill down (double-click the blue circle), select

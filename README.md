@@ -1,10 +1,10 @@
 # Introduction to Working with Spreadsheets
 
 Materials for the Google Sheets track of the Data Science Training Intensive at NC State University
-Libraries, Data Science Services. In one two-hour session, graduate students clean, explore and
+Libraries, Data Science Services. In one two-hour session, graduate students prepare, explore and
 chart a sample of the American Time Use Survey in Google Sheets.
 
-This is a draft. The guide, checklist and slides are still being written.
+The guide is online at https://ncsu-libraries.github.io/intro-spreadsheets/.
 
 - `spreadsheets-workshop.qmd`: the guide we work from in the session.
 - `spreadsheets-checklist.qmd`: the steps only, to print.

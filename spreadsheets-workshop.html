@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="NC State University Libraries — Data Science Services">
-<meta name="dcterms.date" content="2026-10-17">
+<meta name="dcterms.date" content="2026-10-19">
 
 <title>Introduction to Working with Spreadsheets</title>
 <style>
@@ -2284,7 +2284,7 @@ pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 17, 2026</p>
+      <p class="date">October 19, 2026</p>
     </div>
   </div>
   
@@ -2297,19 +2297,14 @@ pre, pre code { white-space: pre-wrap !important; overflow-wrap: anywhere; }
 
 
 <!--
-DRAFT SKELETON (Oct 1). Conventions while drafting:
-- [text]{.tbd} marks a number or column letter that waits for the re-pulled data. Search for
-  "{.tbd}" before release; none should remain.
-- ::: {.placeholder} blocks mark screenshots and GIFs to take. Each names its file in images/.
-  Search for "placeholder" for the full list.
-- Column letters follow the provisional layout in "What's in the workbook" (section 2). If the
-  layout changes, update that table first, then every formula.
+Conventions:
+- [text]{.tbd} marks anything not yet known; ::: {.placeholder} marks a picture still to take.
+  Neither should appear in a released version.
+- Column letters follow the layout table in "What's in the workbook" (section 2). If the layout
+  changes, update that table first, then every formula, here and in the checklist.
 - After a set of steps, only "Gotcha: ..." (callout-warning) and "Extra: ..." (callout-tip)
   callouts, as in mapping-r.
 -->
-<div class="placeholder">
-<p><strong>Draft.</strong> Links and checks highlighted <span class="tbd">like this</span> are still to come.</p>
-</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2517,7 +2512,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </section>
 <section id="sec-setup" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Set up your workbook</h1>
-<p>The workbook has three sheets, and each has one job. Keeping them separate means you can always get back to the original and see what you changed.</p>
+<p>The workbook has four sheets, and each has one job. Keeping them separate means you can always get back to the original and see what you changed.</p>
 <section id="make-your-copy" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="make-your-copy"><span class="header-section-number">2.1</span> Make your copy</h2>
 <ol type="1">
@@ -3127,7 +3122,7 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 <ol type="1">
 <li>In <strong>X1</strong> type <code>ID count</code>. In <strong>X2</strong> type <code>=COUNTIF(A:A, A2)</code>. Fill down.</li>
 <li>Filter column X for values greater than 1 to see every repeated Case ID.</li>
-<li>For exact duplicates: select the data, <strong>Data &gt; Data cleanup &gt; Remove duplicates</strong>, tick <strong>Data has header row</strong>, and choose which columns must match (all of them, for exact duplicates). Sheets reports how many rows it removed: 5.</li>
+<li>For exact duplicates: click any cell in the data, then <strong>Ctrl/Cmd + A</strong> to select it all. <strong>Data &gt; Data cleanup &gt; Remove duplicates</strong>, tick <strong>Data has header row</strong>, and choose which columns must match (all of them, for exact duplicates). Sheets reports how many rows it removed: 5.</li>
 <li>Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and 73). Find that Case in <strong>raw</strong>: the real age is 37. Right-click the row with 73 &gt; <strong>Delete row</strong>.</li>
 <li>Clear column X. The sheet now has 2,000 rows: 2,000 different people. <em>In your own work, you’d log what you removed.</em></li>
 </ol>
@@ -3550,7 +3545,6 @@ DRAFT SKELETON (Oct 1). Conventions while drafting:
 </tr>
 </tbody>
 </table>
-<p><span class="tbd">Check before release: whether NC State accounts allow Sheets add-ons and Gemini.</span></p>
 </div>
 </div>
 <hr>

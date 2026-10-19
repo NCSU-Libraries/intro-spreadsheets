@@ -23,20 +23,14 @@ format:
 ---
 
 <!--
-DRAFT SKELETON (Oct 1). Conventions while drafting:
-- [text]{.tbd} marks a number or column letter that waits for the re-pulled data. Search for
-  "{.tbd}" before release; none should remain.
-- ::: {.placeholder} blocks mark screenshots and GIFs to take. Each names its file in images/.
-  Search for "placeholder" for the full list.
-- Column letters follow the provisional layout in "What's in the workbook" (section 2). If the
-  layout changes, update that table first, then every formula.
+Conventions:
+- [text]{.tbd} marks anything not yet known; ::: {.placeholder} marks a picture still to take.
+  Neither should appear in a released version.
+- Column letters follow the layout table in "What's in the workbook" (section 2). If the layout
+  changes, update that table first, then every formula, here and in the checklist.
 - After a set of steps, only "Gotcha: ..." (callout-warning) and "Extra: ..." (callout-tip)
   callouts, as in mapping-r.
 -->
-
-::: {.placeholder}
-**Draft.** Links and checks highlighted [like this]{.tbd} are still to come.
-:::
 
 ::: callout-important
 ## How to use this guide
@@ -53,8 +47,9 @@ catch up if you fall behind, and come back to it later.
 
 Spreadsheets are where a lot of research data starts: survey exports, lab measurements, field
 sheets, downloads from a database. Before you can analyze that data you have to prepare it:
-understand it, fix its problems and reshape it. Today we do all of that in Google Sheets with a real dataset, the American
-Time Use Survey, and use it to answer one question that gets sharper as we go:
+understand it, fix its problems and reshape it. Today we do all of that in Google Sheets with a
+real dataset, the American Time Use Survey, and use it to answer one question that gets sharper as
+we go:
 
 **How do people split their day between household chores and leisure?**
 
@@ -187,7 +182,7 @@ column.
 
 # Set up your workbook {#sec-setup}
 
-The workbook has three sheets, and each has one job. Keeping them separate means you can always get
+The workbook has four sheets, and each has one job. Keeping them separate means you can always get
 back to the original and see what you changed.
 
 ## Make your copy
@@ -203,8 +198,9 @@ back to the original and see what you changed.
 ## Gotcha: the link asks you to sign in or request access
 
 You're probably signed in to a personal Google account, or not signed in. Switch to your NC State
-account (top right of the window) and try the link again. If it still fails, download [the workbook file](https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx), open a blank
-sheet, and use **File > Import > Upload**.
+account (top right of the window) and try the link again. If it still fails, download
+[the workbook file](https://github.com/NCSU-Libraries/intro-spreadsheets/raw/main/data/DSTI%20ATUS%20Data%20Working.xlsx),
+open a blank sheet, and use **File > Import > Upload**.
 :::
 
 ## What's in the workbook
@@ -551,8 +547,7 @@ Trim whitespace removes the spaces in place. `=TRIM()` does the same in a helper
 want to keep the original.
 
 1. Click any cell in the data, then **Ctrl/Cmd + A** to select it all. **Data > Data cleanup >
-   Trim whitespace.** Sheets reports how many cells it trimmed
-   (9). Click **OK**.
+   Trim whitespace.** Sheets reports how many cells it trimmed (9). Click **OK**.
 2. Select column **E**. Find and replace, with **Match entire cell contents** checked:
    `Bachelors` → `Bachelor's` and `Masters` → `Master's`.
 3. Open the Education level filter again: each level is listed once.
@@ -596,8 +591,8 @@ To see why it matters, put these in two empty cells on a new sheet:
 - `=AVERAGE(working!K2:K)`
 - `=AVERAGEIF(working!K2:K, ">=0")`
 
-The first treats -1 and -4 as numbers of hours and drags the average down: about 23 hours, against about 40 for
-the people who reported their hours.
+The first treats -1 and -4 as numbers of hours and drags the average down: about 23 hours,
+against about 40 for the people who reported their hours.
 
 What to do with codes like these:
 
@@ -664,9 +659,10 @@ Flag first, then decide:
 
 1. In **X1** type `ID count`. In **X2** type `=COUNTIF(A:A, A2)`. Fill down.
 2. Filter column X for values greater than 1 to see every repeated Case ID.
-3. For exact duplicates: select the data, **Data > Data cleanup > Remove duplicates**, tick **Data
-   has header row**, and choose which columns must match (all of them, for exact duplicates).
-   Sheets reports how many rows it removed: 5.
+3. For exact duplicates: click any cell in the data, then **Ctrl/Cmd + A** to select it all.
+   **Data > Data cleanup > Remove duplicates**, tick **Data has header row**, and choose which
+   columns must match (all of them, for exact duplicates). Sheets reports how many rows it
+   removed: 5.
 4. Filter column X again. One Case is still listed twice, and its two rows differ in Age (37 and
    73). Find that Case in **raw**: the real age is 37. Right-click the row with 73 > **Delete row**.
 5. Clear column X. The sheet now has 2,000 rows: 2,000 different people.
@@ -843,8 +839,9 @@ from about 66 to 117 minutes and leisure falls from about 298 to 174.
    workers at every level report roughly 170 to 235 minutes, with no pattern by degree.
 
 Much of the education difference comes from who is working: 64% of people with no diploma have
-work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer depends on a decision from @sec-clean:
-reading -1 as "not working", rather than dropping it or treating it as 0. **How you prepare data
+work hours of -1 (not working), against about 26–29% with a bachelor's or master's. The answer
+depends on a decision from @sec-clean: reading -1 as "not working", rather than dropping it or
+treating it as 0. **How you prepare data
 changes your conclusions,** which is why, in your own work, every decision goes in the
 log.
 
@@ -980,8 +977,9 @@ minutes (a bin) and not a category, it works as a histogram: one bar per group i
 6. Click any cell in the pivot table. **Insert > Chart.** If Sheets picks another type, choose
    **Setup > Chart type: Column chart.** Each bin has two bars, one per group.
 7. **Customize > Series.** In the dropdown at the top (it starts on **Apply to all series**),
-   choose each group in turn and give it a **Color**: a dark and a light shade of one color. The groups have an order (no children, then 3+), and shades still tell them apart
-   in grayscale and for people with color vision deficiency.
+   choose each group in turn and give it a **Color**: a dark and a light shade of one color. The
+   groups have an order (no children, then 3+), and shades still tell them apart in grayscale and
+   for people with color vision deficiency.
 8. **Customize > Chart & axis titles:** a title that asks the question, such as "Do people with
    3+ children have less leisure time than those with none?". Horizontal axis "Leisure on diary
    day (minutes, 2-hour groups)", vertical axis "Percent of group".
@@ -1020,8 +1018,6 @@ standard deviation for the whole series, not a separate value for each bar.
 | **Google Colab** (Google, free) | Python in the browser. seaborn draws box plots, violin plots and error bars. |
 | **Excel** (free to NC State students) | A built-in box and whisker chart, and custom error bars for each bar |
 | **R or Python** | Everything, with steps you can repeat |
-
-[Check before release: whether NC State accounts allow Sheets add-ons and Gemini.]{.tbd}
 :::
 
 ------------------------------------------------------------------------
@@ -1031,8 +1027,8 @@ standard deviation for the whole series, not a separate value for each bar.
 ## Take your data with you
 
 **File > Download > Comma-separated values (.csv)** saves the current sheet as a CSV, which opens
-in R, Python, SPSS, Stata and almost everything else. Download **README** too: the data dictionary belongs
-with the data, and in your own work, so does the log.
+in R, Python, SPSS, Stata and almost everything else. Download **README** too: the data
+dictionary belongs with the data, and in your own work, so does the log.
 
 ## What we did
 
