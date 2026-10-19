@@ -1018,6 +1018,7 @@ standard deviation for the whole series, not a separate value for each bar.
 | **Google Colab** (Google, free) | Python in the browser. seaborn draws box plots, violin plots and error bars. |
 | **Excel** (free to NC State students) | A built-in box and whisker chart, and custom error bars for each bar |
 | **R or Python** | Everything, with steps you can repeat |
+| **Gemini** (your NC State Google account) | Not built into Sheets for NC State accounts, as of October 2026. Gemini chat can explain a formula, or write Python for Colab to draw these charts. Check what it gives you before you rely on it. |
 :::
 
 ------------------------------------------------------------------------
